@@ -694,7 +694,12 @@ $_old_files = array(
 'wp-includes/js/jquery/ui/jquery.ui.tabs.min.js',
 'wp-includes/js/jquery/ui/jquery.ui.tooltip.min.js',
 'wp-includes/js/jquery/ui/jquery.ui.widget.min.js',
-'wp-includes/js/tinymce/skins/wordpress/images/dashicon-no-alt.png'
+'wp-includes/js/tinymce/skins/wordpress/images/dashicon-no-alt.png',
+// 4.3
+'wp-admin/js/wp-fullscreen.js',
+'wp-admin/js/wp-fullscreen.min.js',
+'wp-includes/js/tinymce/wp-mce-help.php',
+'wp-includes/js/tinymce/plugins/wpfullscreen',
 );
 
 /**
@@ -1273,8 +1278,11 @@ function _upgrade_422_find_genericons_files_in_folder( $directory ) {
 		$files[] = "{$directory}example.html";
 	}
 
-	foreach ( glob( $directory . '*', GLOB_ONLYDIR ) as $dir ) {
-		$files = array_merge( $files, _upgrade_422_find_genericons_files_in_folder( $dir ) );
+	$dirs = glob( $directory . '*', GLOB_ONLYDIR );
+	if ( $dirs ) {
+		foreach ( $dirs as $dir ) {
+			$files = array_merge( $files, _upgrade_422_find_genericons_files_in_folder( $dir ) );
+		}
 	}
 
 	return $files;

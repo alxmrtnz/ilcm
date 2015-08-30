@@ -1278,8 +1278,8 @@ function wp_safe_redirect($location, $status = 302) {
 	 *
 	 * @since 4.3.0
 	 *
-	 * @param string $fallback_url	The fallback URL to use by default.
-	 * @param int    $status        The redirect status.
+	 * @param string $fallback_url The fallback URL to use by default.
+	 * @param int    $status       The redirect status.
 	 */
 	$location = wp_validate_redirect( $location, apply_filters( 'wp_safe_redirect_fallback', admin_url(), $status ) );
 
@@ -1688,10 +1688,13 @@ if ( !function_exists('wp_new_user_notification') ) :
  * A new user registration notification is also sent to admin email.
  *
  * @since 2.0.0
+ * @since 4.3.0 The `$plaintext_pass` parameter was changed to `$notify`.
  *
- * @param int    $user_id        User ID.
+ * @param int    $user_id User ID.
+ * @param string $notify  Whether admin and user should be notified ('both') or
+ *                        only the admin ('admin' or empty).
  */
-function wp_new_user_notification($user_id) {
+function wp_new_user_notification( $user_id, $notify = '' ) {
 	global $wpdb;
 	$user = get_userdata( $user_id );
 
@@ -1705,9 +1708,14 @@ function wp_new_user_notification($user_id) {
 
 	@wp_mail(get_option('admin_email'), sprintf(__('[%s] New User Registration'), $blogname), $message);
 
+	if ( 'admin' === $notify || empty( $notify ) ) {
+		return;
+	}
+
 	// Generate something random for a password reset key.
 	$key = wp_generate_password( 20, false );
 
+	/** This action is documented in wp-login.php */
 	do_action( 'retrieve_password_key', $user->user_login, $key );
 
 	// Now insert the key, hashed, into the DB.
@@ -1725,7 +1733,6 @@ function wp_new_user_notification($user_id) {
 	$message .= wp_login_url() . "\r\n";
 
 	wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message);
-
 }
 endif;
 
@@ -2107,8 +2114,9 @@ function wp_rand( $min = 0, $max = 0 ) {
 		$rnd_value .= sha1($rnd_value);
 		$rnd_value .= sha1($rnd_value . $seed);
 		$seed = md5($seed . $rnd_value);
-		if ( ! defined( 'WP_SETUP_CONFIG' ) )
-			set_transient('random_seed', $seed);
+		if ( ! defined( 'WP_SETUP_CONFIG' ) && ! defined( 'WP_INSTALLING' ) ) {
+			set_transient( 'random_seed', $seed );
+		}
 	}
 
 	// Take the first 8 digits for our value

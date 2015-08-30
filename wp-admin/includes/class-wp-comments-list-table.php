@@ -357,8 +357,10 @@ class WP_Comments_List_Table extends WP_List_Table {
 		$columns['author'] = __( 'Author' );
 		$columns['comment'] = _x( 'Comment', 'column name' );
 
-		if ( !$post_id )
-			$columns['response'] = _x( 'In Response To', 'column name' );
+		if ( ! $post_id ) {
+			/* translators: column name or table row header */
+			$columns['response'] = __( 'In Response To' );
+		}
 
 		return $columns;
 	}
@@ -462,15 +464,13 @@ class WP_Comments_List_Table extends WP_List_Table {
  	protected function handle_row_actions( $comment, $column_name, $primary ) {
  		global $comment_status;
 
- 		if ( ! $this->user_can ) {
- 			return;
-		}
-
 		if ( $primary !== $column_name ) {
 			return '';
 		}
 
-		$post = get_post();
+ 		if ( ! $this->user_can ) {
+ 			return;
+		}
 
 		$the_comment_status = wp_get_comment_status( $comment->comment_ID );
 
@@ -532,9 +532,9 @@ class WP_Comments_List_Table extends WP_List_Table {
 
 			$format = '<a data-comment-id="%d" data-post-id="%d" data-action="%s" class="%s" title="%s" href="#">%s</a>';
 
-			$actions['quickedit'] = sprintf( $format, $comment->comment_ID, $post->ID, 'edit', 'vim-q comment-inline',esc_attr__( 'Edit this item inline' ), __( 'Quick&nbsp;Edit' ) );
+			$actions['quickedit'] = sprintf( $format, $comment->comment_ID, $comment->comment_post_ID, 'edit', 'vim-q comment-inline',esc_attr__( 'Edit this item inline' ), __( 'Quick&nbsp;Edit' ) );
 
-			$actions['reply'] = sprintf( $format, $comment->comment_ID, $post->ID, 'replyto', 'vim-r comment-inline', esc_attr__( 'Reply to this comment' ), __( 'Reply' ) );
+			$actions['reply'] = sprintf( $format, $comment->comment_ID, $comment->comment_post_ID, 'replyto', 'vim-r comment-inline', esc_attr__( 'Reply to this comment' ), __( 'Reply' ) );
 		}
 
 		/** This filter is documented in wp-admin/includes/dashboard.php */
@@ -670,6 +670,10 @@ class WP_Comments_List_Table extends WP_List_Table {
 	public function column_response() {
 		$post = get_post();
 
+		if ( ! $post ) {
+			return;
+		}
+
 		if ( isset( $this->pending_count[$post->ID] ) ) {
 			$pending_comments = $this->pending_count[$post->ID];
 		} else {
@@ -678,21 +682,23 @@ class WP_Comments_List_Table extends WP_List_Table {
 		}
 
 		if ( current_user_can( 'edit_post', $post->ID ) ) {
-			$post_link = "<a href='" . get_edit_post_link( $post->ID ) . "'>";
+			$post_link = "<a href='" . get_edit_post_link( $post->ID ) . "' class='comments-edit-item-link'>";
 			$post_link .= esc_html( get_the_title( $post->ID ) ) . '</a>';
 		} else {
 			$post_link = esc_html( get_the_title( $post->ID ) );
 		}
 
-		echo '<div class="response-links"><span class="post-com-count-wrapper">';
-		echo $post_link . '<br />';
+		echo '<div class="response-links">';
+		if ( 'attachment' == $post->post_type && ( $thumb = wp_get_attachment_image( $post->ID, array( 80, 60 ), true ) ) ) {
+			echo $thumb;
+		}
+		echo $post_link;
+		$post_type_object = get_post_type_object( $post->post_type );
+		echo "<a href='" . get_permalink( $post->ID ) . "' class='comments-view-item-link'>" . $post_type_object->labels->view_item . '</a>';
+		echo '<span class="post-com-count-wrapper">';
 		$this->comments_bubble( $post->ID, $pending_comments );
 		echo '</span> ';
-		$post_type_object = get_post_type_object( $post->post_type );
-		echo "<a href='" . get_permalink( $post->ID ) . "'>" . $post_type_object->labels->view_item . '</a>';
 		echo '</div>';
-		if ( 'attachment' == $post->post_type && ( $thumb = wp_get_attachment_image( $post->ID, array( 80, 60 ), true ) ) )
-			echo $thumb;
 	}
 
 	/**
