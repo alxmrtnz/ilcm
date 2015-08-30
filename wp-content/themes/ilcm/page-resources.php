@@ -19,6 +19,9 @@ get_header(); ?>
 				<?php> $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
 				<div class="hero">
 					<?php echo get_the_title(); ?>
+					<div class="hero__image-overlay">
+						
+					</div>
 					<img class="hero__featured-image" src="<?php echo $url; ?>" longdesc="URL_2" alt="Text_2" />
 				</div>
 

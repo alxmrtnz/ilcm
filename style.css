@@ -946,6 +946,13 @@ object {
   background-color: #ddd;
 }
 
+.hero__image-overlay {
+  background: #000;
+  height: 500px;
+  opacity: .2;
+  width: 100%;
+}
+
 .hero__featured-image {
   width: 50%;
 }
