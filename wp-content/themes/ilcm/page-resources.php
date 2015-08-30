@@ -13,10 +13,16 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+				<?php> $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
+				<div class="hero">
+					<?php echo get_the_title(); ?>
+					<img class="hero__featured-image" src="<?php echo $url; ?>" longdesc="URL_2" alt="Text_2" />
+				</div>
 
+					
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php

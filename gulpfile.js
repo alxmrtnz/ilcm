@@ -27,9 +27,9 @@ gulp.task('styles', function() {
   return sass(path+'src/styles/style.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest(''))
-    .pipe(rename({suffix: '.min'}))
+    //.pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest(path+'dist/assets/styles'))
+    .pipe(gulp.dest(path))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
