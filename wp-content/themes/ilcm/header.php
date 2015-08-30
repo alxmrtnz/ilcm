@@ -42,6 +42,31 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav> #site-navigation -->
 
+		<?php
+
+            $menu = array(
+                'theme_location'  => 'primary',
+                'menu'            => 'mainMenu',
+                'container'       => false,
+                'container_class' => '',
+                'container_id'    => '',
+                'menu_class'      => 'mainNavItems',
+                'menu_id'         => 'nav',
+                'echo'            => true,
+                'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                'depth'           => 0,
+                'walker'          => ''
+            );
+
+            wp_nav_menu($menu);
+
+         ?>
+
 		<div class="nav-bar__org-logo">
 			ILCM
 		</div>
