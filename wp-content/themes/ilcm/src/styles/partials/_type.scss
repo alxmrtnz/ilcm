@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Type
+   ========================================================================== */
+
+// We use these to define default font stacks
+$sans-serif-display: 'Playfair Display SC', serif;
+$sans-serif: "Oswald", sans-serif !default;
+$serif: "Vollkorn", Georgia, Cambria, "Times New Roman", Times, serif !default;
+$monospace: Consolas, "Liberation Mono", Courier, monospace !default;
+
+//We use these to define default font weights
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+
+h1 { 
+	font-family: $sans-serif-display;
+}
+h2 { 
+	font-family: Arial;
+}
+h3 { }
+h4 { }
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
