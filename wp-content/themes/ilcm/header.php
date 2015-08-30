@@ -29,43 +29,58 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
 	<header class="nav-bar" role="banner">
+		<ul class="topMenu">
+			<?php
 
+	            $topMenu = array(
+	                'theme_location'  => 'primary',
+	                'menu'            => 'topMenu',
+	                'container'       => false,
+	                'container_class' => '',
+	                'container_id'    => '',
+	                'menu_class'      => 'topMenuList',
+	                'menu_id'         => 'topMenu',
+	                'echo'            => true,
+	                'fallback_cb'     => 'wp_page_menu',
+	                'before'          => '',
+	                'after'           => '',
+	                'link_before'     => '',
+	                'link_after'      => '',
+	                'items_wrap'      => '%3$s',
+	                'depth'           => 0,
+	                'walker'          => ''
+	            );
 
-		<!--<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+	            wp_nav_menu($topMenu);
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', '_mbbasetheme' ); ?></button>
+	         ?>
+		</ul>
+		<nav class="mainMenu">
+			<?php
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav> #site-navigation -->
+	            $menu = array(
+	                'theme_location'  => 'primary',
+	                'menu'            => 'mainMenu',
+	                'container'       => false,
+	                'container_class' => '',
+	                'container_id'    => '',
+	                'menu_class'      => 'mainMenuList',
+	                'menu_id'         => 'nav',
+	                'echo'            => true,
+	                'fallback_cb'     => 'wp_page_menu',
+	                'before'          => '',
+	                'after'           => '',
+	                'link_before'     => '',
+	                'link_after'      => '',
+	                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+	                'depth'           => 0,
+	                'walker'          => ''
+	            );
 
-		<?php
+	            wp_nav_menu($menu);
 
-            $menu = array(
-                'theme_location'  => 'primary',
-                'menu'            => 'mainMenu',
-                'container'       => false,
-                'container_class' => '',
-                'container_id'    => '',
-                'menu_class'      => 'mainNavItems',
-                'menu_id'         => 'nav',
-                'echo'            => true,
-                'fallback_cb'     => 'wp_page_menu',
-                'before'          => '',
-                'after'           => '',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
-            );
-
-            wp_nav_menu($menu);
-
-         ?>
+	         ?>
+		</nav>
 
 		<div class="nav-bar__org-logo">
 			ILCM
