@@ -13,8 +13,12 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/apple-touch-icon.png">
+
+	<!-- Load Favicon and Touch Icon -->
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/apple-touch-icon.png">
+
+	<!-- Load Web Fonts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300|Playfair+Display+SC:400,400italic|Vollkorn:400,700,400italic' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
