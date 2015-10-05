@@ -23,7 +23,7 @@ gulp.task('styles', function() {
   return sass('./src/styles/style.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('./'))
-    .pipe(minifycss())
+    //.pipe(minifycss())
     .pipe(gulp.dest('./'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
