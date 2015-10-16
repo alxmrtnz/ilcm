@@ -9,6 +9,30 @@
 
 get_header(); ?>
 
+<section class="hero">
+	<div class="slider slider--homepage">
+		<div class="slider__slide" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/graduation.jpg);">
+			<div class="row">
+				<div class="columns small-12">
+					Hello
+				</div>
+			</div>
+			<div class="slider__bg-overlay">
+				
+			</div>
+			
+		</div>
+		<div class="slider__slide">
+			<div class="row">
+				<div class="columns small-12">
+					Hello
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<p>hellooooasdfihaosdifhaoisdhfosih</p>

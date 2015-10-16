@@ -4,8 +4,8 @@
 
 // We use these to define default font stacks
 $sans-serif-display: 'Playfair Display SC', serif;
-$sans-serif: "Oswald", sans-serif !default;
-$serif: "Vollkorn", Georgia, Cambria, "Times New Roman", Times, serif !default;
+$sans-serif: 'Source Sans Pro', sans-serif;
+$serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif !default;
 $monospace: Consolas, "Liberation Mono", Courier, monospace !default;
 
 //We use these to define default font weights
@@ -14,7 +14,7 @@ $font-weight-bold: bold !default;
 
 
 h1 { 
-	font-family: $sans-serif-display;
+	font-family: $sans-serif;
 }
 h2 { 
 	font-family: Arial;

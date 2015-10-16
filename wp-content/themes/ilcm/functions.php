@@ -90,3 +90,35 @@ function modify_jquery() {
 	}
 }
 add_action('init', 'modify_jquery');
+
+
+
+
+
+
+
+
+
+
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+      'secondary-menu' => __( 'Secondary Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
+
+
+
+
+
+
+
+
+
+
+
