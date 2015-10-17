@@ -20,7 +20,7 @@
 	})
 	.on('beforeChange', function(event, slick, currentSlide, nextSlide){
         // then let's do this before changing slides
-        console.log('before change');
+         $('.slider[data-slick-index="' + currentSlide + '"]').fadeTo('fast',0);
     });
 
 

@@ -2,14 +2,20 @@
    Home Page Template
    ========================================================================== */
 
+$transition-hover-time: .25s;
+
 body.home {}
 
 .hero {
 	// height: 600px;
-	background: none;
+	background: $black;
 	// margin-top: 400px;
 	overflow: hidden;
 	position: relative;
+}
+
+.slick-slider {
+	margin: 0;
 }
 
 .slider__slide {
@@ -34,7 +40,7 @@ body.home {}
 }
 
 .slide__content {
-	bottom: 50px;
+	bottom: 130px;
 	position: absolute;
 	z-index: 4;
 	max-width: 650px;
@@ -45,7 +51,7 @@ body.home {}
 	font-size: 48px;
 	font-weight: normal;
 	line-height: 58px;
-	margin-bottom: 15px;
+	margin: 0px 0px 15px 0px;
 	text-shadow: 0px 2px 6px rgba(0,0,0,0.76);
 
 	a {
@@ -75,7 +81,7 @@ body.home {}
 
 .slide__nav {
 	position: absolute;
-	bottom: 40px;
+	bottom: 60px;
 	z-index: 15;
 	width: 100%;
 }
@@ -87,10 +93,19 @@ body.home {}
 .slide__arrow {
 	cursor: pointer;
 	color: red;
-	padding: 4px 10px;
+	padding: 4px 12px;
 	background: rgba(255,255,255,.4);
 	border: 1px solid rgba(255,255,255,.8);
 	display: inline-block;
+	transition: all $transition-hover-time;
+
+	&:hover {
+		background: darken(rgba(255,255,255,.4), 15%);
+	}
+
+	&.arrow--next {
+		margin-left: -4px;
+	}
 }
 
 ul.slick-dots {

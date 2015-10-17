@@ -49,7 +49,7 @@ get_header(); ?>
 			</div>
 			
 		</div>
-		<div class="slider__slide" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/graduation.jpg);">
+		<div class="slider__slide" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/mountains.jpg);">
 			<div class="row slide__content-row">
 				<div class="columns small-12 slide__content-columns">
 					<div class="slide__content">
