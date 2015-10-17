@@ -6,6 +6,30 @@
     //test
 
     $('.slider').slick({
-		
-	});console.log('slick success');
+		prevArrow: $('.arrow--prev'),
+		nextArrow: $('.arrow--next'),
+		swipeToSlide: false,
+		touchMove: false,
+		swipe: false,
+		infinite: true,
+        fade: true,
+        dots: true,
+        arrows: true,
+        appendDots: $('.slide__nav-content')
+
+	})
+	.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        // then let's do this before changing slides
+        console.log('before change');
+    });
+
+
+
+
+
+         
+
+
+
+
 })(jQuery);
