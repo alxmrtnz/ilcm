@@ -12,9 +12,18 @@ get_header(); ?>
 <section class="hero">
 	<div class="slider slider--homepage">
 		<div class="slider__slide" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/graduation.jpg);">
-			<div class="row">
-				<div class="columns small-12">
-					Hello
+			<div class="row slide__content-row">
+				<div class="columns small-12 slide__content-columns">
+					<div class="slide__content">
+						<h2 class="slide__title">
+							<a href="#">
+								Find Out if You Qualify for Original 2012 DACA
+							</a>
+						</h2>
+						<div class="slide__subtitle">
+							ILCM believes a key part to providing effective legal service is education. 
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="slider__bg-overlay">

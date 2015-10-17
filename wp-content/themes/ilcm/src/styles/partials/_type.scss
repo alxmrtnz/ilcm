@@ -14,16 +14,15 @@ $font-weight-bold: bold !default;
 
 
 h1 { 
-	font-family: $sans-serif;
 }
 h2 { 
-	font-family: Arial;
 }
 h3 { }
 h4 { }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: $sans-serif;
 }
 
 p {
