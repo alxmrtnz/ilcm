@@ -3,7 +3,7 @@
    ========================================================================== */
 
 $transition-hover-time: .25s;
-$text-transition-time: 1s;
+$text-transition-time: .55s;
 
 body.home {}
 
@@ -24,7 +24,9 @@ body.home {}
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	min-height: 600px;
+	min-height: 500px;
+	max-height: 700px;
+	height: 70vw;
 }
 
 .slide__content-row {

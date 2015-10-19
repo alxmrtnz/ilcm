@@ -71,13 +71,28 @@ get_header(); ?>
 			</div>
 			
 		</div>
-		<div class="slider__slide">
-			<div class="row">
-				<div class="columns small-12">
-					Hello
+		<div class="slider__slide" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/graduation.jpg);">
+					<div class="row slide__content-row">
+						<div class="columns small-12 slide__content-columns">
+							<div class="slide__content">
+								<div class="slide__copy">
+									<h2 class="slide__title">
+										<a href="#">
+											Slide 3
+										</a>
+									</h2>
+									<div class="slide__subtitle">
+										ILCM believes a key part to providing effective legal service is education. 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider__bg-overlay">
+						
+					</div>
+					
 				</div>
-			</div>
-		</div>
 	</div>
 </section>
 

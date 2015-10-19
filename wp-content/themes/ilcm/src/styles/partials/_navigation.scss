@@ -2,6 +2,9 @@
    Navigation
    ========================================================================== */
 
+$hover-time: .25s;
+$hover-nav-bg: #F3F3F3;
+
 header.nav-bar {
 	position: absolute;
 	top: 0px;
@@ -14,9 +17,26 @@ header.nav-bar {
 		background: $white;
 		color: $black;
 
-		.nav-bar__org-logo a img {
+		.nav-bar__org-logo a object {
 			fill: $black;
 		}
+
+		.nav-bar__top-menu {
+			border-bottom: 1px solid rgba(230,230,230,1);
+		}
+		
+		.nav-bar__top-menu li a, .nav-bar__main-menu li a {
+			color: $black;
+		}
+
+		.nav-bar__top-menu-bg {
+			background: none;
+		}
+
+		.org-logo-path {
+			fill: $black;
+		}
+
 	}
 }
 
@@ -26,26 +46,46 @@ header.nav-bar {
 	background: red;
 }
 
+.nav-bar__color-bar {
+	height: 5px;
+	background-image: url(dist/assets/images/color-strip.png);
+	background-repeat: repeat-x;
+}
+
 .nav-bar__org-logo-container {
 
 }
 
+
 .nav-bar__org-logo {
-	height: 48px;
-	width: 329px;
-	margin-top:10px;
+	height: 40px;
+	width: 290px;
+	margin-top: 8px;
+
+	a {
+		display: block;
+	}
 }
+
+.org-logo-path {
+	fill: $white;
+	transition: fill $hover-time;
+}
+
+
 
 .nav-bar__top-menu-bg {
 	background: rgba(0,0,0,.2);
 	overflow: hidden;
+	transition: all $hover-time;
 }
 
 .nav-bar__top-menu {
 
 	margin: 0px;
 	text-align: right;
-	padding: 6px 10px 10px 10px;
+	border-bottom: 1px solid rgba(230,230,230,0);
+	transition: all $hover-time;
 
 	li {
 		font-family: $sans-serif;
@@ -54,41 +94,81 @@ header.nav-bar {
 		letter-spacing: 1.89px;
 		line-height: 15px;
 		list-style: none;
-		display: inline;
-		margin-left: 30px;
+		display: inline-block;
+		transition: all $hover-time;
 
-		&:first-child {
-			margin-left: 0px;
+		&:hover {
+			background: $hover-nav-bg;
 		}
 
 		a {
 			color: $white;
 			text-decoration: none;
+			display: block;
+			height: 100%;
+			width: 100%;
+			padding: 11px 8px 11px 8px;
 		}
 	}
 }
 
+
+
 .nav-bar__main-menu {
 	margin: 0px;
-	padding: 20px 10px 17px 10px;
+
 	text-align: right;
 
 	li {
 		font-family: $serif;
-		font-size: 18px;
+		font-size: 17px;
 		letter-spacing: 1.5px;
-		line-height: 22px;
+		line-height: 21px;
 		list-style: none;
-		display: inline;
-		margin-left: 30px;
+		display: inline-block;
+		transition: all $hover-time;
 
-		&:first-child {
-			margin-left: 0px;
+		&:hover {
+			background: $hover-nav-bg;
 		}
 
 		a {
 			color: $white;
 			text-decoration: none;
+			display: block;
+			height: 100%;
+			width: 100%;
+			padding: 20px 12px 17px 12px;
 		}
 	}
 }
+
+
+
+.nav-bar__top-menu li a, .nav-bar__main-menu li a {
+	transition: all $hover-time;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
