@@ -13,7 +13,7 @@ header.nav-bar {
 	background: none;
 	transition: all .25s;
 
-	&:hover {
+	&:hover, &.nav--not-home {
 		background: $white;
 		color: $black;
 
@@ -38,6 +38,10 @@ header.nav-bar {
 		}
 
 	}
+}
+
+header.nav-bar.nav--not-home {
+	position: relative;
 }
 
 .nav--global {
