@@ -14,7 +14,7 @@ header.nav-bar {
 	transition: all .25s;
 
 	&:hover, &.nav--not-home {
-		background: $white;
+		background: #EEF1F2;
 		color: $black;
 
 		.nav-bar__org-logo a object {
@@ -125,7 +125,7 @@ header.nav-bar.nav--not-home {
 
 	li {
 		font-family: $serif;
-		font-size: 17px;
+		font-size: 18px;
 		letter-spacing: 1.5px;
 		line-height: 21px;
 		list-style: none;
@@ -142,7 +142,7 @@ header.nav-bar.nav--not-home {
 			display: block;
 			height: 100%;
 			width: 100%;
-			padding: 20px 12px 17px 12px;
+			padding: 20px 18px 17px 18px;
 		}
 	}
 }

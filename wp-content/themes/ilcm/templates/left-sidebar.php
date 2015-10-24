@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Services Page
+ * Template Name: Left Sidebar Nav
  *
- * Displays top level content with a hero image
+ * Displays summary blocks of content on the right with navigation in the form of a sidebar on the left
  *
  * @package _mbbasetheme
  */
@@ -11,6 +11,31 @@ get_header(); ?>
 
 	<div class="page-content">
 		<div class="row">
+			<div class="small-12 medium-3 columns sidebar-nav">
+				<h4 class="heading--small">		
+					Legal Services
+				</h4>
+				<ul class="sidebar-nav__list">
+					<li class="sidebar-nav__list-item">
+						Overview
+					</li>
+					<li class="sidebar-nav__list-item">
+						Eligibility &amp; Intake
+					</li>
+					<li class="sidebar-nav__list-item">
+						Cases Served
+					</li>
+					<li class="sidebar-nav__list-item">
+						Privacy Policy
+					</li>
+					<li class="sidebar-nav__list-item">
+						Referrals
+					</li>
+				</ul>
+			</div>
+			<div class="small-12 medium-9 columns">
+				asdf
+			</div>
 			<div class="small-12 columns">
 				<div class="hero-block">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -33,18 +58,18 @@ get_header(); ?>
 					<h2 class="heading--medium text--centered services-subtitle">
 						Representing immigrants, educating communities, advocating for change
 					</h2>
-				</div>
+				</div> <!-- end .hero-block -->
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->
 		<div class="row">
 			<div class="small-12 medium-5 medium-offset-1 columns service-highlights__feature">
 				<div class="service-highlights__image">
-					<a href="legal-services">
+					<a href="#">
 						<img src="http://lorempixel.com/524/360/" alt="image description HERE">
 					</a>
 				</div>
 				<h3 class="service-highlights__title heading--small">
-					<a href="legal-services" class="text-link text-link--black">
+					<a href="#" class="text-link text-link--black">
 						Legal Services
 					</a>
 				</h3>

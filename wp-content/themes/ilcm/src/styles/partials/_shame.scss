@@ -1,0 +1,13 @@
+.card {
+	background: $white;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.10);
+	border-radius: 2px;
+	padding: 40px 50px
+}
+
+.card__copy {
+	font-weight: 300;
+	font-size: 22px;
+	letter-spacing: 0.17px;
+	line-height: 34px;
+}

@@ -4,7 +4,7 @@
 
 // We use these to define default font stacks
 $sans-serif-display: 'Playfair Display SC', serif;
-$sans-serif: 'Source Sans Pro', sans-serif;
+$sans-serif: 'Lato', sans-serif;
 $serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif !default;
 $monospace: Consolas, "Liberation Mono", Courier, monospace !default;
 
@@ -25,8 +25,61 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $sans-serif;
 }
 
+
+//h1 = heading jumbo
+//h2 = heading large
+//h3 = heading medium
+//h4 = heading small
+//h5 = heading micro
+
+
+.heading--medium {
+	font-weight: 300;
+	font-size: 38px;
+	color: $jet;
+	letter-spacing: 0.2px;
+	line-height: 44px;
+
+}
+
+.heading--small {
+	font-weight: 600;
+	font-size: 28px;
+	color: $jet;
+	letter-spacing: 0.15px;
+	line-height: 44px;
+}
+.heading--micro {
+	font-weight: bold;
+	font-size: 14px;
+	color: $primary-color;
+	letter-spacing: 2.21px;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+
+.text--centered {
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
+}
+
+.text--sans {
+	font-family: $sans-serif;
+}
+
+.text-link {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+a.text-link--black {
+	color: $black;
 }
 
 blockquote {

@@ -41,15 +41,22 @@ Tags:
 
 // Page Templates
 @import "partials/page-home";
+@import "partials/page-services";
 @import "partials/page-blog";
+@import "partials/template-left-sidebar";
 
 // Widgets, Search, Comments, Forms, Sharing
 @import "partials/widgets";
 @import "partials/comments";
 @import "partials/forms";
+@import "partials/hero"; 
+
 
 // Helper Classes, Print, Etc
 @import "partials/helpers";
 @import "partials/print";
+
+//Shame
+@import "partials/shame"; 
 
 @import "foundation";

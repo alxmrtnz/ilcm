@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Services Page Template
+   ========================================================================== */
+
+.hero--services {
+	min-height: 400px;
+}
+
+.services-subtitle {
+	max-width: 740px;
+	margin: 0 auto;
+}
+
+.service-highlights__feature {
+	margin-top: 65px;
+	text-align: center;
+
+	.service-highlights__image {
+		width: 100%;
+
+		a {
+			display: block; 
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&:hover ~ .service-highlights__title {
+			text-decoration: underline;
+		}
+	}
+
+	.service-highlights__title {
+		margin-bottom: 0;
+	}
+	.service-highlights__subtitle {
+		font-weight: 300;
+		font-size: 22px;
+		letter-spacing: 0.1px;
+		line-height: 28px;
+		margin-top: 0;
+	}
+}
