@@ -23,6 +23,7 @@ h4 { }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $sans-serif;
+	margin: 0;
 }
 
 
@@ -32,22 +33,37 @@ h1, h2, h3, h4, h5, h6 {
 //h4 = heading small
 //h5 = heading micro
 
-
-.heading--medium {
+.heading--large {
 	font-weight: 300;
 	font-size: 38px;
 	color: $jet;
 	letter-spacing: 0.2px;
 	line-height: 44px;
+}
+
+.heading--medium {
+	font-weight: 300;
+	font-size: 26px;
+	color: $jet;
+	letter-spacing: 0.2px;
+	line-height: 30px;
+}
+
+.heading--bold {
+	font-weight: 600;
 
 }
 
 .heading--small {
-	font-weight: 600;
-	font-size: 28px;
+	font-weight: 400;
+	font-size: 22px;
 	color: $jet;
 	letter-spacing: 0.15px;
-	line-height: 44px;
+	line-height: 26px;
+}
+
+.heading--sub-gray {
+	color: #A0AAAD;
 }
 .heading--micro {
 	font-weight: bold;
@@ -55,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: $primary-color;
 	letter-spacing: 2.21px;
 	line-height: 17px;
+	margin-bottom: 5px;
 	text-transform: uppercase;
 }
 
@@ -63,7 +80,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+	font-family: $sans-serif;
+	font-size: 20px;
 	margin-bottom: 1.5em;
+	margin-top: .625em;
+}
+
+.p--standard {
+	
 }
 
 .text--sans {
@@ -78,8 +102,16 @@ p {
 	}
 }
 
+a.text-link--underline {
+
+}
+
 a.text-link--black {
 	color: $black;
+}
+
+a.text-link--primary-color {
+	color: $primary-color;
 }
 
 blockquote {
