@@ -110,8 +110,9 @@ a.text-link--black {
 	color: $black;
 }
 
-a.text-link--primary-color {
+a.text-link--primary {
 	color: $primary-color;
+	font-family: $sans-serif;
 }
 
 blockquote {

@@ -40,15 +40,20 @@ get_header(); ?>
 							$description = get_field('summary', $page->ID);
 
 						?>
+						<div class="child-summary">
 							<h2 class="heading--medium">
-								<a class="text-link text-link--black" href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>
+								<a class="child__title text-link text-link--black" href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>
 								</a>
 							</h2>
 
-							<p class="">
+							<p class="child__description">
 								<?php echo $description ?>
 							</p>
-
+							<a class="child__link text-link text-link--primary" href="<?php echo get_page_link($page->ID) ?>">
+								Learn More
+							</a>
+						</div>
+							
 						<?php
 						}
 					?>

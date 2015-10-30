@@ -54,12 +54,14 @@ get_header(); ?>
 			</div>
 			<div class="small-12 medium-5 end columns service-highlights__feature">
 				<div class="service-highlights__image">
-					<a href="#">
+					<a href="educational-presentations">
 						<img src="http://lorempixel.com/524/360/" alt="image description HERE">
 					</a>
 				</div> <!-- end .service-highlights__image -->
 				<h3 class="service-highlights__title heading--small">
-					Educational Presentations
+					<a href="educational-presentations" class="text-link text-link--black">
+						Educational Presentations
+					</a>
 				</h3>
 				<p class="service-highlights__subtitle text--sans">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.

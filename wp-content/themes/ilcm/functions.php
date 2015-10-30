@@ -148,16 +148,6 @@ function revcon_change_post_object() {
 add_action( 'admin_menu', 'revcon_change_post_label' );
 add_action( 'init', 'revcon_change_post_object' );
 
-// $sidebar_services = array(
-//   'name'          => 'Services',
-//   'id'            => 'services',
-//   'description'   => 'Widgets placed here will go in the left sidebar of the "Services" pages',
-//   'before_widget' => '<div class="sidebar-nav">',
-//   'after_widget'  => '</div><!-- end .sidebar-nav -->',
-//   'before_title'  => '',
-//   'after_title'   => '',
-// );
-// register_sidebar( $sidebar_services );
 
 
 function ilcm_register_sidebars() {
@@ -180,64 +170,36 @@ function ilcm_register_sidebars() {
 add_action( 'widgets_init', 'ilcm_register_sidebars' );
 
 
-// Callback function to insert 'styleselect' into the $buttons array
-function my_mce_buttons_2( $buttons ) {
-    array_unshift( $buttons, 'styleselect' );
-    return $buttons;
-}
-// Register our callback to the appropriate filter
-add_filter('mce_buttons_2', 'my_mce_buttons_2');
 
-// Callback function to filter the MCE settings
-function my_mce_before_init_insert_formats( $init_array ) {  
-    // Define the style_formats array
-    $style_formats = array(  
-        // Each array child is a format with it's own settings
-        array(  
-            'title' => 'Subtitle Gray',  
-            'block' => 'div',  
-            'classes' => 'heading--sub-gray',
-            'wrapper' => true,
-            
-        ),  
-        array(  
-            'title' => '⇠.rtl',  
-            'block' => 'blockquote',  
-            'classes' => 'rtl',
-            'wrapper' => true,
-        ),
-        array(  
-            'title' => '.ltr⇢',  
-            'block' => 'blockquote',  
-            'classes' => 'ltr',
-            'wrapper' => true,
-        ),
-    );  
-    // Insert the array, JSON ENCODED, into 'style_formats'
-    $init_array['style_formats'] = json_encode( $style_formats );  
-    
-    return $init_array;  
-  
-} 
-
-
-// Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
-
-add_action( 'init', 'create_post_type' );
-function create_post_type() {
-    register_post_type( 'service',
-        array(
-            'labels' => array(
-                'name' => __( 'Services' ),
-                'singular_name' => __( 'Service' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'services'),
-        )
+function custom_post_presentation() {
+    $labels = array(
+        'name'               => _x( 'Presentations', 'post type general name' ),
+        'singular_name'      => _x( 'Presentation', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Presentation' ),
+        'edit_item'          => __( 'Edit Presentation' ),
+        'new_item'           => __( 'New Presentation' ),
+        'all_items'          => __( 'All Presentations' ),
+        'view_item'          => __( 'View Presentation' ),
+        'search_items'       => __( 'Search Presentations' ),
+        'not_found'          => __( 'No presentations found' ),
+        'not_found_in_trash' => __( 'No presentations found in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Presentations'
     );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'All of my educational presentations',
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+        'has_archive'   => false,
+        'rewrite' => array( 'slug' => 'services/educational-presentations')
+    );
+    register_post_type( 'presentation', $args ); 
 }
+add_action( 'init', 'custom_post_presentation' );
+
 
 // function custom_post_type_news() {
 // 	$labels = array(
