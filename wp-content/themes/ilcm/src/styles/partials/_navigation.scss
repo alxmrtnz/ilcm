@@ -3,7 +3,7 @@
    ========================================================================== */
 
 $hover-time: .25s;
-$hover-nav-bg: #F3F3F3;
+$hover-nav-bg: #E6E9EA;
 
 header.nav-bar {
 	position: absolute;
@@ -99,7 +99,7 @@ header.nav-bar.nav--not-home {
 		line-height: 15px;
 		list-style: none;
 		display: inline-block;
-		transition: all $hover-time;
+		// transition: all $hover-time;
 
 		&:hover {
 			background: $hover-nav-bg;
@@ -130,7 +130,7 @@ header.nav-bar.nav--not-home {
 		line-height: 21px;
 		list-style: none;
 		display: inline-block;
-		transition: all $hover-time;
+		// transition: all $hover-time;
 
 		&:hover {
 			background: $hover-nav-bg;
@@ -150,13 +150,25 @@ header.nav-bar.nav--not-home {
 
 
 .nav-bar__top-menu li a, .nav-bar__main-menu li a {
-	transition: all $hover-time;
+	// transition: all $hover-time;
 }
 
 
 
 
+//Sub Menus
 
+.top-menu__sub-menu {
+	display: none;
+	background: $hover-nav-bg;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#menu-item-114:hover {
+	
+}
 
 
 

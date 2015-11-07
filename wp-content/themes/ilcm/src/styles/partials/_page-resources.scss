@@ -19,3 +19,16 @@ body.home {}
 .hero__featured-image {
 	width: 50%;
 } 
+
+.hero-block {
+	width: 100%;
+	height: 350px;
+
+	.hero-block__banner {
+		height: 100%;
+		.banner__img {
+			height: 100%;
+			background-size: 100%;
+		}
+	}
+}

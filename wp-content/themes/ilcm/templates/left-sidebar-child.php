@@ -12,7 +12,8 @@ get_header(); ?>
 	<div class="page-content">
 		<div class="row">
 			<div class="small-12 medium-3 columns">
-				<?php dynamic_sidebar( 'sidebar-services' ); ?>
+				<?php  require('template-parts/left-sidebar-template-sidebar.php');
+				?>
 			</div> <!-- end .columns -->
 			<div class="small-12 medium-8 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -34,7 +35,6 @@ get_header(); ?>
 					<?php the_content(); ?>
 
 					<?php 
-
 						if (is_page('Cases Served')) {
 							require('template-parts/case-highlights.php');
 						} else if (is_page('Referrals')) {

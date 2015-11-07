@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Left Sidebar Child 
+ * Template Name:page presentation
  *
  * Displays summary blocks of content on the right with navigation in the form of a sidebar on the left
  *

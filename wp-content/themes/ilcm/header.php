@@ -78,6 +78,7 @@
 				         ?>
 					</ul>
 			</div>
+			
 				
 		</nav>
 		
@@ -119,7 +120,13 @@
 		    </ul>
 		</nav>
 
-
+		<div class="top-menu__sub-menu" id="sub-menu--client-services">
+			<div class="row">
+				<div class="medium-8 medium-offset-4 columns">
+					Client Services
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

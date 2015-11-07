@@ -25,9 +25,23 @@
 
 
 
+	// $('#menu-item-114').on('mouseover', function() {
+	//     $('#sub-menu--client-services').show();
+	// }).on('mouseout', function() {
+	//     $('#sub-menu--client-services').hide();
+	// });
 
-
-         
+         $("#menu-item-114").mouseenter(function(){
+             clearTimeout($(this).data('timeoutId'));
+             $("#sub-menu--client-services").show();
+         }).mouseleave(function(){
+             var someElement = $(this),
+                 timeoutId = setTimeout(function(){
+                     $("#sub-menu--client-services").hide();
+                 }, 650);
+             //set the timeoutId, allowing us to clear this trigger if the mouse comes back over
+             someElement.data('timeoutId', timeoutId); 
+         });
 
 
 

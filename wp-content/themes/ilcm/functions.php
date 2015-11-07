@@ -165,9 +165,23 @@ function ilcm_register_sidebars() {
         )
     );
 
+    /* Register the services sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-immigration-resources',
+            'name' => __( 'Immigration Resources Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="heading--small">',
+            'after_title' => '</h4>'
+        )
+    );
+
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 add_action( 'widgets_init', 'ilcm_register_sidebars' );
+
 
 
 
