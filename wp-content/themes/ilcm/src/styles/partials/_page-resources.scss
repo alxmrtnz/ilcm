@@ -32,3 +32,45 @@ body.home {}
 		}
 	}
 }
+
+.child-grid__feature {
+	margin-top: 65px;
+	text-align: center;
+
+	&:last-child {
+		float: left !important;
+	}
+
+	.child-grid__image {
+		width: 100%;
+
+		a {
+			display: block; 
+
+			img {
+				width: 100%;
+				margin: 0 auto 20px auto;
+				padding: 5px;
+				border: 1px solid #e6e6e6;
+				background: $white;
+			}
+		}
+
+		&:hover ~ .child-grid__title {
+			text-decoration: underline;
+		}
+	}
+
+	.child-grid__title {
+		margin-bottom: 0;
+		// text-align: left;
+	}
+	.child-grid__subtitle {
+		font-weight: 300;
+		font-size: 18px;
+		letter-spacing: 0.1px;
+		line-height: 26px;
+		margin-top: 0;
+		// text-align: left;
+	}
+}

@@ -15,7 +15,7 @@ get_header(); ?>
 				<?php  require('template-parts/left-sidebar-template-sidebar.php');
 				?>
 			</div> <!-- end .columns -->
-			<div class="small-12 medium-8 end columns">
+			<div class="small-12 medium-7 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<h2 class="heading--micro">
 						<?php
@@ -29,9 +29,7 @@ get_header(); ?>
 					<h3 class="heading--small heading--sub-gray">
 						<?php the_field('subtitle'); ?>
 					</h3>
-					<p>
-						<?php the_field('summary_paragraph'); ?>
-					</p>
+					
 					<?php the_content(); ?>
 
 					<?php 

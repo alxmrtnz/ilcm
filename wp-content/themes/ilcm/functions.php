@@ -152,15 +152,15 @@ add_action( 'init', 'revcon_change_post_object' );
 
 function ilcm_register_sidebars() {
 
-    /* Register the services sidebar. */
+    /* Register the Immigration Help sidebar. */
     register_sidebar(
         array(
             'id' => 'sidebar-services',
-            'name' => __( 'Services Sidebar', 'ilcm' ),
-            'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
+            'name' => __( 'Immigration Help Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Immigration Services" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
-            'before_title' => '<h4 class="heading--small">',
+            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
             'after_title' => '</h4>'
         )
     );
@@ -173,7 +173,20 @@ function ilcm_register_sidebars() {
             'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
-            'before_title' => '<h4 class="heading--small">',
+            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
+            'after_title' => '</h4>'
+        )
+    );
+
+    /* Register the DACA sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-daca',
+            'name' => __( 'DACA Deferred Action Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
             'after_title' => '</h4>'
         )
     );

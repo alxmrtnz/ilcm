@@ -15,20 +15,20 @@ get_header(); ?>
 				<?php  require('template-parts/left-sidebar-template-sidebar.php');
 				?>
 			</div> <!-- end .columns -->
-			<div class="small-12 medium-8 end columns">
+			<div class="small-12 medium-7 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<h2 class="heading--micro">
+					<!-- <h2 class="heading--micro">
 						<?php the_title(); ?>
-					</h2>
+					</h2> -->
 
-					<h1 class="heading--large heading--bold heading--legal-services">
-						<?php the_field('title'); ?>
+					<h1 class="heading--large heading--bold heading--sidebar-parent">
+						<?php the_title(); ?>
 					</h1>
 					<h3 class="heading--small heading--sub-gray">
 						<?php the_field('subtitle'); ?>
 					</h3>
 					<p>
-						<?php the_field('summary_paragraph'); ?>
+						<?php the_content(); ?>
 					</p>
 
 
@@ -42,9 +42,8 @@ get_header(); ?>
 
 						?>
 						<div class="child-summary">
-							<h2 class="heading--medium">
-								<a class="child__title text-link text-link--black" href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>
-								</a>
+							<h2 class="heading--medium heading--bold">
+								<?php echo $page->post_title ?>
 							</h2>
 
 							<p class="child__description">

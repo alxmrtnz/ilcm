@@ -27,6 +27,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+a, 
+a:visited {
+	text-decoration: none;
+	color: $primary-color;
+	&:hover {
+		color: $primary-color;
+		text-decoration: underline;
+	}
+}
+
+ul, ol {
+	// font-family: $sans-serif;
+	color: #7A818D;
+	font-size: 20px;
+	// font-style: italic;
+	font-weight: 200;
+	a {
+
+	}
+}
+
 //h1 = heading jumbo
 //h2 = heading large
 //h3 = heading medium
@@ -94,13 +116,7 @@ p {
 	font-family: $sans-serif;
 }
 
-.text-link {
-	text-decoration: none;
 
-	&:hover {
-		text-decoration: underline;
-	}
-}
 
 a.text-link--underline {
 

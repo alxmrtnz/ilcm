@@ -1,6 +1,6 @@
 <?php
 /**
- * The Sidebar containing the widget areas for the Services pages
+ * The Sidebar containing the widget areas for the Immigration pages
  *
  * @package _mbbasetheme
  */

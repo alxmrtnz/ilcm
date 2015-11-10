@@ -37,80 +37,58 @@ get_header(); ?>
 			
 
 			<div class="small-12 medium-10 medium-offset-1  columns">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php $this_page_id=$wp_query->post->ID; $flag=1;?>
 
-				<?php
-					$pages = get_pages('child_of='.$post->ID.'&sort_column=menu_order&sort_order=asc');
-					$count = 0;
-					foreach($pages as $page)
-					{
-						$content = $page->post_content;
-						$description = get_field('summary', $page->ID);
+			    	<?php query_posts(array('orderby' => 'menu_order', 'order' => 'ASC', 'showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
 
-					?>
-					
-						<div class="small-12 medium-6 columns service-highlights__feature">
-							<div class="service-highlights__image">
-								<a href="<?php echo get_page_link($page->ID) ?>">
-									<img src="http://lorempixel.com/524/360/" alt="image description HERE">
-								</a>
-							</div>
-							<h3 class="service-highlights__title heading--small">
-								<a href="legal-services" class="text-link text-link--black">
-									<a class="child__title text-link text-link--black" href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>
-									</a>
-								</a>
-							</h3>
-							<p class="service-highlights__subtitle text--sans">
-								<?php echo $description ?>
-							</p>
-						</div>
-						
-					
+			        		<?php $flagMarker = $flag % 3; ?>
 
-						
-					<?php
-					}
-				?>
+			                <?php if ( $flagMarker == 1 ) { ?>
 
-			<?php endwhile; else: ?>
+			                    <div class="row">
+		
 
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			                <?php }  ?>
+			                    <div class="small-12 medium-4 columns child-grid__feature">
+			                    	<div class="child-grid__image">
+			                    		<a href="<?php echo get_page_link($page->ID) ?>">
+			                    			<img src="http://lorempixel.com/524/300/" alt="image description HERE">
+			                    		</a>
+			                    	</div>
+			                    	<h3 class="child-grid__title heading--small">
+			                    		<a href="<?php echo get_page_link($page->ID) ?>" class="text-link text-link--black">
+			                    			<?php the_title(); ?>
+			                    		</a>
+			                    	</h3>
+			                    	<p class="child-grid__subtitle text--sans">
+			                    		<?php echo get_field('summary', $page->ID); ?>
+			                    	</p>
+			                    </div>
 
-			<?php endif; ?>
+			                <?php  ?>
+
+			                <?php if ( $flagMarker == 0 ) { ?>
+
+			                    </div>
+			                
+			                <?php }  ?>
+							<?php $flag+=1; ?>
+
+
+			    
+
+			        <?php } ?>
+
+				
+
 
 			</div> <!-- end .columns -->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			
 		</div> <!-- end .row -->
-		<div class="row">
+		<!-- <div class="row">
 			<div class="small-12 medium-10 medium-offset-1 end columns">
 				<div class="card">
 					<p class="card__copy text--sans">
@@ -118,28 +96,11 @@ get_header(); ?>
 					</p>
 				</div>
 			</div>	
-		</div>
+		</div> -->
 	</div> <!-- end .page-content -->
 	
 	
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
 
 <?php get_footer(); ?>

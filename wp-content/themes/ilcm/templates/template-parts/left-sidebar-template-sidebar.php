@@ -4,7 +4,10 @@
 	$cat_name = $category[0]->cat_name; 
 	if ($cat_name == 'Immigration Resource') {
 		dynamic_sidebar( 'sidebar-immigration-resources' );
-	} else if ($cat_name == 'Client Service') {
+	} else if ($cat_name == 'Immigration Help') {
 		dynamic_sidebar( 'sidebar-services' );
+	}
+	else if ($cat_name == 'DACA') {
+		dynamic_sidebar( 'sidebar-daca' );
 	}
 ?>
