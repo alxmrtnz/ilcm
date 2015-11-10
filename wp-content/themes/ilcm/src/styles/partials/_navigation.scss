@@ -3,7 +3,7 @@
    ========================================================================== */
 
 $hover-time: .25s;
-$hover-nav-bg: #E6E9EA;
+$hover-nav-bg: #F7F7F7;
 
 header.nav-bar {
 	position: absolute;
@@ -13,9 +13,11 @@ header.nav-bar {
 	background: none;
 	transition: all .25s;
 
+
 	&:hover, &.nav--not-home {
 		background: #EEF1F2;
 		color: $black;
+		border-bottom: 1px solid $line-main;
 
 		.nav-bar__org-logo a object {
 			fill: $black;
@@ -52,8 +54,9 @@ header.nav-bar.nav--not-home {
 
 .nav-bar__color-bar {
 	height: 5px;
-	background-image: url(dist/assets/images/color-strip.png);
-	background-repeat: repeat-x;
+	background: $primary-color;
+	// background-image: url(dist/assets/images/color-strip.png);
+	// background-repeat: repeat-x;
 }
 
 .nav-bar__org-logo-container {
@@ -124,9 +127,9 @@ header.nav-bar.nav--not-home {
 	text-align: right;
 
 	li {
-		font-family: $serif;
-		font-size: 18px;
-		letter-spacing: 1.5px;
+		font-family: $sans-serif;
+		font-size: 16px;
+		letter-spacing: 1px;
 		line-height: 21px;
 		list-style: none;
 		display: inline-block;

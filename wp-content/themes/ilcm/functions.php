@@ -111,6 +111,7 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 // additional image sizes
 // delete the next line if you do not need additional image sizes
 add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
+add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels tall
 
 
 
@@ -160,7 +161,7 @@ function ilcm_register_sidebars() {
             'description' => __( 'Widgets placed here will go in the left sidebar of the "Immigration Services" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
-            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
+            'before_title' => '<h4 class="sidebar-nav__title">',
             'after_title' => '</h4>'
         )
     );
@@ -173,7 +174,7 @@ function ilcm_register_sidebars() {
             'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
-            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
+            'before_title' => '<h4 class="sidebar-nav__title">',
             'after_title' => '</h4>'
         )
     );
@@ -186,7 +187,7 @@ function ilcm_register_sidebars() {
             'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
-            'before_title' => '<h4 class="sidebar-nav__title heading--micro">',
+            'before_title' => '<h4 class="sidebar-nav__title">',
             'after_title' => '</h4>'
         )
     );

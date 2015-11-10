@@ -4,31 +4,38 @@
 
 .sidebar-nav {
 	margin-right: 20px;
-	padding: 0px 25px;
-
+	// margin-top: 50px;
+	padding: 0px;
+	text-transform: uppercase;
+	font-family: $sans-serif-condensed;
 
 	div {
 		ul {
 			padding: 0px;
-
+			margin: 0px;
 			li {
 				list-style: none;
-				margin-bottom: 10px;
-				padding-left: 15px;
-				font-size: 16px;
+				padding: 9.8px 0px;
+				font-size: 14px;
+				border-top: 1px solid $line-main;
+
 				a {
-					font-family: $sans-serif;
+					
 					text-decoration: none;
-					color: $black;
+					color: $aluminum;
+					
 
 					&:hover {
-						text-decoration: underline;
-						color: $secondary-color;
+						
+						color: $primary-color;
 					}
 				}
 
 				&.current_page_item {
 					font-weight: bold;
+					a {
+						color: $primary-color;
+					}
 					// text-decoration: underline;
 				}
 
@@ -38,7 +45,10 @@
 }
 
 .sidebar-nav__title {
-
+	font-family: $sans-serif-display;
+	font-weight: normal;
+	font-size:26px;
+	margin-bottom: 10px;
 }
 
 .heading--sidebar-parent {

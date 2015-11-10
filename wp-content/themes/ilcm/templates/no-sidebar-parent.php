@@ -54,15 +54,16 @@ get_header(); ?>
 
 				<?php if ( $query->have_posts() ) : ?>
 
-					<!-- pagination here -->
+				
 
 					<!-- the loop -->
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<h2><?php the_title(); ?></h2>
+						<h3><?php the_field('subtitle');?></h3>
+						<?php echo get_the_post_thumbnail( $page->ID, 'thumbnail-medium' ); ?>
 					<?php endwhile; ?>
 					<!-- end of the loop -->
 
-					<!-- pagination here -->
 
 					<?php wp_reset_postdata(); ?>
 

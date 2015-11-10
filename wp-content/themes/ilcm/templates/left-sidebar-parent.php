@@ -21,7 +21,7 @@ get_header(); ?>
 						<?php the_title(); ?>
 					</h2> -->
 
-					<h1 class="heading--large heading--bold heading--sidebar-parent">
+					<h1 class="heading--large  heading--sidebar-parent">
 						<?php the_title(); ?>
 					</h1>
 					<h3 class="heading--small heading--sub-gray">
