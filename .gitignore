@@ -1,15 +1,6 @@
-*.log
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/wp-cache-config.php
+# Directories
 node_modules/
-dist/
-wp-content/themes/ilcm/style.css
+.sass-cache/
+
+# Specific Files
+.DS_Store

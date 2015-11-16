@@ -5,6 +5,7 @@
 
 // Load plugins
 var gulp = require('gulp'),
+    browserify = require('browserify'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
@@ -16,7 +17,9 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
-    del = require('del');
+    del = require('del'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer');
 
 // Styles
 gulp.task('styles', function() {
@@ -30,13 +33,11 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('./src/scripts/**/*.js')
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('./dist/assets/scripts'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
+  return browserify('./src/scripts/main.js')
+    .bundle()
+    .pipe(source('main.min.js'))
+    .pipe(buffer())
+//    .pipe(uglify())
     .pipe(gulp.dest('./dist/assets/scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
