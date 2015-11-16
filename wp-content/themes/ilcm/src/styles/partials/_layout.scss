@@ -2,6 +2,8 @@
    Layout
    ========================================================================== */
 
+$image-border: 1px solid #e6e6e6;
+
 .page {
 	//max-width: $pageWidth;
 	margin: 0px auto;
@@ -31,3 +33,9 @@
 	clear: both;
 	width: 100%;
 }
+
+
+.hr--margin-large {
+	margin: 3em 0px;
+}
+

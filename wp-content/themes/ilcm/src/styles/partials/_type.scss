@@ -48,18 +48,23 @@ body {
 }
 
 h1 { 
+	clear: both;
+	font-family: $sans-serif-display;
+	text-shadow: 2px 2px 0px rgba(0,0,0,.1);
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 h2 { 
 }
 h3 { }
 h4 { }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: $sans-serif-display;
+	font-family: $sans-serif-condensed;
 	margin: 0;
-	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: bold;
 }
 
 
@@ -94,10 +99,10 @@ ul, ol {
 
 .heading--large {
 	font-weight: 300;
-	font-size: 38px;
+	font-size: 44px;
 	color: $jet;
 	letter-spacing: 0.2px;
-	line-height: 44px;
+	line-height: 48px;
 }
 
 .heading--medium {
@@ -138,13 +143,14 @@ ul, ol {
 	text-align: center;
 }
 
-p {
+p, .paragraph--standard, .paragraph--standard ul {
 	font-family: $serif;
 	font-size: 16px;
 	color: $pebble;
 	margin-bottom: 25px;
 	margin-top: .625em;
 	letter-spacing: .1px;
+	line-height: 25px;
 }
 
 .p--standard {

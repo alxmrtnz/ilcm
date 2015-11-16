@@ -25,7 +25,7 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="small-12 columns">
-				<h1 class="heading--micro text--centered">
+				<h1 class="heading--large text--centered title--resources">
 					<?php the_title(); ?>
 				</h1>
 				<h2 class="heading--medium text--centered services-subtitle">

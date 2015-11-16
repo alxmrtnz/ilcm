@@ -1,0 +1,33 @@
+.sidebar-right-content-left {
+	border-right: 1px solid $line-main;
+	padding-right: 50px;
+}
+
+.content-left__intro-content {
+	margin-bottom: 70px;
+}
+.no-sidebar-main-content {
+	
+}
+
+.presentation-thumbnail {
+	text-align: center;
+	
+	img {
+		width: 100%;
+		padding: 10px;
+		border: $image-border;
+	}
+}
+
+.presentation-summary {
+	padding-left: 25px;
+	border-left: 8px solid $vapor;
+	margin-bottom: 60px;
+}
+
+.presentation-description {
+	ul {
+		padding-left:20px;
+	}
+}
