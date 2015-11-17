@@ -161,12 +161,16 @@ header.nav-bar.nav--not-home {
 
 //Sub Menus
 
-.top-menu__sub-menu {
+.nav-bar__sub-menu {
 	display: none;
 	background: $hover-nav-bg;
 	position: absolute;
 	left: 0;
 	right: 0;
+}
+
+.sub-menu--immigration-help {
+	// display: none;
 }
 
 #menu-item-114:hover {

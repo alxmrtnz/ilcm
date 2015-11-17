@@ -77,6 +77,7 @@
 				            wp_nav_menu($topMenu);
 
 				         ?>
+				   
 					</ul>
 			</div>
 			
@@ -120,14 +121,291 @@
 		         ?>
 		    </ul>
 		</nav>
-	
-		<div class="top-menu__sub-menu" data-name="services">
-			<div class="row">
-				<div class="medium-8 medium-offset-4 columns">
-					Client Services
+
+		<div class="sub-menu__marquee">
+			<div class="nav-bar__sub-menu sub-menu--immigration-help" data-name="immigration-help">
+				<div class="row">
+					<div class="medium-8 medium-offset-4 columns">
+						Immigration Help
+
+						<ul class="immigration-help">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Services Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>		
+
+					</div>
 				</div>
-			</div>
+			</div> <!-- end .sub-menu- -immigration-help -->
+			<div class="nav-bar__sub-menu sub-menu--resources" data-name="resources">
+				<div class="row">
+					<div class="medium-8 medium-offset-4 columns">
+						Resources
+
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>	
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>		
+
+					</div>
+				</div>
+			</div> <!-- end .sub-menu- -resources -->
+			<div class="nav-bar__sub-menu sub-menu--work" data-name="work">
+				<div class="row">
+					<div class="medium-8 medium-offset-4 columns">
+						Resources
+
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>	
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>		
+
+					</div>
+				</div>
+			</div> <!-- end .sub-menu- -work -->
+			<div class="nav-bar__sub-menu sub-menu--news" data-name="news">
+				<div class="row">
+					<div class="medium-8 medium-offset-4 columns">
+						Resources
+
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>	
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>		
+
+					</div>
+				</div>
+			</div> <!-- end .sub-menu- -news -->
+			<div class="nav-bar__sub-menu sub-menu--events" data-name="events">
+				<div class="row">
+					<div class="medium-8 medium-offset-4 columns">
+						Resources
+
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>	
+						<ul class="resources-sub-menu__immigration-resources">
+							<?php
+
+				            $menu = array(
+				                'theme_location'  => '',
+				                'menu'            => 'Immigration Resources Menu',
+				                'container'       => false,
+				                'container_class' => '',
+				                'container_id'    => '',
+				                'menu_class'      => 'mainMenuList',
+				                'menu_id'         => 'nav',
+				                'echo'            => true,
+				                'fallback_cb'     => 'wp_page_menu',
+				                'before'          => '',
+				                'after'           => '',
+				                'link_before'     => '',
+				                'link_after'      => '',
+				                'items_wrap'      => '%3$s',
+				                'depth'           => 0,
+				                'walker'          => ''
+				            );
+
+				            wp_nav_menu($menu);
+
+				         ?>
+						</ul>		
+
+					</div>
+				</div>
+			</div> <!-- end .sub-menu- -news -->
 		</div>
+	
+		
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

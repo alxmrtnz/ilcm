@@ -716,12 +716,20 @@ body {
   font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   clear: both;
   font-family: "league_gothicregular", sans-serif;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
   margin: 0;
   text-transform: uppercase;
   font-weight: 300;
+}
+
+h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  font-weight: bold;
 }
 
 a,
@@ -745,10 +753,10 @@ ul, ol {
 
 .heading--large {
   font-weight: 300;
-  font-size: 38px;
+  font-size: 44px;
   color: #353535;
   letter-spacing: 0.2px;
-  line-height: 44px;
+  line-height: 48px;
 }
 
 .heading--medium {
@@ -789,13 +797,14 @@ ul, ol {
   text-align: center;
 }
 
-p {
+p, .paragraph--standard, .paragraph--standard ul {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 16px;
   color: #4b525d;
   margin-bottom: 25px;
   margin-top: .625em;
   letter-spacing: .1px;
+  line-height: 25px;
 }
 
 .text--sans {
@@ -849,6 +858,10 @@ address {
 .site-footer {
   clear: both;
   width: 100%;
+}
+
+.hr--margin-large {
+  margin: 3em 0px;
 }
 
 /* ==========================================================================
@@ -973,7 +986,7 @@ header.nav-bar.nav--not-home {
   padding: 20px 18px 17px 18px;
 }
 
-.top-menu__sub-menu {
+.nav-bar__sub-menu {
   display: none;
   background: #F7F7F7;
   position: absolute;
@@ -1183,6 +1196,10 @@ object {
   background-size: 100%;
 }
 
+.title--resources {
+  margin-bottom: 20px;
+}
+
 .child-grid__feature {
   margin-top: 65px;
   text-align: center;
@@ -1202,6 +1219,7 @@ object {
   padding: 5px;
   border: 1px solid #e6e6e6;
   background: #FFFFFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .child-grid__feature .child-grid__image:hover ~ .child-grid__title {
   text-decoration: underline;
@@ -1430,6 +1448,34 @@ ul.slick-dots li button:before {
 /* ==========================================================================
    Blog pages
    ========================================================================== */
+.sidebar-right-content-left {
+  border-right: 1px solid #eaeaea;
+  padding-right: 50px;
+}
+
+.content-left__intro-content {
+  margin-bottom: 70px;
+}
+
+.presentation-thumbnail {
+  text-align: center;
+}
+.presentation-thumbnail img {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+}
+
+.presentation-summary {
+  padding-left: 25px;
+  border-left: 8px solid #EEF1F2;
+  margin-bottom: 60px;
+}
+
+.presentation-description ul {
+  padding-left: 20px;
+}
+
 /* ==========================================================================
    Left Sidebar Template
    ========================================================================== */

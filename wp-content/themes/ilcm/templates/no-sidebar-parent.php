@@ -69,7 +69,7 @@ get_header(); ?>
 									<?php echo get_the_post_thumbnail( $page->ID, 'thumbnail-medium' ); ?>
 								</div>
 							</div> -->
-							<div class="small-12 columns ">
+							<div class="small-12 columns">
 								<div class="presentation-summary">
 									<h2 class="heading--medium heading--bold"><?php the_title(); ?></h2>
 									<h3 class="heading--small heading--sub-gray"><?php the_field('subtitle');?>
