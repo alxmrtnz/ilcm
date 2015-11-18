@@ -184,7 +184,7 @@ function ilcm_register_sidebars() {
         array(
             'id' => 'sidebar-daca',
             'name' => __( 'DACA Deferred Action Sidebar', 'ilcm' ),
-            'description' => __( 'Widgets placed here will go in the left sidebar of the "Services" pages.', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "DACA Deferred Action" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
             'before_title' => '<h4 class="sidebar-nav__title">',

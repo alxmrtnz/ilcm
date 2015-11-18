@@ -15,7 +15,7 @@ get_header(); ?>
 				<?php  require('template-parts/left-sidebar-template-sidebar.php');
 				?>
 			</div> <!-- end .columns -->
-			<div class="small-12 medium-7 end columns">
+			<div class="small-12 medium-8 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<!-- <h2 class="heading--micro">
 						<?php the_title(); ?>

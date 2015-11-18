@@ -50,6 +50,7 @@
 	" role="banner">
 		<div class="nav-bar__color-bar">
 		</div>
+
 		<nav class="nav-bar__top-menu-bg">
 			<div class="row ">
 					<ul class="nav-bar__top-menu columns small-12">
@@ -77,7 +78,9 @@
 				            wp_nav_menu($topMenu);
 
 				         ?>
-				   
+				   		<li>
+				   			<?php echo do_shortcode('[prisna-google-website-translator]'); ?>
+				   		</li>
 					</ul>
 			</div>
 			
@@ -206,7 +209,7 @@
 
 				            $menu = array(
 				                'theme_location'  => '',
-				                'menu'            => 'Immigration Resources Menu',
+				                'menu'            => 'DACA Deferred Action',
 				                'container'       => false,
 				                'container_class' => '',
 				                'container_id'    => '',
