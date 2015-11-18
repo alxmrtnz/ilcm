@@ -963,6 +963,7 @@ header.nav-bar.nav--not-home {
 }
 
 .nav-bar__main-menu {
+  font-size: 0;
   margin: 0px;
   text-align: right;
 }
@@ -992,6 +993,9 @@ header.nav-bar.nav--not-home {
   position: absolute;
   left: 0;
   right: 0;
+}
+.nav-bar__sub-menu.is-shown {
+  display: block;
 }
 
 /* ==========================================================================
