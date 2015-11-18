@@ -828,6 +828,15 @@ address {
   margin: 0 0 1.5em;
 }
 
+.img-bordered-small {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -993,8 +1002,40 @@ header.nav-bar.nav--not-home {
   position: absolute;
   left: 0;
   right: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 30px 20px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
 }
-.nav-bar__sub-menu.is-shown {
+
+ul.sub-nav__ul {
+  padding: 0px;
+  margin: 0px;
+}
+ul.sub-nav__ul li {
+  list-style: none;
+  padding: 3.8px 0px;
+  font-size: 14px;
+}
+ul.sub-nav__ul li a {
+  text-decoration: none;
+  color: #b2b8bd;
+}
+ul.sub-nav__ul li a:hover {
+  color: #5FA3B8;
+}
+ul.sub-nav__ul li.current_page_item {
+  font-weight: bold;
+}
+ul.sub-nav__ul li.current_page_item a {
+  color: #5FA3B8;
+}
+
+.sub-menu__featured-img-left {
+  height: 100%;
+}
+
+.sub-menu--resources.is-shown {
   display: block;
 }
 
