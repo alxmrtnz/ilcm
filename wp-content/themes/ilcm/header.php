@@ -79,11 +79,15 @@
 
 				         ?>
 				   		<li>
-				   			<?php echo do_shortcode('[prisna-google-website-translator]'); ?>
+				   			<div id="google_translate_element"></div>
 				   		</li>
 					</ul>
 			</div>
-			
+			<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 				
 		</nav>
 		

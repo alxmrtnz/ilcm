@@ -1,0 +1,53 @@
+
+.goog-te-gadget-simple {
+	padding-left: 10px;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+	color: $white !important;
+}
+
+.nav-bar:hover {
+	.goog-te-gadget-simple .goog-te-menu-value {
+		color: $black !important;
+	}
+}
+
+.goog-te-gadget-simple {
+	position: relative;
+	background: none !important;
+	background-color: none !important;
+	border: none !important;
+
+	img {
+		position: absolute;
+		left: 0px;
+		top: 10px;
+		border-radius: 20px;
+	}
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+	color: $white !important;
+
+	&:nth-child(3) {
+		display: none !important;
+	}
+
+	&:last-child {
+		font-size: 8px !important;
+		margin-left: 7px !important;
+	}
+}
+
+.nav-bar:hover {
+	.goog-te-gadget-simple .goog-te-menu-value span {
+		color: $black !important;
+	}
+}
+
+.goog-te-menu-value {
+	font-size: 12px !important;
+	font-family: $sans-serif !important;
+	letter-spacing: 1.89px !important;
+}
