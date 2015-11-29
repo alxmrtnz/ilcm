@@ -4,14 +4,9 @@
 }
 
 .goog-te-gadget-simple .goog-te-menu-value {
-	color: $white !important;
+	color: $white;
 }
 
-.nav-bar:hover {
-	.goog-te-gadget-simple .goog-te-menu-value {
-		color: $black !important;
-	}
-}
 
 .goog-te-gadget-simple {
 	position: relative;
@@ -40,7 +35,7 @@
 	}
 }
 
-.nav-bar:hover {
+.nav-bar:hover, .nav--not-home {
 	.goog-te-gadget-simple .goog-te-menu-value span {
 		color: $black !important;
 	}

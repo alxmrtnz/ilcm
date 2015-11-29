@@ -10,4 +10,7 @@
 	else if ($cat_name == 'DACA') {
 		dynamic_sidebar( 'sidebar-daca' );
 	}
+	else if ($cat_name == 'About ILCM') {
+		dynamic_sidebar( 'sidebar-about-us' );
+	}
 ?>
