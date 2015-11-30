@@ -116,40 +116,9 @@ add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels t
 
 
 
-//Defining Custom Post Types
-// Website
 
-function revcon_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'News Posts';
-    $submenu['edit.php'][5][0] = 'News Posts';
-    $submenu['edit.php'][10][0] = 'Add News Post';
-    $submenu['edit.php'][16][0] = 'News Post Tags';
-    echo '';
-}
-function revcon_change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'News Posts';
-    $labels->singular_name = 'News Post';
-    $labels->add_new = 'Add News';
-    $labels->add_new_item = 'Add News';
-    $labels->edit_item = 'Edit News';
-    $labels->new_item = 'News';
-    $labels->view_item = 'View News';
-    $labels->search_items = 'Search News';
-    $labels->not_found = 'No News found';
-    $labels->not_found_in_trash = 'No News found in Trash';
-    $labels->all_items = 'All News';
-    $labels->menu_name = 'News';
-    $labels->name_admin_bar = 'News';
-}
- 
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
-
-
+//////////////////////////////////////////////////////////////////////////////
+//Defining Sidebars for the Site
 
 function ilcm_register_sidebars() {
 
@@ -209,7 +178,26 @@ function ilcm_register_sidebars() {
 }
 add_action( 'widgets_init', 'ilcm_register_sidebars' );
 
+//end sidebars
+////////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////////////////
+//Defining Custom Post Types
+
+
+// Remove default "Posts" from the wordpress menu
+
+// function remove_menus () {
+// global $menu;
+//     $restricted = array(__('Posts'));
+//     end ($menu);
+//     while (prev($menu)){
+//         $value = explode(' ',$menu[key($menu)][0]);
+//         if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
+//     }
+// }
+// add_action('admin_menu', 'remove_menus');
 
 
 function custom_post_presentation() {
@@ -242,33 +230,77 @@ function custom_post_presentation() {
 add_action( 'init', 'custom_post_presentation' );
 
 
-// function custom_post_type_news() {
-// 	$labels = array(
-// 		'name'               => _x( 'News Posts', 'post type general name' ),
-// 		'singular_name'      => _x( 'News Post', 'post type singular name' ),
-// 		'add_new'            => _x( 'Add New', 'book' ),
-// 		'add_new_item'       => __( 'Add New News Post' ),
-// 		'edit_item'          => __( 'Edit News Post' ),
-// 		'new_item'           => __( 'New News Post' ),
-// 		'all_items'          => __( 'All News Posts' ),
-// 		'view_item'          => __( 'View News Post' ),
-// 		'search_items'       => __( 'Search News Posts' ),
-// 		'not_found'          => __( 'No news posts found' ),
-// 		'not_found_in_trash' => __( 'No news posts found in the Trash' ), 
-// 		'parent_item_colon'  => '',
-// 		'menu_name'          => 'News Post'
-// 	);
-// 	$args = array(
-// 		'labels'        => $labels,
-// 		'description'   => 'All of my news posts',
-// 		'public'        => true,
-// 		'menu_position' => 6,
-// 		'supports'      => array( 'title', 'editor', 'thumbnail' ),
-// 		'has_archive'   => true,
-// 	);
-// 	register_post_type( 'news-post', $args );	
-// }
-// add_action( 'init', 'custom_post_type_news' );
+function custom_post_type_news() {
+	$labels = array(
+		'name'               => _x( 'News Posts', 'post type general name' ),
+		'singular_name'      => _x( 'News Post', 'post type singular name' ),
+		'add_new'            => _x( 'Add New', 'book' ),
+		'add_new_item'       => __( 'Add New News Post' ),
+		'edit_item'          => __( 'Edit News Post' ),
+		'new_item'           => __( 'New News Post' ),
+		'all_items'          => __( 'All News Posts' ),
+		'view_item'          => __( 'View News Post' ),
+		'search_items'       => __( 'Search News Posts' ),
+		'not_found'          => __( 'No news posts found' ),
+		'not_found_in_trash' => __( 'No news posts found in the Trash' ), 
+		'parent_item_colon'  => '',
+		'menu_name'          => 'News Post'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'All of my news posts',
+		'public'        => true,
+		'menu_position' => 6,
+		'supports'      => array( 'title', 'editor', 'thumbnail' ),
+		'has_archive'   => true,
+	);
+	register_post_type( 'news-post', $args );	
+}
+add_action( 'init', 'custom_post_type_news' );
+
+
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_topics_hierarchical_taxonomy', 0 );
+
+//create a custom taxonomy name it topics for your posts
+
+function create_topics_hierarchical_taxonomy() {
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+  $labels = array(
+    'name' => _x( 'News Topics', 'taxonomy general name' ),
+    'singular_name' => _x( 'News Topic', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search News Topics' ),
+    'all_items' => __( 'All News Topics' ),
+    'parent_item' => __( 'Parent News Topic' ),
+    'parent_item_colon' => __( 'Parent News Topic:' ),
+    'edit_item' => __( 'Edit News Topic' ), 
+    'update_item' => __( 'Update News Topic' ),
+    'add_new_item' => __( 'Add New News Topic' ),
+    'new_item_name' => __( 'New News Topic Name' ),
+    'menu_name' => __( 'Topics' ),
+  );    
+
+// Now register the taxonomy
+
+  register_taxonomy(
+    'topics', //this line registers the taxonomy name
+    'news-post', //this line determines what kind of post type (or custom post type) to display the taxonomy's meta box on the wordpress backend 
+
+    array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'topic' ),
+    )
+    );
+
+}
 
 
 
