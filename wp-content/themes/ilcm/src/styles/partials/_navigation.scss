@@ -183,6 +183,7 @@ header.nav-bar.nav--not-home {
 
 	@media #{$large-up} {
 		background-color: transparent;
+		height: 0;
 	}
 }
 

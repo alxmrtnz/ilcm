@@ -5,3 +5,4 @@ node_modules/
 # Specific Files
 .DS_Store
 *.min.js
+*.css
