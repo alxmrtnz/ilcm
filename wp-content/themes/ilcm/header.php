@@ -52,7 +52,7 @@
 		</div>
 
 		<nav class="nav-bar__top-menu-bg">
-			<div class="row ">
+			<div class="row show-for-large-up">
 					<ul class="nav-bar__top-menu columns small-12">
 						<?php
 
@@ -92,16 +92,17 @@ function googleTranslateElementInit() {
 		</nav>
 		
 		<nav class="nav-bar__main-menu-container row">
-			<div class="nav-bar__org-logo-container columns small-12 medium-4">
-				<div class="nav-bar__org-logo">
-					<a href="/">
-						<?php get_template_part( 'nav_logo' );  // Navigation and Logo (nav_logo.php) ?>
-					</a>
+			<div class="nav-bar__main-menu-bg">
+				<div class="nav-bar__org-logo-container columns small-10 medium-4">
+					<div class="nav-bar__org-logo">
+						<a href="/">
+							<?php get_template_part( 'nav_logo' );  // Navigation and Logo (nav_logo.php) ?>
+						</a>
+					</div>
 				</div>
-				
-				
+				<button class="nav-bar__mobile-open hide-for-large-up small-2"></button>
 			</div>
-			<ul class="nav-bar__main-menu columns small-12 medium-8">
+			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 large-8 small-collapse">
 				<?php
 
 		            $menu = array(
@@ -115,7 +116,7 @@ function googleTranslateElementInit() {
 		                'echo'            => true,
 		                'fallback_cb'     => 'wp_page_menu',
 		                'before'          => '',
-		                'after'           => '',
+		                'after'           => '<button class="nav-bar__main-menu-open-sub-menu hide-for-large-up"></button>',
 		                'link_before'     => '',
 		                'link_after'      => '',
 		                'items_wrap'      => '%3$s',

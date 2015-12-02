@@ -22,6 +22,8 @@ Tags:
 @import "partials/normalize";
 
 // Globals
+@import "foundation";
+@import "bourbon/bourbon";
 @import "partials/h5bp-global";
 @import "partials/general";
 @import "partials/grid";
@@ -64,4 +66,3 @@ Tags:
 //Shame
 @import "partials/shame"; 
 
-@import "foundation";
