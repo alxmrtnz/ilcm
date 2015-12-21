@@ -25,8 +25,10 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="small-12 columns">
-				<h1 class="heading--large text--centered title--resources">
-					<?php the_title(); ?>
+				<h1 class="heading--large heading--centered title--resources">
+					<span>
+						<?php the_title(); ?>
+					</span> 
 				</h1>
 				<h2 class="heading--medium text--centered services-subtitle">
 					<?php the_field('subtitle'); ?>

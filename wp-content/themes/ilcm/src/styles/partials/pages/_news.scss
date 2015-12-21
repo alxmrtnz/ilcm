@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Page:  News Landing
+   ========================================================================== */
+
+.heading--featured-news {
+	font-size: 36px;
+	margin-bottom: 20px;
+	line-height: 44px;
+	letter-spacing: 0;
+}
+
+.featured-article {
+	position: relative;
+
+	&:hover {
+		.heading--featured-news {
+			text-decoration: underline;
+		}
+	}
+}
+
+.featured-article__meta {
+	position: absolute;
+	bottom: 0px;
+	background: $body-bg;
+	padding: 30px;
+	width: 80%;
+}

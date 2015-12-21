@@ -112,6 +112,7 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 // delete the next line if you do not need additional image sizes
 add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
 add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels tall
+add_image_size( 'featured-news', 750, 450 ); //750 pixels wide, 450 pixels tall
 
 
 
@@ -252,7 +253,7 @@ function custom_post_type_news() {
 		'public'        => true,
 		'menu_position' => 6,
 		'supports'      => array( 'title', 'editor', 'thumbnail' ),
-		'has_archive'   => true,
+		'has_archive'   => true
 	);
 	register_post_type( 'news-post', $args );	
 }
@@ -301,8 +302,22 @@ function create_topics_hierarchical_taxonomy() {
     );
 
 }
-
-
+///////////////////////////////////////////
+// Function to delete and reset the categories for news posts. 
+//Uncomment this, save, and reload a page on the site to run. 
+// After running, make sure your categories have been deleted and 
+// then comment this out again or it will delete and clear any new 
+// categories added any time a page is reloaded.
+/////////////////////////////////////////////
+// function sjc_delete_terms() {
+//      if ( is_admin() ) {
+//           $terms = get_terms( 'topics', array( 'fields' => 'ids', 'hide_empty' => false ) );
+//           foreach ( $terms as $value ) {
+//                wp_delete_term( $value, 'topics' );
+//           }
+//      }
+// }
+// add_action( 'init', 'sjc_delete_terms' );
 
 
 

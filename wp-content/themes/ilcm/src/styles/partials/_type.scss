@@ -130,13 +130,37 @@ ul, ol {
 	color: #A0AAAD;
 }
 .heading--micro {
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 14px;
-	color: $primary-color;
-	letter-spacing: 2.21px;
+	color: $phasma;
+	// letter-spacing: 2.21px;
 	line-height: 17px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
+}
+
+.heading--centered {
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+
+	span {
+		background: $body-bg;
+		z-index: 100;
+		padding: 0 15px;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		height: 5px;
+		border-bottom: 1px solid $line-main;
+		border-top: 1px solid $line-main;
+		top: 19px;
+		width: 100%;
+		left: 0;
+		z-index: -1;
+	}
 }
 
 .text--centered {
