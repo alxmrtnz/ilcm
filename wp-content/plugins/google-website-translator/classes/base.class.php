@@ -256,8 +256,8 @@ class PrisnaGWTPremiumField extends PrisnaGWTField {
 			'content' => '/admin/premium.tpl',
 			'meta_tag_rules' => array(
 				array(
-					'expression' => time() < strtotime('2015-12-02 00:00:00'),
-					'tag' => 'black_friday'
+					'expression' => time() < strtotime('2016-01-02 00:00:00'),
+					'tag' => 'banner'
 				)
 			)
 		), $_html_encode);

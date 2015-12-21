@@ -8,6 +8,7 @@ class PrisnaGWTAdmin {
 			return;
 
 		add_action('admin_init', array('PrisnaGWTAdmin', '_initialize'));
+		add_action('admin_head', array('PrisnaGWTAdmin', '_remove_messages'));
 		add_action('plugins_loaded', array('PrisnaGWTAdmin', 'initializeMenus'));
 
 	}
@@ -68,6 +69,13 @@ class PrisnaGWTAdmin {
 		if (PrisnaGWTAdminEvents::isLoadingAdminPage() || strpos(PrisnaGWTCommon::getAdminWidgetsUrl(), $_SERVER['REQUEST_URI']) !== false)
 			wp_enqueue_style('prisna-gwt-admin', PRISNA_GWT__CSS .'/admin.css', false, PrisnaGWTConfig::getVersion(), 'screen');
 
+	}
+	
+	public static function _remove_messages() {
+	
+		if (PrisnaGWTAdminEvents::isLoadingAdminPage() || strpos(PrisnaGWTCommon::getAdminWidgetsUrl(), $_SERVER['REQUEST_URI']) !== false)	
+			PrisnaGWTCommon::renderCSS('.update-nag,div.updated,div.error{display:none}');
+		
 	}
 	
 	public static function initializeMenus() {

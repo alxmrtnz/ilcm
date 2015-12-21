@@ -400,7 +400,38 @@ class PrisnaGWTConfig {
 				'dependence_show_value' => 'true',
 				'group' => 2
 			),
+
+			'callbacks_heading' => array(
+				'title_message' => __('Javascript callbacks', 'prisna-gwt'),
+				'description_message' => '',
+				'value' => 'false',
+				'id' => 'prisna_callbacks_heading',
+				'type' => 'heading',
+				'group' => 2
+			),
 			
+			'on_before_load' => array(
+				'title_message' => __('On before load', 'prisna-gwt'),
+				'description_message' => __('Defines a javascript routine that runs before the translator is loaded.', 'prisna-gwt'),
+				'id' => 'prisna_on_before_load',
+				'type' => 'textarea',
+				'value' => '',
+				'dependence' => 'callbacks_heading',
+				'dependence_show_value' => 'true',
+				'group' => 2
+			),
+
+			'on_after_load' => array(
+				'title_message' => __('On after load', 'prisna-gwt'),
+				'description_message' => __('Defines a javascript routine that runs after the translator is loaded.', 'prisna-gwt'),
+				'id' => 'prisna_on_after_load',
+				'type' => 'textarea',
+				'value' => '',
+				'dependence' => 'callbacks_heading',
+				'dependence_show_value' => 'true',
+				'group' => 2
+			),
+
 			'templates_heading' => array(
 				'title_message' => __('Templates', 'prisna-gwt'),
 				'description_message' => '',

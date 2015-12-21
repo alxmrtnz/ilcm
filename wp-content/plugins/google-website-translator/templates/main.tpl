@@ -57,6 +57,13 @@ body {
 {{ custom_css }}
 -->
 </style>
+{{ on_before_load.empty.false:begin }}
+<script type="text/javascript">
+/*<![CDATA[*/
+{{ on_before_load }}
+/*]]>*/
+</script>
+{{ on_before_load.empty.false:end }}
 {{ has_flags.true:begin }}
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -108,7 +115,8 @@ var PrisnaGWT = {
 /*<![CDATA[*/
 function initializeGoogleTranslateElement() {
 	new google.translate.TranslateElement({
-{{ options_formatted }}	}{{ has_container.true:begin }}, "google_translate_element"{{ has_container.true:end }});
+{{ options_formatted }}	}{{ has_container.true:begin }}, "google_translate_element"{{ has_container.true:end }});{{ on_after_load.empty.false:begin }}
+{{ on_after_load }}{{ on_after_load.empty.false:end }}
 }
 /*]]>*/
 </script>

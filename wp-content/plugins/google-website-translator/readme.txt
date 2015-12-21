@@ -1,9 +1,9 @@
 === Google Website Translator by Prisna.net ===
 Contributors: Prisna
 Tags: translation plugin, automatic translation, machine translation, automatic translate, google website translator, google translator, google language translator, language translate, language translator, multi language, translate, translation
-Stable tag: 1.1
+Stable tag: 1.2
 Requires at least: 3.3
-Tested up to: 4.3
+Tested up to: 4.4
 License: GPL2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,12 @@ Support includes:
 
 == Changelog ==
 
+= 1.2 =
+Release date: December 10th, 2015
+
+* Ability to define a new javascript function: on before load.
+* Ability to define a new javascript function: on after load.
+
 = 1.1 =
 Release date: November 19th, 2015
 
@@ -84,7 +90,7 @@ Release date: November 19th, 2015
 * Higher quality flags.
 
 = 1.0 =
-Initial release date: September 29th, 2014
+Release date: September 29th, 2014
 
 == Upgrade Notice ==
 

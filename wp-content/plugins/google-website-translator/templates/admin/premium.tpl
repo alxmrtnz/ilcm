@@ -417,19 +417,19 @@
 		<div class="prisna_gwt_field prisna-promote-wrapper">
 
 			<table cellpadding="0" cellspacing="0" class="prisna-promote">
-{{ black_friday.true:begin }}
+{{ banner.true:begin }}
 				<tr>
 					<td class="prisna-sale">
 						<table cellpadding="0" cellspacing="0" class="prisna-center prisna-sale-wrapper">
 							<tr>
 								<td class="prisna-bg-green">
-									<a href="https://www.prisna.net/get-the-translation-plugin/?d=2a77e8c7e292a519949930f6034af1f4" target="_blank"><img src="{{ images_path }}/banner.png" /></a>
+									<a href="https://www.prisna.net/get-the-translation-plugin/?d=7b5c5e4727d5f06d0cfcb95a82276db2" target="_blank"><img src="{{ images_path }}/banner.png" /></a>
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
-{{ black_friday.true:end }}
+{{ banner.true:end }}
 				<tr>
 					<td class="prisna-logo">
 
