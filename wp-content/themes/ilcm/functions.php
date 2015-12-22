@@ -112,7 +112,7 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 // delete the next line if you do not need additional image sizes
 add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
 add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels tall
-add_image_size( 'featured-news', 750, 450 ); //750 pixels wide, 450 pixels tall
+add_image_size( 'featured-news', 900, 500 ); //750 pixels wide, 450 pixels tall
 
 
 

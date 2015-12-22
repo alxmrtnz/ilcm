@@ -10,6 +10,9 @@
 }
 
 .featured-article {
+	border-bottom: 5px solid $line-main;
+	margin-bottom: 50px;
+	padding-bottom: 20px;
 	position: relative;
 
 	&:hover {
@@ -19,10 +22,31 @@
 	}
 }
 
+.featured-article__img {
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+}
+
 .featured-article__meta {
 	position: absolute;
 	bottom: 0px;
 	background: $body-bg;
 	padding: 30px;
-	width: 80%;
+	width: 100%;
+}
+
+.articles-block__title-container {
+	border-bottom: 1px solid $line-main;
+}
+
+.articles-block__title {
+	display: inline-block;
+}
+
+.articles-block__view-all {
+	text-align: right;
+	float: right;
 }
