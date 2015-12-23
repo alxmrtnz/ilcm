@@ -1,13 +1,14 @@
 
 	<?php 
-
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		// args
 		$args = array(
 			'numberposts'	=> '1',
 			'post_type'		=> 'news-post',
 			// 'meta_key'		=> 'featured_news_article',
 			// 'meta_value'	=> 'Not Featured', //1 for "True". Checkbox is checked in Wordpress
-			'showposts' 	=> 10
+			'posts_per_page' 	=> 2,
+			'paged' 		=> $paged
 		);
 
 		// query
@@ -50,8 +51,12 @@
 			</div><!--  end .featured-article -->
 				
 		<?php endwhile; ?>
+		<div class="navigation">
+  <div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
+  <div class="alignright"><?php next_posts_link('More &raquo;') ?></div>
+  </div>
 	<?php endif; ?>
 
-	<?php kriesi_pagination(); ?>
+	
 
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
