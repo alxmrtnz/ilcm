@@ -1,4 +1,3 @@
-<!-- <h3 class="heading--extra-small heading--condensed heading--featured-stories-label">Featured Articles</h3> -->
 
 	<?php 
 
@@ -6,9 +5,9 @@
 		$args = array(
 			'numberposts'	=> '1',
 			'post_type'		=> 'news-post',
-			'meta_key'		=> 'featured_news_article',
-			'meta_value'	=> 'Featured', //1 for "True". Checkbox is checked in Wordpress
-			'showposts' 	=> 1
+			// 'meta_key'		=> 'featured_news_article',
+			// 'meta_value'	=> 'Not Featured', //1 for "True". Checkbox is checked in Wordpress
+			'showposts' 	=> 10
 		);
 
 		// query
@@ -20,12 +19,13 @@
 			<div class="featured-article">
 				
 			
-				
-				<div class="featured-article__img">
-					<a href="<?php the_permalink(); ?>">
-						<? the_post_thumbnail('featured-news'); ?>
-					</a>
-				</div>
+				<?php if ( has_post_thumbnail() ) {
+					echo '<div class="featured-article__img">';
+					echo '<a href="<?php the_permalink(); ?>">';
+						the_post_thumbnail('featured-news'); 
+					echo '</a>';
+				    echo '</div>';
+				} ?>
 
 				<div class="featured-article__meta">
 					
@@ -51,5 +51,7 @@
 				
 		<?php endwhile; ?>
 	<?php endif; ?>
+
+	<?php kriesi_pagination(); ?>
 
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>

@@ -97,6 +97,15 @@ ul, ol {
 //h4 = heading small
 //h5 = heading micro
 
+
+.heading {
+	font-family: $sans-serif;
+}
+
+.heading--condensed {
+	font-family: $sans-serif-condensed;
+}
+
 .heading--large {
 	font-weight: 300;
 	font-size: 44px;
@@ -106,6 +115,7 @@ ul, ol {
 }
 
 .heading--medium {
+	@extend .heading;
 	font-weight: 300;
 	font-size: 26px;
 	color: $jet;
@@ -119,11 +129,19 @@ ul, ol {
 }
 
 .heading--small {
+	@extend .heading;
 	font-weight: 400;
 	font-size: 22px;
 	color: $jet;
 	letter-spacing: 0.15px;
 	line-height: 26px;
+}
+
+.heading--extra-small {
+	@extend .heading;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 400;
 }
 
 .heading--sub-gray {
@@ -134,6 +152,7 @@ ul, ol {
 	font-size: 14px;
 	color: $phasma;
 	// letter-spacing: 2.21px;
+	font-family: $sans-serif-condensed;
 	line-height: 17px;
 	margin-bottom: 5px;
 	text-transform: uppercase;
@@ -193,7 +212,12 @@ a.text-link--underline {
 
 a.text-link--black {
 	color: $black;
+
+	&:hover {
+		color: $black;
+	}
 }
+
 
 a.text-link--primary {
 	color: $primary-color;

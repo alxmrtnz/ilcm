@@ -21,27 +21,28 @@ get_header(); ?>
 			
 		</div>
 		<div class="row">
-			<div class="small-12 medium-9 columns">
-				<div class="featured-article">
-					<?php require('template-parts/news/featured-story.php'); ?>
-				</div> <!-- end .featured-article -->
+			<div class="small-12 medium-8 columns">
+				
+				<div class="news-feed">
+					<?php require('template-parts/news/news-feed.php'); ?>
+				</div>
+			</div> <!-- end .columns -->
+			<div class="small-12 medium-4 columns">
 				<div class="articles-block">
 					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-				</div> <!-- end .articles-block -->
+				</div>
 				<div class="articles-block">
-					<?php require('template-parts/news/articles-block/immigration-in-usa.php');?>
-				</div> <!-- end .articles-block -->
-
+					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
+				</div>
 				<div class="articles-block">
-					<?php require('template-parts/news/articles-block/ilcm-in-the-news.php');?>
-				</div> <!-- end .articles-block -->
-				
-			</div> <!-- end .columns -->
-			<div class="small-12 medium-3 columns">
-				<?php  require('template-parts/left-sidebar-template-sidebar.php');
-				?>
+					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
+				</div>
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->
+
+
+		
+				
 
 
 
