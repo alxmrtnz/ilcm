@@ -113,6 +113,7 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
 add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels tall
 add_image_size( 'featured-news', 720, 300 ); //750 pixels wide, 450 pixels tall
+add_image_size( 'staff-portrait', 260, 260 ); //750 pixels wide, 450 pixels tall
 
 
 
@@ -258,6 +259,62 @@ function custom_post_type_news() {
 	register_post_type( 'news-post', $args );	
 }
 add_action( 'init', 'custom_post_type_news' );
+
+function custom_post_type_board() {
+    $labels = array(
+        'name'               => _x( 'Board Member', 'post type general name' ),
+        'singular_name'      => _x( 'Board Member', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Board Member' ),
+        'edit_item'          => __( 'Edit Board Member' ),
+        'new_item'           => __( 'New Board Member' ),
+        'all_items'          => __( 'All Board Members' ),
+        'view_item'          => __( 'View Member' ),
+        'search_items'       => __( 'Search Board Members' ),
+        'not_found'          => __( 'No board member found' ),
+        'not_found_in_trash' => __( 'No board member in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Board'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'All of my board members',
+        'public'        => true,
+        'menu_position' => 7,
+        'supports'      => array( 'title', 'thumbnail' ),
+        'has_archive'   => true
+    );
+    register_post_type( 'board-members', $args );   
+}
+add_action( 'init', 'custom_post_type_board' );
+
+function custom_post_type_staff() {
+    $labels = array(
+        'name'               => _x( 'Staff Member', 'post type general name' ),
+        'singular_name'      => _x( 'Staff Member', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New Staff Member' ),
+        'edit_item'          => __( 'Edit Staff Member' ),
+        'new_item'           => __( 'New Staff Member' ),
+        'all_items'          => __( 'All Staff Members' ),
+        'view_item'          => __( 'View Member' ),
+        'search_items'       => __( 'Search Staff Members' ),
+        'not_found'          => __( 'No staff member found' ),
+        'not_found_in_trash' => __( 'No staff member in the Trash' ), 
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Staff'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'All of my staff members',
+        'public'        => true,
+        'menu_position' => 8,
+        'supports'      => array( 'title', 'thumbnail' ),
+        'has_archive'   => true
+    );
+    register_post_type( 'staff-members', $args );   
+}
+add_action( 'init', 'custom_post_type_staff' );
 
 
 

@@ -1,0 +1,23 @@
+ul.member-list {
+	padding: 0px;
+	li {
+		list-style: none;
+	}
+}
+
+.member-list--board {
+
+	li.columns {
+		&:last-child {
+			float: left !important;
+		}
+	}
+}
+
+.staff-member__portrait {
+
+	img {
+		width: 100%;
+		
+	}
+}

@@ -138,10 +138,9 @@ ul, ol {
 }
 
 .heading--extra-small {
-	@extend .heading;
-	font-size: 15px;
+	font-size: 1.17em;
 	line-height: 22px;
-	font-weight: 400;
+	font-weight: bold;
 }
 
 .heading--sub-gray {
