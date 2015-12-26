@@ -281,7 +281,7 @@ function custom_post_type_board() {
         'description'   => 'All of my board members',
         'public'        => true,
         'menu_position' => 7,
-        'supports'      => array( 'title', 'thumbnail' ),
+        'supports'      => array( 'title' ),
         'has_archive'   => true
     );
     register_post_type( 'board-members', $args );   

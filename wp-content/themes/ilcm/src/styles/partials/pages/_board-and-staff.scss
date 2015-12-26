@@ -2,6 +2,7 @@ ul.member-list {
 	padding: 0px;
 	li {
 		list-style: none;
+		margin-bottom: 10px;
 	}
 }
 
@@ -14,10 +15,26 @@ ul.member-list {
 	}
 }
 
+.board-member__name {
+	margin-bottom: 0px;
+}
+
+.board-member__job-title {
+	margin: 0px;
+}
+.board-member__organization {
+	margin: 0px;
+}
+
+.staff-member__name {
+	color: $pebble;
+	font-size: 16px;
+}
+
 .staff-member__portrait {
 
 	img {
 		width: 100%;
-		
+
 	}
 }

@@ -30,7 +30,7 @@ get_header(); ?>
 						<ul class="member-list member-list--staff">
 							<?php 
 								////////////////////////////////////////////////////////////////////////
-								//CUSTOM POST QUERY - BOARD OF DIRECTORS
+								//CUSTOM POST QUERY - STAFF MEMBERS
 								// This is a query by custom fields. 
 								// You can designate two or more field values and a relation between them (AND, OR). 
 								// Each field value is put into its own array to compare against one another.
@@ -40,6 +40,8 @@ get_header(); ?>
 								$args = array(
 									'numberposts'	=> -1,
 									'post_type'		=> 'staff-members',
+									'orderby'			=> 'order',
+									'order'				=> 'ASC'
 					
 								);
 
@@ -61,10 +63,12 @@ get_header(); ?>
 												</div> 
 											</div>
 											<div class="small-12 large-10 columns">
-												<?php the_title(); ?>
-												<h3 class="heading--micro heading--sub-gray">
+												<h3 class="staff-member__name heading--serif heading--bold">
+													<?php the_title(); ?>
+												</h3> 
+												<h4 class="heading--micro heading--sub-gray">
 													<?php the_field('position'); ?>
-												</h3>
+												</h4>
 												<h2 class="heading--medium heading--bold heading--featured-news">
 													<?php the_field('job_title'); ?>
 												</h2> 
