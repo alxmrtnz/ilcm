@@ -46,7 +46,7 @@
 
 			<li class="articles-block__article">
 				
-				<h3 class="heading--extra-small heading--bold ">
+				<h3 class="heading--extra-small heading--bold heading--non-condensed">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?>
 					</a>

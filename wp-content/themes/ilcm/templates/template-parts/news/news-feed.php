@@ -51,10 +51,37 @@
 			</div><!--  end .featured-article -->
 				
 		<?php endwhile; ?>
-		<div class="navigation">
-  <div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
-  <div class="alignright"><?php next_posts_link('More &raquo;') ?></div>
-  </div>
+		<?php
+
+			// next_posts_link() usage with max_num_pages
+			next_posts_link( 'Older Entries', $the_query->max_num_pages );
+
+			$total_pages = $the_query->max_num_pages;
+
+			if ($total_pages > 1){
+		        $current_page = max(1, get_query_var('paged'));
+		 
+		        echo paginate_links(array(
+		            'base' => get_pagenum_link(1) . '%_%',
+		            'format' => '/page/%#%',
+		            'current' => $current_page,
+		            'total' => $total_pages,
+		        ));
+		    }
+
+
+			previous_posts_link( 'Newer Entries' );
+
+		?>
+		<?php pagination_nav(); ?>
+
+
+		<?php 
+		// clean up after the query and pagination
+		wp_reset_postdata(); 
+		?>
+
+
 	<?php endif; ?>
 
 	

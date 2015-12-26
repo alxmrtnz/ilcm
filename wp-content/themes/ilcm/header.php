@@ -127,6 +127,11 @@ function googleTranslateElementInit() {
 		            wp_nav_menu($menu);
 
 		         ?>
+		         <li>
+		         	<a class="button--donate">
+		         		Donate
+		         	</a>
+		         </li>
 		    </ul>
 		</nav>
 

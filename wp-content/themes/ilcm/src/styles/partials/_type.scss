@@ -102,6 +102,10 @@ ul, ol {
 	font-family: $sans-serif;
 }
 
+.heading--non-condensed {
+	font-family: $sans-serif;
+}
+
 .heading--condensed {
 	font-family: $sans-serif-condensed;
 }
@@ -138,9 +142,9 @@ ul, ol {
 }
 
 .heading--extra-small {
-	font-size: 1.17em;
+
+	font-size: 15px;
 	line-height: 22px;
-	font-weight: bold;
 }
 
 .heading--sub-gray {
