@@ -53,11 +53,12 @@
 		<?php endwhile; ?>
 		<?php
 
-			// next_posts_link() usage with max_num_pages
-			next_posts_link( 'Older Entries', $the_query->max_num_pages );
+			
 
+			//Here we get the total number of news pages by checking the query we made initially ($the_query)
 			$total_pages = $the_query->max_num_pages;
 
+			//If the total pages is greater than one, we check and see what page we're on ($current_page) and then echo out 
 			if ($total_pages > 1){
 		        $current_page = max(1, get_query_var('paged'));
 		 
@@ -70,18 +71,7 @@
 		    }
 
 
-			previous_posts_link( 'Newer Entries' );
-
 		?>
-		<?php pagination_nav(); ?>
-
-
-		<?php 
-		// clean up after the query and pagination
-		wp_reset_postdata(); 
-		?>
-
-
 	<?php endif; ?>
 
 	
