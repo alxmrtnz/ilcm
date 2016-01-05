@@ -43,13 +43,15 @@
 }
 
 .articles-block {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .articles-block-container {
 	background: $vapor;
 	border-top: 1px solid $line-main;
 	padding-top: 50px;
+
+
 }
 
 .articles-block__title-container {
@@ -93,4 +95,21 @@ ul.articles-block-list {
 
 .articles-block__article-date {
 	margin-top: 0px;
+}
+
+.news-sidebar {
+	background: $vapor;
+	border-top: 1px solid $line-main;
+	padding-top: 40px;
+
+	@media #{$large-up} {
+		padding-top: 0px;
+		border-top: none;
+		background: none;
+	}
+}
+
+.news-sidebar__content {
+	max-width: 750px;
+	margin: 0 auto;
 }

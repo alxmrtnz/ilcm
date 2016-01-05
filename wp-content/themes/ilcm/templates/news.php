@@ -21,22 +21,24 @@ get_header(); ?>
 			
 		</div>
 		<div class="row">
-			<div class="small-12 medium-8 columns">
+			<div class="small-12 large-8 columns ">
 				
 				<div class="news-feed">
 					<?php require('template-parts/news/news-feed.php'); ?>
 				</div>
 			</div> <!-- end .columns -->
-			<div class="small-12 medium-4 columns">
-				<div class="articles-block">
-					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-				</div>
-				<div class="articles-block">
-					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-				</div>
-				<div class="articles-block">
-					<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-				</div>
+			<div class="small-12 large-4 columns news-sidebar">
+				<div class=" news-sidebar__content">
+					<div class="articles-block">
+						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
+					</div>
+					<div class="articles-block">
+						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
+					</div>
+					<div class="articles-block">
+						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
+					</div>
+				</div> <!-- end .news-sidebar__content -->
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->
 
