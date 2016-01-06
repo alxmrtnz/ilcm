@@ -97,6 +97,48 @@ ul.articles-block-list {
 	margin-top: 0px;
 }
 
+.news-feed__pagination {
+	
+	font-family: $sans-serif;
+	margin-bottom: 50px;
+
+	@media #{$large-up} {
+		margin-bottom: none;
+	}
+
+	.page-numbers {
+		padding: 5px 9px;
+		border: 1px solid $line-main;
+		
+		&.current {
+			background: $white-smoke;
+		}
+
+		&:hover {
+			background: $white-smoke;
+			text-decoration: none;
+		}
+	}
+
+	.prev, .next {
+		border: none;
+		background: none;
+
+		&:hover {
+			background: none;
+			text-decoration: underline;
+		}
+	}
+
+	.prev {
+		margin-right: 11px;
+	}
+
+	.next {
+		margin-left: 11px;
+	}
+}
+
 .news-sidebar {
 	background: $vapor;
 	border-top: 1px solid $line-main;
@@ -113,3 +155,4 @@ ul.articles-block-list {
 	max-width: 750px;
 	margin: 0 auto;
 }
+

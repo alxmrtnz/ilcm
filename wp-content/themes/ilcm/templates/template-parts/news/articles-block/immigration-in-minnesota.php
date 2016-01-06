@@ -58,6 +58,7 @@
 			</li>
 
 		<?php endwhile; ?>
+		
 	<?php endif; ?>
 	</ul>
 

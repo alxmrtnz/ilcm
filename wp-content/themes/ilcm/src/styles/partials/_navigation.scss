@@ -256,6 +256,8 @@ header.nav-bar.nav--not-home {
 	padding-left: 0;
 	padding-right: 0;
 	text-align: right;
+	max-height: 0;
+	@include transition(max-height 0.8s);
 	@include transform(translateY(-125%));
 	@include transition(transform 0.2s);
 	@include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
@@ -341,6 +343,7 @@ header.nav-bar.nav--not-home {
 
 	.nav-bar__main-menu {
 		@include transform(translateY(0));
+		max-height: none;
 	}
 }
 
