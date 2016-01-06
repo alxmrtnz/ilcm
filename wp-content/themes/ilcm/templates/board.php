@@ -39,6 +39,7 @@ get_header(); ?>
 
 								$args = array(
 									'numberposts'	=> -1,
+									'posts_per_page' => -1,
 									'post_type'		=> 'board-members',
 									'orderby'			=> 'order',
 									'order'				=> 'ASC'
@@ -58,11 +59,16 @@ get_header(); ?>
 
 										<li class="small-12 columns">
 											<p class="board-member__name heading--serif heading--bold">
-												<?php the_title(); ?>, <?php the_field('board_position'); ?>
-											</p>	
-											<p class="board-member__job-title heading--micro heading--sub-gray">
-												<?php the_field('job_title'); ?>
+												<?php the_title(); ?>
+												<?php if( get_field('board_position') ): ?>
+													, <?php the_field('board_position'); ?>
+												<?php endif; ?>
 											</p>
+											<?php if( get_field('job_title') ): ?>	
+												<p class="board-member__job-title heading--micro heading--sub-gray">
+													<?php the_field('job_title'); ?>
+												</p>
+											<?php endif; ?>
 
 											<?php if( get_field('organization') ): ?>
 												<p class="board-member__organization heading--micro heading--sub-gray">
