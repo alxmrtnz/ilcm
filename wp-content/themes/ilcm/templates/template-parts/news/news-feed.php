@@ -1,17 +1,50 @@
 
 	<?php 
-		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-		// args
-		$args = array(
-			'numberposts'	=> '1',
-			'post_type'		=> 'news-post',
-			// 'meta_key'		=> 'featured_news_article',
-			// 'meta_value'	=> 'Not Featured', //1 for "True". Checkbox is checked in Wordpress
-			'posts_per_page' 	=> 2,
-			'paged' 		=> $paged
-		);
+		// Get the page's title to determine which type of articles to query
+	    $pageTitle = get_the_title( $ID );
 
-		// query
+	    // Get page variable for pagination function
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		
+		// Get all news posts if on the 'News' landing page
+		if ($pageTitle == 'News'){
+			$args = array(
+				'numberposts'	=> '1',
+				'post_type'		=> 'news-post',
+				'posts_per_page' 	=> 2,
+				'paged' 		=> $paged
+			);
+		} else { 
+		//if the page is not the main 'News' page, use the following switch statement to determine which page it is, then query news posts with that news type
+
+			$newsType = 'default';
+
+			switch ($pageTitle) {
+				case 'Immigration In Minnesota':
+					$newsType = 'Immigration In Minnesota';
+					break;
+				case 'Immigration In The United States':
+					$newsType = 'Immigration In The United States';
+					break;
+				case 'ILCM In The News':
+					$newsType = 'ILCM In The News';
+					break;
+				default:
+					return false;
+			}
+
+			$args = array(
+				'numberposts'	=> '1',
+				'post_type'		=> 'news-post',
+				'meta_key'		=> 'news_section',
+				'meta_value'	=> $newsType, //1 for "True". Checkbox is checked in Wordpress
+				'posts_per_page' 	=> 2,
+				'paged' 		=> $paged
+			);
+
+		}//end else
+
+		// query all news posts in array $args
 		$the_query = new WP_Query( $args );
 	?>
 	<?php if( $the_query->have_posts() ): ?>
@@ -32,7 +65,7 @@
 					
 						<h3 class="heading--micro heading--sub-gray">
 							
-							<?php the_field('news_section'); ?>&nbsp;&nbsp;|&nbsp;&nbsp;  <?php the_time('M n Y'); ?>
+							<?php the_time('M n Y'); ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_field('news_section'); ?>
 							
 						</h3>
 					<h2 class="heading--medium heading--bold heading--featured-news">
