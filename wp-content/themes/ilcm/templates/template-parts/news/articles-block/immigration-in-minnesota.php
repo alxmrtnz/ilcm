@@ -19,19 +19,8 @@
 			'numberposts'	=> -1,
 			'post_type'		=> 'news-post',
 			'showposts' 	=> '3',
-			'meta_query'	=> array(
-				'relation'		=> 'AND',
-				array(
-					'key'	 	=> 'news_section',
-					'value'	  	=> 'Immigration In Minnesota',
-					'compare' 	=> '=',
-				),
-				array(
-					'key'	  	=> 'featured_news_article',
-					'value'	  	=> 'Not Featured',
-					'compare' 	=> '=',
-				),
-			),
+			'meta_key'		=> 'news_section',
+			'meta_value'	=> 'Immigration In Minnesota',
 		);
 
 		// query

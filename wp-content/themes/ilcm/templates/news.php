@@ -13,10 +13,10 @@ get_header(); ?>
 		<div class="row">
 			<div class="small-12 columns">
 				<h1 class="heading--large heading--centered">
-				<span>
-					<?php the_title(); ?>
-				</span>
-			</h1>
+					<span>
+						<?php the_title(); ?>
+					</span>
+				</h1>
 			</div>
 			
 		</div>
@@ -29,15 +29,7 @@ get_header(); ?>
 			</div> <!-- end .columns -->
 			<div class="small-12 large-4 columns news-sidebar">
 				<div class=" news-sidebar__content">
-					<div class="articles-block">
-						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-					</div>
-					<div class="articles-block">
-						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-					</div>
-					<div class="articles-block">
-						<?php require('template-parts/news/articles-block/immigration-in-minnesota.php');?>
-					</div>
+					<?php require('template-parts/news/articles-sidebar.php'); ?>
 				</div> <!-- end .news-sidebar__content -->
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->

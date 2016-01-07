@@ -1,14 +1,14 @@
 <div class="articles-block__title-container">
-	<h4 class="heading--small articles-block__title">
+	<h4 class=" heading--condensed heading--bold articles-block__title">
 		Immigration In The United States
 	</h4>
-	<a href="#" class="articles-block__view-all">
+	<a href="/news/immigration-in-the-united-states" class="articles-block__view-all">
 		View All
 	</a>
 </div>
 <?php 
 	////////////////////////////////////////////////////////////////////////
-	//CUSTOM POST QUERY - IMMIGRATION IN THE UNITED STATES, NOT FEATURED
+	//CUSTOM POST QUERY - IMMIGRATION IN MINNESOTA, NOT FEATURED
 	// This is a query by custom fields. 
 	// You can designate two or more field values and a relation between them (AND, OR). 
 	// Each field value is put into its own array to compare against one another.
@@ -18,47 +18,37 @@
 	$args = array(
 		'numberposts'	=> -1,
 		'post_type'		=> 'news-post',
-		'meta_query'	=> array(
-			'relation'		=> 'AND',
-			array(
-				'key'	 	=> 'news_section',
-				'value'	  	=> 'Immigration In The United States',
-				'compare' 	=> '=',
-			),
-			array(
-				'key'	  	=> 'featured_news_article',
-				'value'	  	=> 'Not Featured',
-				'compare' 	=> '=',
-			),
-		),
+		'showposts' 	=> '3',
+		'meta_key'		=> 'news_section',
+		'meta_value'	=> 'Immigration In The United States',
 	);
 
 	// query
 	$the_query = new WP_Query( $args );
 ?>
 
+<ul class="articles-block-list">
+	
 
 <?php if( $the_query->have_posts() ): ?>
 	<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+		<li class="articles-block__article">
 			
-
-			<a href="<?php the_permalink(); ?>">
-
-			<div class="">
-				<h3 class="heading--micro heading--sub-gray">
-					<?php the_date('M n Y'); ?>
-				</h3>
-				<h2 class="heading--medium heading--bold heading--featured-news">
+			<h3 class="heading--extra-small heading--bold heading--non-condensed">
+				<a href="<?php the_permalink(); ?>">
 					<?php the_title(); ?>
-				</h2> 
-				<p>
-					<?php the_field('byline'); ?>
-				</p> 
-			</div>
-			
-				
-			</a>
+				</a>
+			</h3> 
+			<p class="articles-block__article-date heading--micro heading heading--sub-gray">
+				<?php the_time('M n Y'); ?>
+			</p>
+
+		</li>
+
 	<?php endwhile; ?>
+	
 <?php endif; ?>
+</ul>
 
 <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
