@@ -55,7 +55,9 @@
 			
 				<?php if ( has_post_thumbnail() ) {
 					echo '<div class="featured-article__img">';
-					echo '<a href="<?php the_permalink(); ?>">';
+					echo '<a href="';
+						the_permalink();
+					echo '">';
 						the_post_thumbnail('featured-news'); 
 					echo '</a>';
 				    echo '</div>';

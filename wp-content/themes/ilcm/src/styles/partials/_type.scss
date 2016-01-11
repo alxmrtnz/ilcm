@@ -48,12 +48,7 @@ body {
 }
 
 h1 { 
-	clear: both;
-	font-family: $sans-serif-display;
-	text-shadow: 2px 2px 0px rgba(0,0,0,.1);
-	margin: 0;
-	text-transform: uppercase;
-	font-weight: 300;
+	
 }
 h2 { 
 }
@@ -108,6 +103,15 @@ ul, ol {
 
 .heading--condensed {
 	font-family: $sans-serif-condensed;
+}
+
+.heading--display {
+	clear: both;
+	font-family: $sans-serif-display;
+	text-shadow: 2px 2px 0px rgba(0,0,0,.1);
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 .heading--large {

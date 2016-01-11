@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: News Archive - Immigration (MN)
+ * Template Name: News Archive 
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *

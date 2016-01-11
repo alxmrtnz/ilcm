@@ -3,7 +3,7 @@
 		<h4 class=" heading--condensed heading--bold articles-block__title">
 			ILCM In The News
 		</h4>
-		<a href="/news/immigration-in-minnesota" class="articles-block__view-all">
+		<a href="/news/ilcm-in-the-news" class="articles-block__view-all">
 			View All
 		</a>
 	</div>

@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="page-content">
 		<div class="row">
 			<div class="small-12 columns">
-				<h1 class="heading--large heading--centered">
+				<h1 class=" heading--large heading--centered">
 					<span>
 						<?php the_title(); ?>
 					</span>
