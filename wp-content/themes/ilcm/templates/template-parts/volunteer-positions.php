@@ -5,10 +5,10 @@
 		<?php if ( have_rows('positions') ) : while ( have_rows('positions') ) : the_row(); ?>
 			<li class="position-list__position row">
 				<div class="position__content-left small-12 large-9 columns">
-					<h4>
+					<h4 class="position__title">
 						<?php the_sub_field('position_title');?>
 					</h4> 
-					<a href="<?php the_sub_field('pdf');?>" target="_blank" class="position-detail-link">View Position Details</a>
+					
 					<h5 class="heading--micro">
 						Responsibilities
 					</h5>
@@ -21,9 +21,10 @@
 					<p class="">
 						<?php the_sub_field('requirements');?>
 					</p>
+					<a href="<?php the_sub_field('pdf');?>" target="_blank" class="position-detail-link">View Position Details</a>
 				</div>
 				<div class="small-12 large-3 columns">
-					<p class="position-detail">
+					<p class="position-detail-application-timeline">
 						<?php the_sub_field('application_timeline');?>
 					</p>
 				</div>

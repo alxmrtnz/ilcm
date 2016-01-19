@@ -2,8 +2,7 @@ ul.position-list {
 	padding-left: 0px;
 }
 
-li.position-list__position:nth-child(odd) {
-	background: $vapor;
+li.position-list__position {
 	color: $jet;
 	list-style: none;
 	margin: 0px;
@@ -11,12 +10,24 @@ li.position-list__position:nth-child(odd) {
 	padding: 20px;
 }
 
+li.position-list__position:nth-child(odd) {
+	background: $vapor;
+}
+
 .position__content-left {
 	border-right: 1px solid $line-main;
 }
 
+.position__title {
+	margin-bottom: 10px;
+}
+
 .position-detail-link {
-	font-size: 14px;
+	font-size: 16px;
+}
+
+.position-detail-application-timeline {
+	font-weight: bold;
 }
 
 .position-table__column {
