@@ -21,7 +21,7 @@
 					<p class="">
 						<?php the_sub_field('requirements');?>
 					</p>
-					<a href="<?php the_sub_field('pdf');?>" target="_blank" class="position-detail-link">View Position Details</a>
+					<a href="<?php the_sub_field('pdf');?>" target="_blank" class="position-detail-link">View Details</a>
 				</div>
 				<div class="small-12 large-3 columns">
 					<p class="position-detail-application-timeline">

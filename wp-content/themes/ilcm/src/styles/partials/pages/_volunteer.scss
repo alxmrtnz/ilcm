@@ -8,6 +8,10 @@ li.position-list__position {
 	margin: 0px;
 	overflow: hidden;
 	padding: 20px;
+
+	p {
+		font-size: 16px;
+	}
 }
 
 li.position-list__position:nth-child(odd) {
