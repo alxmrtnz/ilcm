@@ -13,7 +13,7 @@
 }
 
 .featured-article {
-	margin-bottom: 40px;
+	margin-bottom: 15px;
 	position: relative;
 	border: 1px solid $line-main;
 	border-radius: 3px;
@@ -154,5 +154,18 @@ ul.articles-block-list {
 .news-sidebar__content {
 	max-width: 750px;
 	margin: 0 auto;
+}
+
+.news-post__content {
+	margin-bottom: 50px;
+}
+
+.news-post__thumbnail-container {
+	margin: 20px 0px;
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
 }
 

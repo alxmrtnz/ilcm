@@ -2,7 +2,7 @@
 		<h4 class=" heading--condensed heading--bold articles-block__title">
 			Immigration In Minnesota
 		</h4>
-		<a href="/news/immigration-in-minnesota" class="articles-block__view-all">
+		<a href="/news-immigration-in-minnesota" class="articles-block__view-all">
 			View All
 		</a>
 	</div>

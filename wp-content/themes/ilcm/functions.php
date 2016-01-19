@@ -176,6 +176,19 @@ function ilcm_register_sidebars() {
         )
     );
 
+    /* Register the Get Involved sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-get-involved',
+            'name' => __( 'Get Involved Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "About" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="sidebar-nav__title">',
+            'after_title' => '</h4>'
+        )
+    );
+
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 add_action( 'widgets_init', 'ilcm_register_sidebars' );
@@ -254,7 +267,8 @@ function custom_post_type_news() {
 		'public'        => true,
 		'menu_position' => 6,
 		'supports'      => array( 'title', 'editor', 'thumbnail' ),
-		'has_archive'   => true
+        'rewrite' => array( 'slug' => 'news'),
+		'has_archive'   => false
 	);
 	register_post_type( 'news-post', $args );	
 }

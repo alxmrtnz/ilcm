@@ -14,10 +14,10 @@ get_header(); ?>
 	
 		<div class="row">
 			<div class="small-12 columns">
-				<h1 class="heading--large heading--centered">
+				<h1 class="heading--medium heading--serif heading--centered">
 					<span>
-						<?php $permalink = get_permalink($post->post_parent); ?>
-						<a class="" href="<?php echo $permalink; ?>">
+						
+						<a class="" href="/news">
 							News > 
 						</a>
 						<?php the_title(); ?>

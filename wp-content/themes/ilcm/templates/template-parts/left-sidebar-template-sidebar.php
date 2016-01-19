@@ -2,6 +2,7 @@
 	//use this code to determine what category the current page is and then use that to determine which sidebar menu to display
 	$category = get_the_category( $post->ID ); 
 	$cat_name = $category[0]->cat_name; 
+	
 	if ($cat_name == 'Immigration Resource') {
 		dynamic_sidebar( 'sidebar-immigration-resources' );
 	} else if ($cat_name == 'Immigration Help') {
@@ -12,5 +13,8 @@
 	}
 	else if ($cat_name == 'About ILCM') {
 		dynamic_sidebar( 'sidebar-about-us' );
+	}
+	else if ($cat_name == 'Get Involved') {
+		dynamic_sidebar( 'sidebar-get-involved' );
 	}
 ?>

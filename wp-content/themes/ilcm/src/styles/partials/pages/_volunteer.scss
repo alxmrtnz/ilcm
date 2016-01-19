@@ -1,0 +1,24 @@
+ul.position-list {
+	padding-left: 0px;
+}
+
+li.position-list__position:nth-child(odd) {
+	background: $vapor;
+	color: $jet;
+	list-style: none;
+	margin: 0px;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.position__content-left {
+	border-right: 1px solid $line-main;
+}
+
+.position-detail-link {
+	font-size: 14px;
+}
+
+.position-table__column {
+
+}

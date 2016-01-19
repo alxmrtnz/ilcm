@@ -21,7 +21,7 @@
 
 
 
-
+$font-family-serif: "Vollkorn", Georgia, Cambria, "Times New Roman", Times, serif !default;
 $sans-serif-display: 'league_gothicregular', sans-serif;
 $sans-serif-condensed: 'Roboto Condensed', sans-serif;
 $sans-serif: 'Roboto', sans-serif;
@@ -48,7 +48,7 @@ body {
 }
 
 h1 { 
-	
+	margin: 0;
 }
 h2 { 
 }
@@ -95,6 +95,10 @@ ul, ol {
 
 .heading {
 	font-family: $sans-serif;
+}
+
+.heading--serif {
+	font-family: $font-family-serif;
 }
 
 .heading--non-condensed {
@@ -199,12 +203,12 @@ ul, ol {
 
 p, .paragraph--standard, .paragraph--standard ul {
 	font-family: $serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: $pebble;
 	margin-bottom: 25px;
 	margin-top: .625em;
 	letter-spacing: .1px;
-	line-height: 25px;
+	line-height: 26px;
 }
 
 .p--standard {

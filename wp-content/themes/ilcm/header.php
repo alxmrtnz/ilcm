@@ -248,7 +248,7 @@ function googleTranslateElementInit() {
 
 				            $menu = array(
 				                'theme_location'  => '',
-				                'menu'            => 'Immigration Resources Menu',
+				                'menu'            => 'Educational Presentations Menu',
 				                'container'       => false,
 				                'container_class' => '',
 				                'container_id'    => '',
@@ -333,10 +333,10 @@ function googleTranslateElementInit() {
 					</div>
 				</div>
 			</div> <!-- end .sub-menu- -work -->
-			<div class="nav-bar__sub-menu sub-menu--news" data-name="news">
+			<!--<div class="nav-bar__sub-menu sub-menu--news" data-name="news">
 				<div class="row">
 					<div class="medium-8 medium-offset-4 columns">
-						Resources
+						Resourcesasdf
 
 						<ul class="resources-sub-menu__immigration-resources">
 							<?php
@@ -393,7 +393,7 @@ function googleTranslateElementInit() {
 
 					</div>
 				</div>
-			</div> <!-- end .sub-menu- -news -->
+			</div>  end .sub-menu- -news -->
 			<div class="nav-bar__sub-menu sub-menu--events" data-name="events">
 				<div class="row">
 					<div class="medium-8 medium-offset-4 columns">

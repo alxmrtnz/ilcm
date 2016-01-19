@@ -37,6 +37,8 @@ get_header(); ?>
 							require('template-parts/case-highlights.php');
 						} else if (is_page('Referrals')) {
 							require('template-parts/referral-list.php');
+						} else if (is_page('Volunteer')) {
+							require('template-parts/volunteer-positions.php');
 						}
 					?>
 					
