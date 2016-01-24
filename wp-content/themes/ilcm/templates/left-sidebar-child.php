@@ -39,6 +39,8 @@ get_header(); ?>
 							require('template-parts/referral-list.php');
 						} else if (is_page('Volunteer')) {
 							require('template-parts/volunteer-positions.php');
+						} else if (is_page('Trainings and Registration')) {
+							require('template-parts/training-registration-listings.php');
 						}
 					?>
 					
