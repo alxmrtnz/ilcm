@@ -11,3 +11,39 @@
 	letter-spacing: 0.17px;
 	line-height: 34px;
 }
+
+
+// For hiding sub menus in sidebars except when viewing the parent or child page
+.sidebar-nav {
+	.menu-item {
+		.sub-menu {
+			display: none;
+		}
+
+	}
+
+	.current_page_item.menu-item-has-children, .current_page_parent {
+		.sub-menu {
+			display: block;
+
+			li {
+				border-top: none;
+				padding-left: 20px;
+
+				a {
+					color: $phasma;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+
+				&.current_page_item {
+					a {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}

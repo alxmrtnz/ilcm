@@ -338,7 +338,12 @@ header.nav-bar.nav--not-home {
 				padding: 20px 18px 17px 18px;
 			}
 		}
-	}
+		
+		//add a margin to the right of the 'Events' nav link
+		&#menu-item-17 {
+			margin-right: 10px;
+		}
+	} // end .nav-bar__main-menu li
 }
 
 .is-mobile-menu-open {
