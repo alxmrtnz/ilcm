@@ -12,9 +12,9 @@
 
 	?>
 		<div class="case-highlight">
-			<h4 class="case__heading heading--medium heading--bold">
+			<h2 class="case__heading">
 				<?php echo $caseTitle; ?>
-			</h4>
+			</h2>
 			<p class="case__summary">
 				<?php echo $caseSummary; ?>
 			</p>

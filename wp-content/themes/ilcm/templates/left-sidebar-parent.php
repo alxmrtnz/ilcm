@@ -27,6 +27,7 @@ get_header(); ?>
 						echo '</a>';
 						?>
 					</h2>
+					
 
 					<h1 class=" heading--large  heading--sidebar-parent">
 						<?php the_title(); ?>
