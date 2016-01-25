@@ -15,16 +15,7 @@ get_header(); ?>
 				<div class="sidebar-right-content-left">
 					<div class="content-left__intro-content">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<h2 class="heading--micro">
-							<?php
-							echo '<a class="text-link text-link--primary" href="';
-							echo get_permalink( $post->post_parent );
-
-							echo '">';
-							echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
-							echo '</a>';
-							?>
-						</h2>
+						
 						<h1 class="heading--large ">
 							<?php the_title(); ?>
 						</h1>

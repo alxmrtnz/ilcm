@@ -17,4 +17,7 @@
 	else if ($cat_name == 'Get Involved') {
 		dynamic_sidebar( 'sidebar-get-involved' );
 	}
+	else if ($cat_name == 'Our Work') {
+		dynamic_sidebar( 'sidebar-our-work' );
+	}
 ?>
