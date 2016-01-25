@@ -17,9 +17,16 @@ get_header(); ?>
 			</div> <!-- end .columns -->
 			<div class="small-12 medium-8 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<!-- <h2 class="heading--micro">
-						<?php the_title(); ?>
-					</h2> -->
+					<h2 class="heading--micro">
+						<?php
+						echo '<a class="text-link text-link--primary" href="';
+						echo get_permalink( $post->post_parent );
+
+						echo '">';
+						echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
+						echo '</a>';
+						?>
+					</h2>
 
 					<h1 class=" heading--large  heading--sidebar-parent">
 						<?php the_title(); ?>
@@ -33,8 +40,13 @@ get_header(); ?>
 
 
 					<?php
-						$pages = get_pages('child_of='.$post->ID.'&sort_column=menu_order&sort_order=asc');
-						$count = 0;
+						$pages = get_pages(array(
+							'child_of' => $post->ID,
+							'parent' => $post->ID,
+							'sort_order' => 'ASC',
+							'sort_column' => 'menu_order'
+						));
+						
 						foreach($pages as $page)
 						{
 							$content = $page->post_content;
@@ -42,7 +54,7 @@ get_header(); ?>
 
 						?>
 						<div class="child-summary">
-							<h2 class="heading--medium heading--bold">
+							<h2 class="">
 								<?php echo $page->post_title ?>
 							</h2>
 

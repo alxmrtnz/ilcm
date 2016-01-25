@@ -17,11 +17,16 @@ get_header(); ?>
 			</div> <!-- end .columns -->
 			<div class="small-12 medium-9 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<!-- <h2 class="heading--micro">
+					<h2 class="heading--micro">
 						<?php
+						echo '<a class="text-link text-link--primary" href="';
+						echo get_permalink( $post->post_parent );
+
+						echo '">';
 						echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
+						echo '</a>';
 						?>
-					</h2> -->
+					</h2>
 
 					<h1 class="heading--large heading--legal-services">
 						<?php the_title(); ?>
