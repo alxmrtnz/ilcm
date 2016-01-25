@@ -19,7 +19,18 @@ li.position-list__position:nth-child(odd) {
 }
 
 .position__content-left {
-	border-right: 1px solid $line-main;
+
+	border-bottom: 1px solid $line-main;
+	margin-bottom: 20px; 
+	padding-bottom: 20px;
+	
+
+	@media #{$large-up} {
+		border-bottom: none;
+        border-right: 1px solid $line-main;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
 }
 
 .position__title {
@@ -32,6 +43,7 @@ li.position-list__position:nth-child(odd) {
 
 .position-detail-application-timeline {
 	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .position-table__column {
