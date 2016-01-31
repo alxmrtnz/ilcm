@@ -25,7 +25,7 @@ get_header(); ?>
 							echo '</a>';
 							?>
 						</h2>
-						<h1 class="heading--large ">
+						<h1 class="heading heading--large ">
 							<?php the_title(); ?>
 						</h1>
 						
