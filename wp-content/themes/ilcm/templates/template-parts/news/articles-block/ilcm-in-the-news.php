@@ -1,7 +1,7 @@
 <div class="articles-block">
 	<div class="articles-block__title-container">
 		<h4 class=" heading--condensed heading--bold articles-block__title">
-			ILCM In The News
+			<a href="/news-ilcm-in-the-news" class="text-link--black">ILCM In The News</a>
 		</h4>
 		<a href="/news-ilcm-in-the-news" class="articles-block__view-all">
 			View All

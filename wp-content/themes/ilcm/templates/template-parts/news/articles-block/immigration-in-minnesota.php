@@ -1,6 +1,6 @@
 	<div class="articles-block__title-container">
 		<h4 class=" heading--condensed heading--bold articles-block__title">
-			Immigration In Minnesota
+			<a href="/news-immigration-in-minnesota" class="text-link--black">Immigration In Minnesota</a>
 		</h4>
 		<a href="/news-immigration-in-minnesota" class="articles-block__view-all">
 			View All

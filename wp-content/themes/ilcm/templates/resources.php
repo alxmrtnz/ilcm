@@ -24,15 +24,15 @@ get_header(); ?>
 	<div class="page-content">
 
 		<div class="row">
-			<div class="small-12 columns">
-				<h1 class="heading--large heading--centered title--resources">
+			<div class="page__heading-description small-12 columns">
+				<h1 class="heading heading--large heading--centered title--resources">
 					<span>
 						<?php the_title(); ?>
 					</span> 
 				</h1>
-				<h2 class="heading--medium text--centered services-subtitle">
+				<p class=" text--centered services-subtitle">
 					<?php the_field('subtitle'); ?>
-				</h2>
+				</p>
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->
 		<div class="row">
@@ -62,7 +62,7 @@ get_header(); ?>
 			                    			<?php the_title(); ?>
 			                    		</a>
 			                    	</h3>
-			                    	<p class="child-grid__subtitle text--sans">
+			                    	<p class="child-grid__excerpt ">
 			                    		<?php echo get_field('summary', $page->ID); ?>
 			                    	</p>
 			                    </div>
