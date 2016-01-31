@@ -28,7 +28,7 @@ get_header(); ?>
 						?>
 					</h2>
 
-					<h1 class="heading--large heading--legal-services">
+					<h1 class="heading heading--large heading--legal-services">
 						<?php the_title(); ?>
 					</h1>
 					<h3 class="heading--small heading--sub-gray">

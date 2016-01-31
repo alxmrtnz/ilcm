@@ -16,7 +16,7 @@ get_header(); ?>
 					<div class="content-left__intro-content">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
-						<h1 class="heading--large ">
+						<h1 class="heading heading--large ">
 							<?php the_title(); ?>
 						</h1>
 						

@@ -14,7 +14,7 @@ get_header(); ?>
 	
 		<div class="row">
 			<div class="small-12 columns">
-				<h1 class="heading--medium heading--serif heading--centered">
+				<h1 class="heading heading--medium heading--centered">
 					<span>
 						
 						<a class="" href="/news">

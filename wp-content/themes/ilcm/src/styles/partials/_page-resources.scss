@@ -33,12 +33,15 @@ body.home {}
 	}
 }
 
+.page__heading-description {
+	margin-bottom: 30px;
+}
+
 .title--resources {
 	margin-bottom: 20px;
 }
 
 .child-grid__feature {
-	margin-top: 65px;
 	text-align: center;
 
 	&:last-child {
