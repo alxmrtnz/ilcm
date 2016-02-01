@@ -2,5 +2,30 @@
    Footer
    ========================================================================== */
 
-.site-footer {
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.site-content {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.site-content:after {
+  content: "";
+  display: block;
+}
+
+footer, .site-content:after {
+  height: 142px; 
+
+}footer {
+  background: orange;
+}
+
+
+footer {
+	background: #262A2F;
 }
