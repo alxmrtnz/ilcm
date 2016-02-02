@@ -128,7 +128,7 @@ function googleTranslateElementInit() {
 
 		         ?>
 		         <li>
-		         	<a class="button--donate">
+		         	<a class="button--standard">
 		         		Donate
 		         	</a>
 		         </li>

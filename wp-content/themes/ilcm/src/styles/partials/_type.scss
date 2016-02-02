@@ -131,7 +131,12 @@ ul, ol {
 	font-size: 26px;
 	color: $jet;
 	letter-spacing: 0.2px;
-	line-height: 30px;
+	line-height: 32px;
+
+	@media #{$medium-up}{
+		font-size: 32px;
+		line-height: 40px;
+	}
 }
 
 .heading--homepage-medium {
@@ -144,6 +149,9 @@ ul, ol {
 }
 
 
+.heading--normal {
+	font-weight: 300;
+}
 
 .heading--bold {
 	font-weight: 600;
@@ -191,7 +199,7 @@ ul, ol {
 .heading--centered-lines {
 	text-align: center;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 
 	span {
 		background: $white;
@@ -222,12 +230,17 @@ ul, ol {
 
 p, .paragraph--standard, .paragraph--standard ul {
 	font-family: $serif;
-	font-size: 18px;
+	font-size: 16px;
 	color: $pebble;
 	margin-bottom: 25px;
 	margin-top: .625em;
 	letter-spacing: .1px;
-	line-height: 26px;
+	line-height: 22px;
+
+	@media #{$medium-up}{
+		font-size: 18px;
+		line-height: 26px;
+	}
 }
 
 .p--standard {
@@ -249,6 +262,14 @@ a.text-link--black {
 
 	&:hover {
 		color: $jet;
+	}
+}
+
+a.text-link--white {
+	color: $white;
+
+	&:hover {
+		color: $white;
 	}
 }
 
