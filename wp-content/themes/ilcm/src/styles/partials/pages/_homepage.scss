@@ -170,7 +170,7 @@ ul.slick-dots {
 .intro {
 	background: $dark-bg;
 	border: 20px solid #262A2F;
-	padding: 125px 0px 125px 0px;
+	padding: 200px 0px 200px 0px;
 
 	p {
 		color: $shadow;
@@ -219,10 +219,15 @@ ul.slick-dots {
 
 .what-we-do {
 	background: $white;
-	padding: 100px 0px;
+	padding: 170px 0px;
 
 	.what-we-do__summary-block {
 		text-align: center;
 	}
 
+}
+
+.our-projects {
+	background: $primary-color;
+	padding: 100px 0px;
 }

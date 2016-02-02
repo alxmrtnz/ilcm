@@ -152,8 +152,49 @@ get_header(); ?>
 <section class="our-projects">
 	<div class="row">
 		<div class="small-12 columns">
-			<h2>Our Project</h2>
+			<h2 class="heading--centered heading--homepage-medium">Our Projects</h2>
 		</div>
+		<div class="small-12 medium-4 columns child-grid__feature">
+			<div class="child-grid__image">
+				<a href="<?php echo get_page_link($page->ID) ?>">
+					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
+				</a>
+			</div>
+			<h3 class="child-grid__title heading--small">
+				<a href="#" class="text-link text-link--black">
+					Refugee Project
+				</a>
+			</h3>
+		</div>
+		<div class="small-12 medium-4 columns child-grid__feature">
+			<div class="child-grid__image">
+				<a href="<?php echo get_page_link($page->ID) ?>">
+					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
+				</a>
+			</div>
+			<h3 class="child-grid__title heading--small">
+				<a href="#" class="text-link text-link--black">
+					Advocacy and Defense Project
+				</a>
+			</h3>
+		</div>
+		<div class="small-12 medium-4 columns child-grid__feature">
+			<div class="child-grid__image">
+				<a href="<?php echo get_page_link($page->ID) ?>">
+					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
+				</a>
+			</div>
+			<h3 class="child-grid__title heading--small">
+				<a href="#" class="text-link text-link--black">
+					Youth Intervention Project
+				</a>
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<button>
+			View All Work
+		</button>
 	</div>
 </section>
 
