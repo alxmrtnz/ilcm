@@ -8,17 +8,18 @@
 html, body {
   height: 100%;
 }
-.site-content {
+.page-content {
   min-height: 100%;
   /* equal to footer height */
   margin-bottom: -142px; 
+  padding-bottom: 150px;
 }
-.site-content:after {
+.page-content:after {
   content: "";
   display: block;
 }
 
-footer, .site-content:after {
+footer, .page-content:after {
   height: 142px; 
 
 }footer {

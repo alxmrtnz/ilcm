@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<div class="medium-8 columns">
-			Resources
+			Our Work
 
 			<ul class="sub-nav__ul">
 				<?php
