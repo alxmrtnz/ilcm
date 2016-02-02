@@ -27,11 +27,23 @@ get_header(); ?>
 		</div>
 	</div> <!-- end .slide__nav-container -->
 	<div class="slider slider--homepage">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php 
+			$args = array(
+				'numberposts'	=> '1',
+				'post_type'		=> 'news-post',
+				'posts_per_page' 	=> 2,
+				'paged' 		=> $paged
+			); 
+
+			$the_query = new WP_Query( $args );
+		?>
+
+		<?php if( $the_query->have_posts() ): ?>
+		<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<div class="slider__slide" style="background-image:url(
 				<?php
 				$thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'homepage-featured', true);
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'featured-homepage', true);
 				echo $thumb_url[0];
 				?>
 			">
@@ -40,7 +52,7 @@ get_header(); ?>
 						<div class="slide__content">
 							<div class="slide__copy">
 								<h2 class="slide__title">
-									<a href="#">
+									<a class="text-link--white" href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h2>
@@ -64,16 +76,16 @@ get_header(); ?>
 
 
 <section class="intro">
-	<div class="row">
-		<div class="small-12 large-7 columns">
+	<div class="intro-row-1 row">
+		<div class="intro-copy small-12 large-7 columns">
 			<div class="intro-header-block">
 				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/stock/stock1.jpg" alt=""> -->
-				<h3 class="heading--homepage-medium intro-header-block__heading heading--white">Supporting the pursuit<br>of the American Dream</h3>
+				<h3 class="heading--medium intro-header-block__heading heading--white">Supporting the pursuit<br>of the American Dream</h3>
 			</div>
 			<p>The Immigrant Law Center of Minnesota (ILCM) was founded in 1976 as Oficina Legal, a program of Southern Minnesota Regional Legal Services (SMRLS).</p>
 			<p>The agency was later renamed to reflect the increasing diversity of the immigrant population it served. Over the last decade ILCM has established itself as Minnesota’s premier provider of comprehensive immigration legal services to low-income clients of all nationalities.</p>
 		</div>
-		<div class="small-12 large-4 columns">
+		<div class="intake-block-container small-12 large-5 columns">
 			<div class="intake-block">
 				<div class="intake-block__header">
 					<h4 class="heading--small heading--white">Intake Hours</h4>
@@ -92,13 +104,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-</section> <!-- end .intro -->
-
-<section class="what-we-do">
-	<div class="row">
-		<div class="small-12 columns">
-			<h2 class="heading--centered heading--homepage-medium">What We Do</h2>
-		</div>
+	<div class="row homepage__child-grid">
 		<div class="small-12 medium-4 columns child-grid__feature">
 			<div class="child-grid__image">
 				<a href="<?php echo get_page_link($page->ID) ?>">
@@ -106,12 +112,12 @@ get_header(); ?>
 				</a>
 			</div>
 			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
-					Services
+				<a href="#" class="text-link text-link--white">
+					Immigration Help
 				</a>
 			</h3>
 			<p class="child-grid__excerpt ">
-				Link to the services section of the site. Most important for the primary user. 
+				A short sentence detailing immigration help.
 			</p>
 		</div>
 		<div class="small-12 medium-4 columns child-grid__feature">
@@ -121,12 +127,12 @@ get_header(); ?>
 				</a>
 			</div>
 			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
+				<a href="#" class="text-link text-link--white">
 					Our Work
 				</a>
 			</h3>
 			<p class="child-grid__excerpt ">
-				Important to not only show off the projects that ILCM is working on, but also to help educate any and all users on immigration by showing what is being done.
+				A short sentence detailing work.
 			</p>
 		</div>
 		<div class="small-12 medium-4 columns child-grid__feature">
@@ -136,72 +142,36 @@ get_header(); ?>
 				</a>
 			</div>
 			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
+				<a href="#" class="text-link text-link--white">
 					News
 				</a>
 			</h3>
 			<p class="child-grid__excerpt ">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				A short sentence about news.
 			</p>
 		</div>
-
-
 	</div>
-</section>
-
-<section class="our-projects">
-	<div class="row">
-		<div class="small-12 columns">
-			<h2 class="heading--centered heading--homepage-medium">Our Projects</h2>
-		</div>
-		<div class="small-12 medium-4 columns child-grid__feature">
-			<div class="child-grid__image">
-				<a href="<?php echo get_page_link($page->ID) ?>">
-					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
-				</a>
-			</div>
-			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
-					Refugee Project
-				</a>
-			</h3>
-		</div>
-		<div class="small-12 medium-4 columns child-grid__feature">
-			<div class="child-grid__image">
-				<a href="<?php echo get_page_link($page->ID) ?>">
-					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
-				</a>
-			</div>
-			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
-					Advocacy and Defense Project
-				</a>
-			</h3>
-		</div>
-		<div class="small-12 medium-4 columns child-grid__feature">
-			<div class="child-grid__image">
-				<a href="<?php echo get_page_link($page->ID) ?>">
-					<img src="http://lorempixel.com/350/250/" alt="image description HERE">
-				</a>
-			</div>
-			<h3 class="child-grid__title heading--small">
-				<a href="#" class="text-link text-link--black">
-					Youth Intervention Project
-				</a>
-			</h3>
-		</div>
-	</div>
-	<div class="row">
-		<button>
-			View All Work
-		</button>
-	</div>
-</section>
+</section> <!-- end .intro -->
 
 <section class="donate">
 	<div class="row">
-		<div class="small-12 columns">
-			<h3>Support ILCM</h3>
+		<div class="donate-right-border small-12 medium-6 columns">
+			<div class="text--centered">
+				<h3 class="heading--medium heading--centered">Support ILCM</h3>
+				<p class="text--centered">Paragraph talking about supporting ILCM</p>
+				<button class="button--standard">
+					Donate to ILCM
+				</button>
+			</div>
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="text--centered">
+				<h3 class="heading--medium heading--centered">Subscribe to Our Newsletter</h3>
+				<p class="text--centered">Paragraph talking about signing up for the newsletter</p>
+				<button class="button--standard">
+					Subscribe Now
+				</button>
+			</div>
 		</div>
 	</div>
 </section>

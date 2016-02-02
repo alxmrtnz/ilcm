@@ -11,11 +11,11 @@ get_header(); ?>
 
 	<div class="page-content">
 		<div class="row">
-			<div class="small-12 medium-3 columns">
+			<div class="small-12 medium-4 large-3 columns">
 				<?php  require('template-parts/left-sidebar-template-sidebar.php');
 				?>
 			</div> <!-- end .columns -->
-			<div class="small-12 medium-8 end columns">
+			<div class="small-12 medium-8 large-7 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<h2 class="heading--micro">
 						<?php
