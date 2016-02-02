@@ -10,7 +10,11 @@ $image-border: 1px solid #e6e6e6;
 }
 
 .page-content {
-	margin-top: 50px;
+	margin-top: 30px;
+	
+	@media #{$medium-up}{
+		margin-top: 50px;
+	}
 }
 
 .content-area {

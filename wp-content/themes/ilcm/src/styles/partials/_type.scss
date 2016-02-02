@@ -120,9 +120,14 @@ ul, ol {
 
 .heading--large {
 	font-weight: 300;
-	font-size: 44px;
+	font-size: 36px;
 	color: $jet;
-	line-height: 48px;
+	line-height: 42px;
+
+	@media #{$medium-up}{
+		font-size: 44px;
+		line-height: 48px;
+	}
 }
 
 .heading--medium {
