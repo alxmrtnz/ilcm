@@ -7,7 +7,6 @@
 	color: $white !important;
 	display: inline-block !important;
 	font-family: $sans-serif;
-	padding: 9px 15px !important;
 
 	&:hover {
 		background-color: darken($primary-color, 10%) !important;
@@ -15,3 +14,19 @@
 	}
 }
 
+
+.button__link {
+	color: $white;
+	display: block;
+	padding: 9px 15px !important;
+
+	&:hover, &:visited {
+		color: $white !important;
+		text-decoration: none;
+	}
+}
+
+
+.nav-bar__main-menu li button a{
+	color: $white !important;
+}

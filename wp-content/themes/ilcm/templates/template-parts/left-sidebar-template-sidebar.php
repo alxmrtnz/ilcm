@@ -20,4 +20,7 @@
 	else if ($cat_name == 'Our Work') {
 		dynamic_sidebar( 'sidebar-our-work' );
 	}
+	else if ($cat_name == 'Educational Presentations') {
+		dynamic_sidebar( 'sidebar-educational-presentations' );
+	}
 ?>

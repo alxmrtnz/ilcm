@@ -75,6 +75,10 @@ body.home {}
 	transition: all $text-transition-time;
 
 	@media #{$medium-up} {
+		font-size: 36px;
+		line-height: 42px;
+	}
+	@media #{$large-up} {
 		font-size: 48px;
 		line-height: 58px;
 	}
@@ -214,7 +218,12 @@ ul.slick-dots {
 }
 
 .intro-copy {
-	padding-left: 10%;
+	margin-bottom: 30px;
+
+	@media #{$large-up} {
+		margin-bottom: 0px;
+		padding-left: 10%;
+	}
 }
 .intro-header-block {
 	img {
@@ -230,7 +239,9 @@ ul.slick-dots {
 
 
 .intake-block-container {
-	padding-right: 8%;
+	@media #{$large-up} {
+		padding-right: 8%;
+	}
 }
 
 .intake-block {
@@ -238,6 +249,11 @@ ul.slick-dots {
 	border-radius: 5px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 	padding: 30px;
+
+	@media #{$medium-only} {
+		max-width: 400px;
+		margin: 0 auto;
+	}
 
 	p {
 		color: $white;
@@ -251,10 +267,23 @@ ul.slick-dots {
 	}
 
 	.intake-block__details {
-		p {
-
-			font-size: 15px;
+		text-align: center;
+		
+		.details__days {
+			font-family: $sans-serif;
+			font-size: 13px;
+			font-weight: bold;
 			margin: 0px;
+			text-transform: uppercase;
+		}
+		.details__times {
+			font-size: 16px;
+			margin: 0px 0px 20px 0px;
+		}
+		.details__contact {
+			border-top: 1px solid lighten($dark-bg, 30%);
+			padding-top: 20px;
+			font-size: 15px;
 		}
 	}
 }

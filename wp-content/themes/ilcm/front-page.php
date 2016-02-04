@@ -77,7 +77,7 @@ get_header(); ?>
 
 <section class="intro">
 	<div class="intro-row-1 row">
-		<div class="intro-copy small-12 large-7 columns">
+		<div class="intro-copy small-12 medium-12 large-7 columns">
 			<div class="intro-header-block">
 				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/stock/stock1.jpg" alt=""> -->
 				<h3 class="heading--medium intro-header-block__heading heading--white">Supporting the pursuit<br>of the American Dream</h3>
@@ -85,18 +85,26 @@ get_header(); ?>
 			<p>The Immigrant Law Center of Minnesota (ILCM) was founded in 1976 as Oficina Legal, a program of Southern Minnesota Regional Legal Services (SMRLS).</p>
 			<p>The agency was later renamed to reflect the increasing diversity of the immigrant population it served. Over the last decade ILCM has established itself as Minnesota’s premier provider of comprehensive immigration legal services to low-income clients of all nationalities.</p>
 		</div>
-		<div class="intake-block-container small-12 large-5 columns">
+		<div class="intake-block-container small-12 medium-12 large-5 columns">
 			<div class="intake-block">
 				<div class="intake-block__header">
 					<h4 class="heading--small heading--white">Intake Hours</h4>
 				</div>
 				<div class="intake-block__details">
-					<p>Mon, Tues, Wed</p>
-					<p>from 12 pm - 1:30 pm</p>
-					<p>Thursdays</p>
-					<p>6 pm - 7:30 pm</p>
-					<p>
-						Please call our client line at
+					<p class="details__days">
+						Mon, Tues, Wed
+					</p>
+					<p class="details__times">
+						12 pm - 1:30 pm
+					</p>
+					<p class="details__days">
+						Thursdays
+					</p>
+					<p class="details__times">
+						6 pm - 7:30 pm
+					</p>
+					<p class="details__contact">
+						Please call our client line at <br>
 	1-800-223-1368 during intake hours to enter the appointment lottery system to speak to a legal staff member.
 					</p>
 				</div>
@@ -160,7 +168,9 @@ get_header(); ?>
 				<h3 class="heading--medium heading--centered">Support ILCM</h3>
 				<p class="text--centered">Paragraph talking about supporting ILCM</p>
 				<button class="button--standard">
-					Donate to ILCM
+					<a href="/get-involved/donate" class="button__link">
+						Donate to ILCM
+					</a>
 				</button>
 			</div>
 		</div>
@@ -169,7 +179,9 @@ get_header(); ?>
 				<h3 class="heading--medium heading--centered">Subscribe to Our Newsletter</h3>
 				<p class="text--centered">Paragraph talking about signing up for the newsletter</p>
 				<button class="button--standard">
-					Subscribe Now
+					<a href="/subscribe" class="button__link">
+						Subscribe Now
+					</a>
 				</button>
 			</div>
 		</div>
