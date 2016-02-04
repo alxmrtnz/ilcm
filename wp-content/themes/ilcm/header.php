@@ -93,7 +93,7 @@ function googleTranslateElementInit() {
 		
 		<nav class="nav-bar__main-menu-container row">
 			<div class="nav-bar__main-menu-bg">
-				<div class="nav-bar__org-logo-container columns small-10 medium-4">
+				<div class="nav-bar__org-logo-container columns small-10 medium-3">
 					<div class="nav-bar__org-logo">
 						<a href="/">
 							<?php get_template_part( 'nav_logo' );  // Navigation and Logo (nav_logo.php) ?>
@@ -102,7 +102,7 @@ function googleTranslateElementInit() {
 				</div>
 				<button class="nav-bar__mobile-open hide-for-large-up small-2"></button>
 			</div>
-			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 large-8 small-collapse">
+			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-9 small-collapse">
 				<?php
 
 		            $menu = array(
@@ -128,9 +128,11 @@ function googleTranslateElementInit() {
 
 		         ?>
 		         <li>
-		         	<a class="button--standard">
-		         		Donate
-		         	</a>
+		         	<button class="button--standard">
+		         		<a href="/get-involved/donate" class="button__link">
+		         			Donate
+		         		</a>
+		         	</button>
 		         </li>
 		    </ul>
 		</nav>
