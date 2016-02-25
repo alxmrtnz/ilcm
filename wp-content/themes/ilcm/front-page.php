@@ -31,7 +31,7 @@ get_header(); ?>
 			$args = array(
 				'numberposts'	=> '1',
 				'post_type'		=> 'news-post',
-				'posts_per_page' 	=> 2,
+				'posts_per_page' 	=> 3,
 				'paged' 		=> $paged
 			); 
 

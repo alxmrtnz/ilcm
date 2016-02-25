@@ -28,65 +28,31 @@ get_header(); ?>
 					
 						
 						<ul class="member-list member-list--staff">
+							
 							<?php 
-								////////////////////////////////////////////////////////////////////////
-								//CUSTOM POST QUERY - STAFF MEMBERS
-								// This is a query by custom fields. 
-								// You can designate two or more field values and a relation between them (AND, OR). 
-								// Each field value is put into its own array to compare against one another.
-								//http://www.advancedcustomfields.com/resources/query-posts-custom-fields/
-								/////////////////////////////////////////////////////////////////////////
+								// check for rows (parent repeater)
+							if( have_rows('staff_members') ): ?>
+								<?php 
 
-								$args = array(
-									'numberposts'	=> -1,
-									'post_type'		=> 'staff-members',
-									'posts_per_page' => -1,
-									'orderby'			=> 'order',
-									'order'				=> 'ASC'
-					
-								);
-
-								// query
-								$board_query = new WP_Query( $args );
-							?>
-
-
-							<?php if( $board_query->have_posts() ): ?>
-								<?php while( $board_query->have_posts() ) : $board_query->the_post(); ?>
-										
-
-										
-
-										<li class="row">
-											<div class="staff-member__portrait small-12 large-2 columns">
-												<div class="img-bordered-small">
-													<?php the_post_thumbnail('staff-portrait'); ?>
-												</div> 
-											</div>
-											<div class="small-12 large-10 columns">
+								// loop through rows (parent repeater)
+								while( have_rows('staff_members') ): the_row(); ?>
+										<li class="small-12 columns">
 												<h3 class="staff-member__name heading--serif heading--bold">
-													<?php the_title(); ?>
+													<?php the_sub_field('name'); ?>
 												</h3> 
 												<h4 class="heading--micro heading--sub-gray">
-													<?php the_field('position'); ?>
+													<?php the_sub_field('position'); ?>
 												</h4>
 												<h2 class="heading--medium heading--bold heading--featured-news">
 													<?php the_field('job_title'); ?>
 												</h2> 
 												<p>
-													<?php the_field('bio'); ?>
+													<?php the_sub_field('bio'); ?>
 												</p> 
-											</div>
-											
-										</li> <!-- end .columns for individual board menu -->
-										
-											
-										
-								<?php endwhile; ?>
-							<?php endif; ?>
-
-							<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
-
+										</li>
+									<?php endwhile; // while( has_sub_field('staff_members') ): ?>
+								
+								<?php endif; // if( get_field('staff_members') ): ?>
 						</ul> <!-- end .board-member-list -->
 
 					

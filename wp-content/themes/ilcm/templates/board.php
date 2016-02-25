@@ -17,77 +17,47 @@ get_header(); ?>
 			</div> <!-- end .columns -->
 			<div class="small-12 medium-9 end columns">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<!-- <h2 class="heading- -micro">
-						<?php the_title(); ?>
-					</h2> -->
-					
 					<h1 class="heading--large  heading--sidebar-parent">
 						<?php the_title(); ?>
 					</h1>
 					
-					<div class="row">
 						
 						<ul class="member-list member-list--board">
 							<?php 
-								////////////////////////////////////////////////////////////////////////
-								//CUSTOM POST QUERY - BOARD OF DIRECTORS
-								// This is a query by custom fields. 
-								// You can designate two or more field values and a relation between them (AND, OR). 
-								// Each field value is put into its own array to compare against one another.
-								//http://www.advancedcustomfields.com/resources/query-posts-custom-fields/
-								/////////////////////////////////////////////////////////////////////////
+								// check for rows (parent repeater)
+							if( have_rows('board_members') ): ?>
+								<?php 
 
-								$args = array(
-									'numberposts'	=> -1,
-									'posts_per_page' => -1,
-									'post_type'		=> 'board-members',
-									'orderby'			=> 'order',
-									'order'				=> 'ASC'
-					
-								);
-
-								// query
-								$board_query = new WP_Query( $args );
-							?>
-
-
-							<?php if( $board_query->have_posts() ): ?>
-								<?php while( $board_query->have_posts() ) : $board_query->the_post(); ?>
+								// loop through rows (parent repeater)
+								while( have_rows('board_members') ): the_row(); ?>
 										
 
 										
 
 										<li class="small-12 columns">
 											<p class="board-member__name heading--serif heading--bold">
-												<?php the_title(); ?>
-												<?php if( get_field('board_position') ): ?>
-													, <?php the_field('board_position'); ?>
+												<?php the_sub_field('name'); ?>
+												<?php if( get_sub_field('board_position') ): ?>, <?php the_sub_field('board_position'); ?>
 												<?php endif; ?>
 											</p>
-											<?php if( get_field('job_title') ): ?>	
+											<?php if( get_sub_field('job_title') ): ?>	
 												<p class="board-member__job-title heading--micro heading--sub-gray">
-													<?php the_field('job_title'); ?>
+													<?php the_sub_field('job_title'); ?>
 												</p>
 											<?php endif; ?>
 
-											<?php if( get_field('organization') ): ?>
+											<?php if( get_sub_field('organization') ): ?>
 												<p class="board-member__organization heading--micro heading--sub-gray">
 													
-													<?php the_field('organization'); ?>
+													<?php the_sub_field('organization'); ?>
 												</p>
 											<?php endif; ?>
 										</li> <!-- end .columns for individual board menu -->
-										
-											
-										
-								<?php endwhile; ?>
-							<?php endif; ?>
-
-							<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+									<?php endwhile; // while( has_sub_field('board_members') ): ?>
+								
+								<?php endif; // if( get_field('board_members') ): ?>
 
 						</ul> <!-- end .board-member-list -->
-
-					</div> <!-- end .row for board -->
 					
 				<?php endwhile; else: ?>
 
