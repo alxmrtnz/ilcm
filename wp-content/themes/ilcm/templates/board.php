@@ -34,10 +34,13 @@ get_header(); ?>
 
 										
 
-										<li class="small-12 columns">
+										<li class="small-12 large-6 columns">
 											<p class="board-member__name heading--serif heading--bold">
 												<?php the_sub_field('name'); ?>
-												<?php if( get_sub_field('board_position') ): ?>, <?php the_sub_field('board_position'); ?>
+											</p>
+											<p class="board-member__position">
+												<?php if( get_sub_field('board_position') ):?>
+													<?php the_sub_field('board_position'); ?>
 												<?php endif; ?>
 											</p>
 											<?php if( get_sub_field('job_title') ): ?>	
