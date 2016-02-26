@@ -5,7 +5,7 @@
 				<img src="http://www.lorempixel.com/200/150" alt="" class="img-bordered-small">
 			</div>
 		</div>
-		<div class="medium-8 columns">
+		<div class="medium-12 columns">
 			Our Work
 
 			<ul class="sub-nav__ul">
