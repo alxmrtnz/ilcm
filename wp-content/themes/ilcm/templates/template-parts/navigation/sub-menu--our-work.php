@@ -1,4 +1,4 @@
-<div class="nav-bar__sub-menu sub-menu--work" data-name="work">
+<div class="nav-bar__sub-menu sub-menu--work" data-name="our-work">
 	<div class="row">
 		<div class="medium-3 medium-offset-1 columns">
 			<div class="sub-menu__featured-img-left">

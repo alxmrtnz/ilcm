@@ -342,7 +342,11 @@ header.nav-bar.nav--not-home {
 		
 		//add a margin to the right of the 'Events' nav link
 		&#menu-item-17 {
-			margin-right: 10px;
+
+			@media #{$large-up}  {
+				margin-right: 10px;
+				
+			}
 		}
 	} // end .nav-bar__main-menu li
 }
@@ -385,14 +389,48 @@ header.nav-bar.nav--not-home {
 	}
 }
 
+.mobile-sub-menu {
+	height: 0;
+	font-size: 0;
+	overflow: hidden;
 
+	img {
+		display: none;
+	}
+
+	div {
+		font-size: 0;
+		line-height: 0;
+	}
+
+	ul {
+		padding-left: 0;
+	}
+
+	.sub-nav__ul li {
+		padding: 0;
+	}
+}
+
+.is-mobile-sub-menu-open + .mobile-sub-menu {
+	height: auto;
+}
+
+.is-mobile-sub-menu-open {
+
+	.nav-bar__main-menu-open-sub-menu {
+		border-bottom: 0;
+		border-left: 0;
+		border-top: 1px solid darken($line-main, 10%);
+		border-right: 1px solid darken($line-main, 10%);
+		@include transform(rotate(180deg));
+	}
+}
 
 
 .nav-bar__top-menu li a, .nav-bar__main-menu li a {
 	// transition: all $hover-time;
 }
-
-
 
 
 //Sub Menus
