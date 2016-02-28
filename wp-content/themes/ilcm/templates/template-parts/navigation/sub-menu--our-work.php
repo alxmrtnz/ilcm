@@ -1,11 +1,11 @@
-<div class="nav-bar__sub-menu sub-menu--work" data-name="work">
+<div class="nav-bar__sub-menu sub-menu--work" data-name="our-work">
 	<div class="row">
 		<div class="medium-3 medium-offset-1 columns">
 			<div class="sub-menu__featured-img-left">
 				<img src="http://www.lorempixel.com/200/150" alt="" class="img-bordered-small">
 			</div>
 		</div>
-		<div class="medium-8 columns">
+		<div class="medium-12 columns">
 			Our Work
 
 			<ul class="sub-nav__ul">

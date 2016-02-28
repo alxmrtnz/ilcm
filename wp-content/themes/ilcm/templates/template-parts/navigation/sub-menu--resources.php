@@ -1,11 +1,11 @@
 <div class="nav-bar__sub-menu sub-menu--resources" data-name="resources">
 	<div class="row">
-		<div class="medium-3 columns">
+		<div class="medium-12 columns">
 			<div class="sub-menu__featured-img-left">
 				<img src="http://www.lorempixel.com/200/150" alt="" class="img-bordered-small">
 			</div>
 		</div>
-		<div class="medium-3 columns">
+		<div class="medium-12 columns">
 			Immigration Resources
 
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
@@ -35,7 +35,7 @@
 	         ?>
 			</ul>	
 		</div>
-		<div class="medium-3 columns">
+		<div class="medium-12 columns">
 			DACA Deferred Action
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
 				<?php
@@ -64,7 +64,7 @@
 	         ?>
 			</ul>		
 		</div>
-		<div class="medium-3 columns">
+		<div class="medium-12 columns">
 			Educational Presentations
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
 				<?php

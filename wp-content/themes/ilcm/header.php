@@ -102,7 +102,7 @@ function googleTranslateElementInit() {
 				</div>
 				<button class="nav-bar__mobile-open hide-for-large-up small-2"></button>
 			</div>
-			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-9 small-collapse">
+			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-12 small-collapse">
 				<?php
 
 		            $menu = array(
