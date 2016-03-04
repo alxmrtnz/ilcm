@@ -11,8 +11,8 @@ html, body {
 .page-content {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px; 
-  padding-bottom: 150px;
+  // margin-bottom: -142px; 
+  // padding-bottom: 150px;
 }
 .page-content:after {
   content: "";
@@ -20,13 +20,159 @@ html, body {
 }
 
 footer, .page-content:after {
-  height: 142px; 
+  // height: 142px; 
 
-}footer {
-  background: orange;
 }
 
 
 footer {
 	background: #262A2F;
+  padding: 60px 0px;
+
+  .footer__main-menus {
+    margin-left: 20px;
+    margin-right: 20px;
+    @media #{$small-only} {
+      max-width: 320px;
+    }
+  }
+
+  .footer__sub-menu {
+    padding: 0px 10px;
+    margin-bottom: 20px;
+    @media #{$medium-up} {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer__menu-title, .footer__sub-menu-list {
+    font-size: 14px;
+  }
+
+  .footer__menu-title{
+    color: $white;
+    font-family: $sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .footer__sub-menu-list {
+    font-family: $sans-serif;
+    list-style: none;
+    padding-left: 0px;
+
+    li {
+      list-style: none;
+      margin-bottom: 8px;
+
+      @media #{$medium-up} {
+        margin-bottom: 15px;
+      }
+
+      line-height: 18px;
+      a {
+        color: #B0B6BD;
+
+        &:hover {
+          color: #B0B6BD;
+        }
+      }
+      ul {
+        margin-top:10px;
+        font-size: 14px;
+        padding-left: 0px;
+        li {
+          margin-bottom: 8px;
+
+          @media #{$medium-up} {
+            margin-bottom: 15px;
+          }
+          a {
+            color: #B0B6BD;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__secondary-menu {
+    border-top: 1px solid #414952;
+    padding-top: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    .secondary-menu__column {
+      display: inline-block;
+      padding-top:8px;
+
+      &.column--left {
+        display: none;
+        @media #{$medium-up} {
+          width: 19%;
+          text-align: left;
+          display: inline-block;
+        }
+      }
+
+      &.column--center {
+        width: 100%;
+        @media #{$medium-up} {
+          width: 60%;
+        }
+      }
+
+      &.column--right {
+        width: 100%;
+        text-align: center;
+        @media #{$medium-up} {
+          width: 19%;
+          text-align: right;
+        }
+      }
+    }
+
+    .secondary-menu__menu-list {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0px 2%;
+        a {
+          color: $white;
+        }
+      }
+    }
+
+
+    .footer__minnesota-icon {
+      width:29px;
+    }
+
+    .secondary-menu__social-list {
+      list-style: none;
+      // text-align: right;
+      padding:0px;
+
+      li {
+        display: inline-block;
+        margin: 0px 2%;
+        width: 10%;
+        text-align: center;
+        @media #{$medium-up} {
+          margin:0px 0px 0px 8%;
+        }
+        &:hover {
+          opacity:.8;
+        }
+
+        a {
+          img {
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
 }
+
+

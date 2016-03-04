@@ -96,7 +96,14 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'main-menu' => __( 'Main Menu' ),
-      'secondary-menu' => __( 'Secondary Menu' )
+      'secondary-menu' => __( 'Secondary Menu' ),
+      'immigration-help-menu' => __( 'Immigration Help Menu' ),
+      'resources-menu' => __( 'Resources Menu'),
+      'our-work-menu' => __( 'Our Work Menu'),
+      'news-menu' => __( 'News Menu'),
+      'events-menu' => __( 'Events Menu'),
+      'about-menu' => __( 'About Menu'),
+      'footer-secondary-menu' => __( 'Footer Secondary Menu')
     )
   );
 }
@@ -393,8 +400,13 @@ function hide_editor() {
       }
 }
 
+function get_menu_name($theme_location) {
+    $cippo_menu_locations = (array) get_nav_menu_locations();
 
-
+    // In the line below change "primary" to your menu ID (the 'theme_location' parameter in wp_nav_menu())
+    $cippo_menu = get_term_by( 'id', (int) $cippo_menu_locations[ $theme_location ], 'nav_menu', ARRAY_A );
+    return $cippo_menu[ 'name' ];
+}
 
 
 
