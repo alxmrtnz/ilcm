@@ -40,11 +40,11 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
-	<header class="nav-bar 
+	<header class="nav-bar nav--not-home
 		<?php
 		if ( !is_home() ) {
 		    // This is not the homepage
-		    echo 'nav--not-home';
+		    //echo 'nav--not-home';
 		}
 		?>
 	" role="banner">
@@ -94,15 +94,15 @@ function googleTranslateElementInit() {
 		<nav class="nav-bar__main-menu-container row">
 			<div class="nav-bar__main-menu-bg">
 				<div class="nav-bar__org-logo-container columns small-10 medium-3">
-					<div class="nav-bar__org-logo">
+					<div class="nav-bar__org-logo" style="max-width:290px; margin-top: 10px;">
 						<a href="/">
-							<?php get_template_part( 'nav_logo' );  // Navigation and Logo (nav_logo.php) ?>
+							<img src="<?php echo get_theme_mod( 'logo-upload', 'No Logo Has bee uploaded yet.' ); ?>" alt="ILCM">
 						</a>
 					</div>
 				</div>
 				<button class="nav-bar__mobile-open hide-for-large-up small-2"></button>
 			</div>
-			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-12 small-collapse">
+			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-12 large-9 small-collapse">
 				<?php
 
 		            $menu = array(

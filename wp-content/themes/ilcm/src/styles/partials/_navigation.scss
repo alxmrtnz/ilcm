@@ -293,7 +293,7 @@ header.nav-bar.nav--not-home {
 	@include transform(translateY(-125%));
 	@include transition(transform 0.2s);
 	@include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
-	width: 100%;
+	// width: 100%;
 
 	@media #{$large-up} {
 		max-height: none;

@@ -409,4 +409,78 @@ function get_menu_name($theme_location) {
 }
 
 
+function ilcm_customize_register( $wp_customize ) {
+  // Do stuff with $wp_customize, the WP_Customize_Manager object.
+
+    //remove extraneous customizer sections
+    $wp_customize->remove_section('background_image');
+    $wp_customize->remove_section('widgets');
+    $wp_customize->remove_section('static_front_page');
+    $wp_customize->remove_section('menus');
+    $wp_customize->remove_control('site_icon');
+
+    $wp_customize->add_setting(
+        'accent-color',
+        array(
+            'default' => '#5FA3B8',
+            'sanitize_callback' => 'sanitize_hex_color',
+            'transport' => 'postMessage',
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'accent-color',
+            array(
+                'label' => 'Accent Color',
+                'section' => 'colors',
+                'settings' => 'accent-color'
+            )
+        )
+    );
+
+    $wp_customize->add_section(
+        'ilcm_section_one',
+        array(
+            'title' => 'ILCM Theme Settings',
+            'description' => 'This is the settings section for the ILCM theme.',
+            'priority' => 35,
+        )
+    );
+
+    //site logo image upload
+    $wp_customize->add_setting( 'logo-upload' );
+     
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'img-upload',
+            array(
+                'label' => 'Logo Upload',
+                'section' => 'title_tagline',
+                'settings' => 'logo-upload'
+            )
+        )
+    );
+
+    if ( $wp_customize->is_preview() ) {
+        add_action( 'wp_footer', 'example_customize_preview', 21);
+    }
+
+}
+add_action( 'customize_register', 'ilcm_customize_register' );
+
+function example_customize_preview() {
+    ?>
+    <script type="text/javascript">
+        ( function( $ ) {
+            wp.customize('featured-background',function( value ) {
+                value.bind(function(to) {
+                    $('#featured').css('background-color', to );
+                });
+            });
+        } )( jQuery )
+    </script>
+    <?php
+}  // End function example_customize_preview()
 
