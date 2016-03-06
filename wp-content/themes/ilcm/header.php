@@ -40,11 +40,11 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
-	<header class="nav-bar nav--not-home
+	<header class="nav-bar
 		<?php
 		if ( !is_home() ) {
 		    // This is not the homepage
-		    //echo 'nav--not-home';
+		    echo 'nav--not-home';
 		}
 		?>
 	" role="banner">
@@ -94,9 +94,9 @@ function googleTranslateElementInit() {
 		<nav class="nav-bar__main-menu-container row">
 			<div class="nav-bar__main-menu-bg">
 				<div class="nav-bar__org-logo-container columns small-10 medium-3">
-					<div class="nav-bar__org-logo" style="max-width:290px; margin-top: 10px;">
+					<div class="nav-bar__org-logo">
 						<a href="/">
-							<img src="<?php echo get_theme_mod( 'logo-upload', 'No Logo Has bee uploaded yet.' ); ?>" alt="ILCM">
+							<?php get_template_part( 'ilcm_20_logo' );  // Navigation and Logo (nav_logo.php) ?>
 						</a>
 					</div>
 				</div>

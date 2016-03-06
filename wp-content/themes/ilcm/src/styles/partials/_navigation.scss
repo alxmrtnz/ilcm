@@ -5,6 +5,8 @@
 $hover-time: .25s;
 $hover-nav-bg: #F7F7F7;
 
+$nav-bg-gray: #EEF1F2;
+
 header.nav-bar {
 	position: absolute;
 	top: 0px;
@@ -15,14 +17,20 @@ header.nav-bar {
 
 	@media #{$large-up} {
 
+		.ilcm-svg-logo .ilcm-svg-logo__text {
+			fill: $white;
+		}
+
 		&:hover {
-			background: #EEF1F2;
+			background: $nav-bg-gray;
 			color: $black;
 			border-bottom: 1px solid $line-main;
 
-			.nav-bar__org-logo a object {
+			
+			.ilcm-svg-logo .ilcm-svg-logo__text {
 				fill: $black;
 			}
+
 
 			.nav-bar__top-menu {
 				border-bottom: 1px solid rgba(230,230,230,1);
@@ -175,7 +183,7 @@ header.nav-bar.nav--not-home {
 }
 
 .nav-bar__main-menu-bg {
-	background-color: $primary-color;
+	background-color: $nav-bg-gray;
 	height: 50px;
 	position: relative;
 	width: 100%;

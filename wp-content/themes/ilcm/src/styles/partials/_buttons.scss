@@ -1,16 +1,16 @@
 .button--standard {
-	background: $primary-color;
-	background-color: $primary-color !important;
+	background: $secondary-color;
+	background-color: $secondary-color !important;
 	border: none;
 	border-radius: 4px;
-	box-shadow: 0px 3px 0px 0px darken($primary-color, 7%);
+	box-shadow: 0px 3px 0px 0px darken($secondary-color, 10%);
 	color: $white !important;
 	display: inline-block !important;
 	font-family: $sans-serif;
 
 	&:hover {
-		background-color: darken($primary-color, 10%) !important;
-		box-shadow: 0px 3px 0px 0px darken($primary-color, 15%) !important;
+		background-color: darken($secondary-color, 10%) !important;
+		box-shadow: 0px 3px 0px 0px darken($secondary-color, 15%) !important;
 	}
 }
 
