@@ -155,46 +155,45 @@ get_header(); ?>
 			<?php endwhile; // while( has_sub_field('featured_sections') ): ?>
 			
 		<?php endif; // if( get_field('featured_sections') ): ?>
-
-
-		
-
-
-
-
-
-
-
-
-
-		
 	</div>
 </section> <!-- end .intro -->
 
-<section class="donate">
+<section class="homepage-ctas">
 	<div class="row">
-		<div class="donate-right-border small-12 medium-6 columns">
-			<div class="text--centered">
-				<h3 class="heading--medium heading--centered">Support ILCM</h3>
-				<p class="text--centered">Paragraph talking about supporting ILCM</p>
-				<button class="button--standard">
-					<a href="/get-involved/donate" class="button__link">
-						Donate to ILCM
-					</a>
-				</button>
+		<?php 
+			// check for rows (parent repeater)
+		if( have_rows('cta_blocks') ): ?>
+		<?php 
+			 $count = 0;
+		// loop through rows (parent repeater)
+		while( have_rows('cta_blocks') ): the_row(); ?>
+			
+			
+			<div class=" <?php if ($count == 0) {echo 'cta-right-border';} ?> small-12 medium-6 columns">
+				<div class="text--centered">
+					<h3 class="heading--medium heading--centered">
+						<?php the_sub_field('cta_title'); ?>
+					</h3>
+					<p class="text--centered">
+						<?php the_sub_field('cta_description'); ?>
+					</p>
+					<button class="button--standard">
+						<a href="<?php the_sub_field('cta_button_link'); ?>" class="button__link">
+							<?php the_sub_field('cta_button_text'); ?>
+						</a>
+					</button>
+				</div>
 			</div>
-		</div>
-		<div class="small-12 medium-6 columns">
-			<div class="text--centered">
-				<h3 class="heading--medium heading--centered">Subscribe to Our Newsletter</h3>
-				<p class="text--centered">Paragraph talking about signing up for the newsletter</p>
-				<button class="button--standard">
-					<a href="/subscribe" class="button__link">
-						Subscribe Now
-					</a>
-				</button>
-			</div>
-		</div>
+
+			<?php
+				$count =+ 1;
+			?>
+
+
+			<?php endwhile; // while( has_sub_field('cta_blocks') ): ?>
+			
+		<?php endif; // if( get_field('cta_blocks') ): ?>
+
 	</div>
 </section>
 <?php endwhile; else: ?>

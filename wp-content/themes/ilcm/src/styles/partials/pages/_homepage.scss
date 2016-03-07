@@ -315,11 +315,19 @@ ul.slick-dots {
 }
 
 
-.donate {
-	padding: 100px 20px;
+.homepage-ctas {
+	padding: 75px 20px;
+
+	@media #{$medium-up}{
+		padding: 100px 20px;
+	}
+
+	@media #{$large-up}{
+		padding: 150px 20px;
+	}
 }
 
-.donate-right-border {
+.cta-right-border {
 	border-bottom: 1px solid $line-main;
 	margin-bottom: 70px;
 	padding-bottom: 75px;

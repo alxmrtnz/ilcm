@@ -410,6 +410,7 @@ header.nav-bar.nav--not-home {
 	.nav-bar__main-menu {
 		@include transform(translateY(0));
 		max-height: none;
+		background: $nav-bg-gray;
 	}
 }
 
