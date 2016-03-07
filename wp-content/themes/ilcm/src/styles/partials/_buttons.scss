@@ -26,8 +26,15 @@
 }
 
 .button--nav {
+	margin: 10px 0px 14px 19px;
 	.button__link {
 		padding: 5px 8px !important;
+		border: none;
+
+	}
+
+	@media #{$large-up}{
+		margin: 0px;
 	}
 }
 

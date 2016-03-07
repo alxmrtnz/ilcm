@@ -32,6 +32,17 @@ get_header(); ?>
 					</p>
 
 
+					<?php  
+						// Get the page's title to determine if page is the presenations page
+		    			$pageTitle = get_the_title( $ID );
+
+		    			if ($pageTitle == 'Educational Presentations') {
+		   
+							require('template-parts/presentation-list.php');
+						}
+					?>
+
+
 
 				<?php endwhile; else: ?>
 
@@ -39,14 +50,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-				<?php  
-					// Get the page's title to determine if page is the presenations page
-	    			$pageTitle = get_the_title( $ID );
-
-	    			if ($pageTitle == 'Educational Presentations') {
-						require('template-parts/presentation-list.php');
-					}
-				?>
+				
 				
 				
 			</div> <!-- end .columns -->
