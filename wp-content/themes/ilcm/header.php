@@ -42,7 +42,7 @@
 
 	<header class="nav-bar
 		<?php
-		if ( !is_home() ) {
+		if ( !is_page('Home') ) {
 		    // This is not the homepage
 		    echo 'nav--not-home';
 		}
@@ -128,7 +128,7 @@ function googleTranslateElementInit() {
 
 		         ?>
 		         <li>
-		         	<button class="button--standard">
+		         	<button class="button--standard button--nav">
 		         		<a href="/get-involved/donate" class="button__link">
 		         			Donate
 		         		</a>
@@ -144,7 +144,6 @@ function googleTranslateElementInit() {
 				require('templates/template-parts/navigation/sub-menu--resources.php');
 				require('templates/template-parts/navigation/sub-menu--our-work.php');
 				require('templates/template-parts/navigation/sub-menu--news.php');
-				// require('templates/template-parts/navigation/sub-menu--events.php');
 			?>
 		</div> <!-- end .sub-menu__marquee -->
 	

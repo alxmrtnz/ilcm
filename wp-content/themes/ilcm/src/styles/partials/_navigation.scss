@@ -15,6 +15,16 @@ header.nav-bar {
 	background: none;
 	transition: all .25s;
 
+	.nav-bar__main-menu li.current-page-ancestor, .nav-bar__main-menu li.current_page_item {
+		
+			box-shadow: inset 4px 0 0 $primary-color;
+
+		@media #{$large-up}{
+			box-shadow: inset 0 -4px 0 0 $primary-color;
+		}
+
+	}
+
 	@media #{$large-up} {
 
 		.ilcm-svg-logo .ilcm-svg-logo__text {
@@ -79,6 +89,10 @@ header.nav-bar {
 			background: none;
 		}
 
+		.ilcm-svg-logo .ilcm-svg-logo__text {
+			fill: $black;
+		}
+
 	}
 }
 
@@ -99,8 +113,8 @@ header.nav-bar.nav--not-home {
 	width: 50px;
 
 	&:before {
-		border-top: 3px solid $white;
-		border-bottom: 3px solid $white;
+		border-top: 3px solid #999;
+		border-bottom: 3px solid #999;
 		content: '';
 		height: 19px;
 		font-family: $sans-serif-display;
@@ -114,7 +128,7 @@ header.nav-bar.nav--not-home {
 	}
 
 	&:after {
-		border-top: 3px solid $white;
+		border-top: 3px solid #999;
 		content: '';
 		height: 5px;
 		position: absolute;
@@ -168,9 +182,9 @@ header.nav-bar.nav--not-home {
 	background: $primary-color;
 	// background-image: url(dist/assets/images/color-strip.png);
 	// background-repeat: repeat-x;
-	
+	height: 5px;
+
 	@media #{$large-up} {
-		height: 5px;
 	}
 }
 
@@ -198,8 +212,8 @@ header.nav-bar.nav--not-home {
 
 .nav-bar__org-logo {
 	width: 210px;
-	margin-bottom: 8px;
-	margin-top: 8px;
+	margin-bottom: 3px;
+	margin-top: 12px;
 
 	@media #{$large-up} {
 		height: 40px;
@@ -332,7 +346,7 @@ header.nav-bar.nav--not-home {
 
 
 		a {
-			background-color: $white;
+			// background-color: $white;
 			border-bottom: 1px solid $line-main;
 			color: $black;
 			text-decoration: none;
@@ -372,7 +386,7 @@ header.nav-bar.nav--not-home {
 		    position:absolute;
 		    width: 34px;
 		    height: 3px;
-		    background-color:white;
+		    background-color: #999;
 		    border-radius:2px;
 		    top:23px;
 		}
@@ -465,13 +479,23 @@ header.nav-bar.nav--not-home {
 }
 
 ul.sub-nav__ul {
+	background: rgba(150,150,150,.1);
 	padding: 0px;
 	margin: 0px;
+
+	@media #{$large-up}{
+		background: none;
+	}
 
 	li {
 		list-style: none;
 		padding: 3.8px 0px;
 		font-size: 14px;
+		border-bottom: 1px solid #ddd;
+
+		@media #{$large-up}{
+			border: none;
+		}
 
 		a {
 			
@@ -481,7 +505,7 @@ ul.sub-nav__ul {
 
 			&:hover {
 				
-				color: $primary-color;
+				color: $primary-color !important;
 			}
 		}
 
@@ -489,8 +513,39 @@ ul.sub-nav__ul {
 			font-weight: bold;
 			a {
 				color: $primary-color;
+				&:hover {
+					
+					color: $primary-color;
+				}
 			}
+
+			&:hover {
+				
+				color: $primary-color;
+			}
+
+			
 			// text-decoration: underline;
+		}
+
+		ul.sub-menu {
+
+			// display: none;
+			li {
+				a {
+					color: $aluminum;
+				}
+
+				&.current_page_item {
+					a{
+						color: $primary-color !important;
+						&:hover {
+							
+							color: $primary-color;
+						}
+					}
+				}
+			}
 		}
 
 	}

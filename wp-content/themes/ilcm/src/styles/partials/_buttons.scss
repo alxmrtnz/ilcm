@@ -14,7 +14,6 @@
 	}
 }
 
-
 .button__link {
 	color: $white;
 	display: block;
@@ -23,6 +22,12 @@
 	&:hover, &:visited {
 		color: $white !important;
 		text-decoration: none;
+	}
+}
+
+.button--nav {
+	.button__link {
+		padding: 5px 8px !important;
 	}
 }
 

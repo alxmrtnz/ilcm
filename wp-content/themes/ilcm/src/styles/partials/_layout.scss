@@ -11,9 +11,11 @@ $image-border: 1px solid #e6e6e6;
 
 .page-content {
 	margin-top: 30px;
+	margin-bottom: 125px;
 	
 	@media #{$medium-up}{
 		margin-top: 50px;
+		margin-bottom: 200px;
 	}
 }
 
