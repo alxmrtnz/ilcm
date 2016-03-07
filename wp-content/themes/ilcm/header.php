@@ -40,9 +40,9 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
-	<header class="nav-bar 
+	<header class="nav-bar
 		<?php
-		if ( !is_home() ) {
+		if ( !is_page('Home') ) {
 		    // This is not the homepage
 		    echo 'nav--not-home';
 		}
@@ -96,13 +96,13 @@ function googleTranslateElementInit() {
 				<div class="nav-bar__org-logo-container columns small-10 medium-3">
 					<div class="nav-bar__org-logo">
 						<a href="/">
-							<?php get_template_part( 'nav_logo' );  // Navigation and Logo (nav_logo.php) ?>
+							<?php get_template_part( 'ilcm_20_logo' );  // Navigation and Logo (nav_logo.php) ?>
 						</a>
 					</div>
 				</div>
 				<button class="nav-bar__mobile-open hide-for-large-up small-2"></button>
 			</div>
-			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-12 small-collapse">
+			<ul class="nav-bar__main-menu columns vertical large-horizontal menu small-12 medium-12 large-9 small-collapse">
 				<?php
 
 		            $menu = array(
@@ -128,7 +128,7 @@ function googleTranslateElementInit() {
 
 		         ?>
 		         <li>
-		         	<button class="button--standard">
+		         	<button class="button--standard button--nav">
 		         		<a href="/get-involved/donate" class="button__link">
 		         			Donate
 		         		</a>
@@ -144,7 +144,6 @@ function googleTranslateElementInit() {
 				require('templates/template-parts/navigation/sub-menu--resources.php');
 				require('templates/template-parts/navigation/sub-menu--our-work.php');
 				require('templates/template-parts/navigation/sub-menu--news.php');
-				// require('templates/template-parts/navigation/sub-menu--events.php');
 			?>
 		</div> <!-- end .sub-menu__marquee -->
 	

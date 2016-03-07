@@ -1,11 +1,11 @@
 <div class="nav-bar__sub-menu sub-menu--resources" data-name="resources">
 	<div class="row">
-		<div class="medium-12 columns">
+		<div class="small-12 small-offset-1 large-3 large-offset-0 columns">
 			<div class="sub-menu__featured-img-left">
 				<img src="http://www.lorempixel.com/200/150" alt="" class="img-bordered-small">
 			</div>
 		</div>
-		<div class="medium-12 columns">
+		<div class="medium-12 large-3 columns">
 			Immigration Resources
 
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
@@ -13,7 +13,7 @@
 
 	            $menu = array(
 	                'theme_location'  => '',
-	                'menu'            => 'Immigration Resources Menu',
+	                'menu'            => 'Resources',
 	                'container'       => false,
 	                'container_class' => '',
 	                'container_id'    => '',
@@ -35,7 +35,7 @@
 	         ?>
 			</ul>	
 		</div>
-		<div class="medium-12 columns">
+		<div class="medium-12 large-3 columns">
 			DACA Deferred Action
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
 				<?php
@@ -64,7 +64,7 @@
 	         ?>
 			</ul>		
 		</div>
-		<div class="medium-12 columns">
+		<div class="medium-12 large-3 columns">
 			Educational Presentations
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
 				<?php

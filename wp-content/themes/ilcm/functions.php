@@ -118,9 +118,9 @@ set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions 
 // additional image sizes
 // delete the next line if you do not need additional image sizes
 add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
-add_image_size( 'thumbnail-medium', 300, 300 ); //1440 pixels wide, 800 pixels tall
+add_image_size( 'thumbnail-medium-square', 300, 300 ); //300 pixels wide, 300 pixels tall
+add_image_size( 'thumbnail-medium', 350, 250 ); //350 pixels wide, 250 pixels tall
 add_image_size( 'featured-news', 720, 300 ); //750 pixels wide, 450 pixels tall
-add_image_size( 'staff-portrait', 260, 260 ); //750 pixels wide, 450 pixels tall
 
 
 
@@ -383,6 +383,10 @@ function hide_editor() {
     if( !isset( $post_id ) ) return;
 
     // Hide the editor on the page titled 'Homepage'
+      $homepgname = get_the_title($post_id);
+      if($homepgname == 'Home'){ 
+        remove_post_type_support('page', 'editor');
+      }
       $boardpgname = get_the_title($post_id);
       if($boardpgname == 'Board of Directors'){ 
         remove_post_type_support('page', 'editor');
@@ -400,6 +404,33 @@ function hide_editor() {
       }
 }
 
+add_action( 'admin_menu', 'remove_homepage_meta_boxes' );
+
+function remove_homepage_meta_boxes() 
+{
+    if( $_GET['post'] == '38' ) 
+    {
+        remove_meta_box('tagsdiv-post_tag', 'page', 'normal');
+        remove_meta_box('categorydiv', 'page', 'normal');
+        remove_meta_box('postimagediv', 'post', 'normal');
+        // remove_meta_box('authordiv', 'post', 'normal');
+        // remove_meta_box('authordiv', 'page', 'normal');
+        // remove_meta_box('postexcerpt', 'post', 'normal');
+        // remove_meta_box('trackbacksdiv', 'post', 'normal');
+        remove_meta_box('commentsdiv', 'page', 'normal');
+        remove_meta_box('commentstatusdiv', 'page', 'normal');
+        // remove_meta_box('postcustom', 'post', 'normal');
+        // remove_meta_box('postcustom', 'page', 'normal');
+        remove_meta_box('commentstatusdiv', 'post', 'normal');
+        remove_meta_box('commentsdiv', 'post', 'normal');
+        // remove_meta_box('revisionsdiv', 'page', 'normal');
+        // remove_meta_box('authordiv', 'post', 'normal');
+        // remove_meta_box('authordiv', 'page', 'normal');
+        // remove_meta_box('slugdiv', 'post', 'normal');
+        // remove_meta_box('slugdiv', 'page', 'normal');
+    }
+}
+
 function get_menu_name($theme_location) {
     $cippo_menu_locations = (array) get_nav_menu_locations();
 
@@ -409,4 +440,78 @@ function get_menu_name($theme_location) {
 }
 
 
+function ilcm_customize_register( $wp_customize ) {
+  // Do stuff with $wp_customize, the WP_Customize_Manager object.
+
+    //remove extraneous customizer sections
+    $wp_customize->remove_section('background_image');
+    $wp_customize->remove_section('widgets');
+    $wp_customize->remove_section('static_front_page');
+    $wp_customize->remove_section('menus');
+    $wp_customize->remove_control('site_icon');
+
+    $wp_customize->add_setting(
+        'accent-color',
+        array(
+            'default' => '#5FA3B8',
+            'sanitize_callback' => 'sanitize_hex_color',
+            'transport' => 'postMessage',
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'accent-color',
+            array(
+                'label' => 'Accent Color',
+                'section' => 'colors',
+                'settings' => 'accent-color'
+            )
+        )
+    );
+
+    $wp_customize->add_section(
+        'ilcm_section_one',
+        array(
+            'title' => 'ILCM Theme Settings',
+            'description' => 'This is the settings section for the ILCM theme.',
+            'priority' => 35,
+        )
+    );
+
+    //site logo image upload
+    $wp_customize->add_setting( 'logo-upload' );
+     
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'img-upload',
+            array(
+                'label' => 'Logo Upload',
+                'section' => 'title_tagline',
+                'settings' => 'logo-upload'
+            )
+        )
+    );
+
+    if ( $wp_customize->is_preview() ) {
+        add_action( 'wp_footer', 'example_customize_preview', 21);
+    }
+
+}
+add_action( 'customize_register', 'ilcm_customize_register' );
+
+function example_customize_preview() {
+    ?>
+    <script type="text/javascript">
+        ( function( $ ) {
+            wp.customize('featured-background',function( value ) {
+                value.bind(function(to) {
+                    $('#featured').css('background-color', to );
+                });
+            });
+        } )( jQuery )
+    </script>
+    <?php
+}  // End function example_customize_preview()
 

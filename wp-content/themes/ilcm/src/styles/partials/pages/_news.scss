@@ -12,22 +12,22 @@
 	letter-spacing: 0;
 }
 
-.featured-article {
-	margin-bottom: 15px;
+.news-card {
+	margin-bottom: 25px;
 	position: relative;
 	border: 1px solid $line-main;
 	border-radius: 3px;
 }
 
-.featured-article__byline {
+.news-card__byline {
 	margin-bottom: 20px;
 }
 
-.featured-article__label {
+.news-card__label {
 	margin-bottom: 15px;
 }
 
-.featured-article__img {
+.news-card__img {
 	width: 100%;
 	max-height: 300px;
 	overflow: hidden;
@@ -37,7 +37,7 @@
 	}
 }
 
-.featured-article__meta {
+.news-card__meta {
 	width: 100%;
 	padding: 30px 20px 15px 20px;
 }

@@ -11,7 +11,7 @@
 			$args = array(
 				'numberposts'	=> '1',
 				'post_type'		=> 'news-post',
-				'posts_per_page' 	=> 2,
+				'posts_per_page' 	=> 10,
 				'paged' 		=> $paged
 			);
 		} else { 
@@ -50,11 +50,11 @@
 	<?php if( $the_query->have_posts() ): ?>
 		<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-			<div class="featured-article">
+			<div class="news-card">
 				
 			
 				<?php if ( has_post_thumbnail() ) {
-					echo '<div class="featured-article__img">';
+					echo '<div class="news-card__img">';
 					echo '<a href="';
 						the_permalink();
 					echo '">';
@@ -63,7 +63,7 @@
 				    echo '</div>';
 				} ?>
 
-				<div class="featured-article__meta">
+				<div class="news-card__meta">
 					
 						<h3 class="heading--micro heading--sub-gray">
 							
@@ -75,7 +75,7 @@
 							<?php the_title(); ?>
 						</a>
 					</h2> 
-					<p class="featured-article__byline">
+					<p class="news-card__byline">
 						<?php the_field('byline'); ?>
 					</p> 
 					<a href="<?php the_permalink(); ?>" class="">
@@ -83,7 +83,7 @@
 					</a>
 				</div>
 
-			</div><!--  end .featured-article -->
+			</div><!--  end .news-card -->
 				
 		<?php endwhile; ?>
 

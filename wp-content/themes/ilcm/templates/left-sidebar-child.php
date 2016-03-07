@@ -19,7 +19,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<h2 class="heading--micro">
 						<?php
-						echo '<a class="text-link text-link--primary" href="';
+						echo '<a class="text-link text-link--primary text-link--gray" href="';
 						echo get_permalink( $post->post_parent );
 
 						echo '">';
