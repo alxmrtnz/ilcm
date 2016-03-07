@@ -248,34 +248,6 @@ add_action( 'widgets_init', 'ilcm_register_sidebars' );
 // add_action('admin_menu', 'remove_menus');
 
 
-function custom_post_presentation() {
-    $labels = array(
-        'name'               => _x( 'Presentations', 'post type general name' ),
-        'singular_name'      => _x( 'Presentation', 'post type singular name' ),
-        'add_new'            => _x( 'Add New', 'book' ),
-        'add_new_item'       => __( 'Add New Presentation' ),
-        'edit_item'          => __( 'Edit Presentation' ),
-        'new_item'           => __( 'New Presentation' ),
-        'all_items'          => __( 'All Presentations' ),
-        'view_item'          => __( 'View Presentation' ),
-        'search_items'       => __( 'Search Presentations' ),
-        'not_found'          => __( 'No presentations found' ),
-        'not_found_in_trash' => __( 'No presentations found in the Trash' ), 
-        'parent_item_colon'  => '',
-        'menu_name'          => 'Presentations'
-    );
-    $args = array(
-        'labels'        => $labels,
-        'description'   => 'All of my educational presentations',
-        'public'        => true,
-        'menu_position' => 5,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-        'has_archive'   => false,
-        'rewrite' => array( 'slug' => 'services/educational-presentations')
-    );
-    register_post_type( 'presentation', $args ); 
-}
-add_action( 'init', 'custom_post_presentation' );
 
 
 function custom_post_type_news() {
