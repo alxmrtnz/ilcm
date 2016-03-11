@@ -125,10 +125,7 @@ ul, ol {
 	color: $jet;
 	line-height: 42px;
 
-	@media #{$medium-up}{
-		font-size: 44px;
-		line-height: 48px;
-	}
+
 }
 
 .heading--medium {

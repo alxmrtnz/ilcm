@@ -252,6 +252,11 @@
 								<img src="<?php bloginfo('template_url'); ?>/dist/assets/images/social-icons/icon--youtube.png" alt="ILCM Youtube">
 							</a>
 						</li>
+						<li>
+							<a href="https://www.youtube.com/user/ImmigrantLawCenterMN" target="_blank">
+								<img src="<?php bloginfo('template_url'); ?>/dist/assets/images/social-icons/icon--linkedin.png" alt="ILCM LinkedIn">
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

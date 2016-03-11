@@ -25,11 +25,28 @@ header.nav-bar {
 
 	}
 
+		.nav__social-icon {
+			list-style: none;
+			display: inline-block;
+
+			a {
+				padding: 11px 7px 12px 7px;
+				svg {
+					width: 15px;
+					height: 15px;
+					fill: $white;
+				}
+			}
+			
+		}
+
 	@media #{$large-up} {
 
 		.ilcm-svg-logo .ilcm-svg-logo__text {
 			fill: $white;
 		}
+
+
 
 		&:hover {
 			background: $nav-bg-gray;
@@ -53,6 +70,17 @@ header.nav-bar {
 			.nav-bar__top-menu-bg {
 				background: none;
 			}
+			.nav__social-icon {
+
+				a {
+					svg {
+						fill: $black;
+					}
+				}
+				
+			}
+
+
 
 			.org-logo-path {
 				fill: $black;
@@ -93,6 +121,16 @@ header.nav-bar {
 			fill: $black;
 		}
 
+		.nav__social-icon {
+
+			a {
+				svg {
+					fill: $black;
+				}
+			}
+			
+		}
+
 	}
 }
 
@@ -103,14 +141,14 @@ header.nav-bar.nav--not-home {
 .nav-bar__mobile-open {
 	background-color: rgba(black, 0.1);
 	border: none;
-	height: 50px;
+	height: 60px;
 	outline: 0;
 	padding-top: 8px;
 	position: absolute;
 	right: 0;
 	top: 0;
 	-webkit-appearance: none;
-	width: 50px;
+	width: 60px;
 
 	&:before {
 		border-top: 3px solid #999;
@@ -121,9 +159,9 @@ header.nav-bar.nav--not-home {
 		font-size: 18px;
 		letter-spacing: 0.5px;
 		position: absolute;
-		right: 12.5px;
-		top: 15px;
-		width: 25px;
+		right: 15px;
+		top: 20px;
+		width: 30px;
 		@include transition(all 0.2s);
 	}
 
@@ -132,9 +170,9 @@ header.nav-bar.nav--not-home {
 		content: '';
 		height: 5px;
 		position: absolute;
-		right: 12.5px;
-		top: 23px;
-		width: 25px;
+		right: 15px;
+		top: 28px;
+		width: 30px;
 		@include transition(all 0.2s);
 	}
 }
@@ -149,13 +187,13 @@ header.nav-bar.nav--not-home {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 50px;
+	width: 60px;
 
 	&:before {
 		content: '';
 		position: absolute;
 		top: 20px;
-		left: 12.5px;
+		left: 16.5px;
 		border-top: 12.5px solid #999;
 		border-left: 12.5px solid transparent;
 		border-right: 12.5px solid transparent;
@@ -165,7 +203,7 @@ header.nav-bar.nav--not-home {
 		content: '';
 		position: absolute;
 		top: 19px;
-		left: 13.5px;
+		left: 17.5px;
 		border-top: 11.5px solid $line-main;
 		border-left: 11.5px solid transparent;
 		border-right: 11.5px solid transparent;
@@ -189,16 +227,13 @@ header.nav-bar.nav--not-home {
 }
 
 .nav-bar__main-menu-container {
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
-.nav-bar__org-logo-container {
-
-}
 
 .nav-bar__main-menu-bg {
 	background-color: $nav-bg-gray;
-	height: 50px;
+	height: 60px;
 	position: relative;
 	width: 100%;
 	z-index: 5;
@@ -211,15 +246,15 @@ header.nav-bar.nav--not-home {
 
 
 .nav-bar__org-logo {
-	width: 210px;
+	width: 250px;
 	margin-bottom: 3px;
-	margin-top: 12px;
+	margin-top: 14px;
 
 	@media #{$large-up} {
-		height: 40px;
-		margin-top: 8px;
-		margin-bottom: 0;
-		width: 290px;
+		height: 50px;
+	    margin-top: 14px;
+	    margin-bottom: 11px;
+	    width: 360px;
 	}
 
 	a {
@@ -359,7 +394,7 @@ header.nav-bar.nav--not-home {
 				background-color: transparent;
 				border-bottom: none;
 				color: $white;
-				padding: 20px 15px 17px 15px;
+				padding: 28px 15px 26px 18px;
 			}
 		}
 		
@@ -388,21 +423,21 @@ header.nav-bar.nav--not-home {
 		    height: 3px;
 		    background-color: #999;
 		    border-radius:2px;
-		    top:23px;
+		    top:28px;
 		}
 
 		&:before{
 		    -webkit-transform:rotate(45deg);
 		    -moz-transform:rotate(45deg);
 		    transform:rotate(45deg);
-		    left: 9px;
+		    left: 13.5px;
 		}
 		
 		&:after{
 		    -webkit-transform:rotate(-45deg);
 		    -moz-transform:rotate(-45deg);
 		    transform:rotate(-45deg);
-		    right: 7px;
+		    right: 12.5px;
 		}
 	}
 

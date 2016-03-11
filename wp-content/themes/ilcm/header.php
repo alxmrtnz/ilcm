@@ -53,7 +53,7 @@
 
 		<nav class="nav-bar__top-menu-bg">
 			<div class="row show-for-large-up">
-					<ul class="nav-bar__top-menu columns small-12">
+					<ul class="nav-bar__top-menu columns small-12 ">
 						<?php
 
 				            $topMenu = array(
@@ -81,6 +81,34 @@
 				   		<li>
 				   			<div id="google_translate_element"></div>
 				   		</li>
+				   		<li class="nav__social-icon">
+				   			<a href="https://www.facebook.com/immigrantlawcenterMN/" target="_blank">
+				   				<?php 
+				   					require('social/icon-facebook.svg');
+				   				?>
+				   			</a>
+				   		</li>
+				   		<li class="nav__social-icon">
+				   			<a href="https://twitter.com/ILCM_MN" target="_blank">
+				   				<?php 
+				   					require('social/icon-twitter.svg');
+				   				?>
+				   			</a>
+				   		</li>
+				   		<li class="nav__social-icon">
+				   			<a href="https://www.youtube.com/user/ImmigrantLawCenterMN" target="_blank">
+				   				<?php 
+				   					require('social/icon-youtube.svg');
+				   				?>
+				   			</a>
+				   		</li>
+				   		<li class="nav__social-icon">
+				   			<a href="https://www.youtube.com/user/ImmigrantLawCenterMN" target="_blank">
+				   				<?php 
+				   					require('social/icon-linkedin.svg');
+				   				?>
+				   			</a>
+				   		</li>
 					</ul>
 			</div>
 			<script type="text/javascript">
@@ -88,6 +116,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 				
 		</nav>
 		
