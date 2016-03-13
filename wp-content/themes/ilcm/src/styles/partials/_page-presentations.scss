@@ -1,6 +1,12 @@
 .sidebar-right-content-left {
-	border-right: 1px solid $line-main;
-	padding-right: 50px;
+	border-bottom: 1px solid $line-main;
+	margin-bottom: 50px;
+
+	@media #{$large-up}{
+		border-right: 1px solid $line-main;
+		padding-right: 50px;
+		border-bottom: none;
+	}
 }
 
 .content-left__intro-content {
