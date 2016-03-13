@@ -1,6 +1,8 @@
+$safe-browsing-color: $primary-color;
+
 .safe-browsing__sticky {
 	// border: solid 3px $white;
-	background: $primary-color;
+	background: $safe-browsing-color;
 	border-radius: 4px 4px 0px 0px;
 	bottom: 0px;
 	color: $white !important;
@@ -18,7 +20,7 @@
 	}
 
 	&:hover {
-		background: darken($primary-color, 10%);
+		background: darken($safe-browsing-color, 10%);
 		text-decoration: none;
 	}
 }
