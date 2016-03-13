@@ -140,7 +140,20 @@ get_header(); ?>
 					<a href="
 						<?php the_sub_field('featured_section_link'); ?>
 					">
-						<img src="<?php the_sub_field('featured_section_image'); ?>" alt="">
+						
+
+						<?php 
+
+						$image = get_sub_field('featured_section_image');
+						$size = 'thumbnail-medium'; // (thumbnail, medium, large, full or custom size)
+
+						if( $image ) {
+
+							echo wp_get_attachment_image( $image, $size );
+
+						}
+
+						?>
 					</a>
 				</div>
 				<h3 class="child-grid__title heading--small">

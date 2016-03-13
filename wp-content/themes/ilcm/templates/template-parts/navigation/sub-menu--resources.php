@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="small-12 small-offset-1 large-3 large-offset-0 columns">
 			<div class="sub-menu__featured-img-left">
-				<img src="http://www.lorempixel.com/200/150" alt="" class="img-bordered-small">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/menu-thumb-resources.jpg" alt="Resources" class="img-bordered-small">
 			</div>
 		</div>
 		<div class="medium-12 large-3 columns">
