@@ -33,6 +33,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<a class="safe-browsing__sticky" href="http://www.google.com/">
+		<img src="<?php bloginfo('template_url'); ?>/dist/assets/images/danger.png" alt="!"> Leave Site
+	</a>
 
 	<!--[if lt IE 9]>
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -177,6 +180,8 @@ function googleTranslateElementInit() {
 		</div> <!-- end .sub-menu__marquee -->
 	
 		
+
+
 		
 	</header><!-- #masthead -->
 
