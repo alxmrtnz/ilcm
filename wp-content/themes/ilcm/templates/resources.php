@@ -36,55 +36,49 @@ get_header(); ?>
 			</div> <!-- end .columns -->
 		</div> <!-- end .row -->
 		<div class="row">
-			
 
-			<div class="small-12 medium-10 medium-offset-1  columns">
-				<?php $this_page_id=$wp_query->post->ID; $flag=1;?>
+		<?php 
+			// check for rows (parent repeater)
+		if( have_rows('feature_blocks') ): ?>
+		<?php 
 
-			    	<?php query_posts(array('orderby' => 'menu_order', 'order' => 'ASC', 'showposts' => 20, 'post_parent' => $this_page_id, 'post_type' => 'page')); while (have_posts()) { the_post(); ?>
-
-			        		<?php $flagMarker = $flag % 3; ?>
-
-			                <?php if ( $flagMarker == 1 ) { ?>
-
-			                    <div class="row">
-		
-
-			                <?php }  ?>
-			                    <div class="small-12 medium-4 columns child-grid__feature">
-			                    	<div class="child-grid__image">
-			                    		<a href="<?php echo get_page_link($page->ID) ?>">
-			                    			<img src="http://lorempixel.com/524/300/" alt="image description HERE">
-			                    		</a>
-			                    	</div>
-			                    	<h3 class="child-grid__title heading--small">
-			                    		<a href="<?php echo get_page_link($page->ID) ?>" class="text-link text-link--black">
-			                    			<?php the_title(); ?>
-			                    		</a>
-			                    	</h3>
-			                    	<p class="child-grid__excerpt ">
-			                    		<?php echo get_field('summary', $page->ID); ?>
-			                    	</p>
-			                    </div>
-
-			                <?php  ?>
-
-			                <?php if ( $flagMarker == 0 ) { ?>
-
-			                    </div>
-			                
-			                <?php }  ?>
-							<?php $flag+=1; ?>
-
-
-			    
-
-			        <?php } ?>
-
+		// loop through rows (parent repeater)
+		while( have_rows('feature_blocks') ): the_row(); ?>
 				
+			<div class="small-12 medium-4 columns child-grid__feature">
+				<div class="child-grid__image">
+					<a href="
+						<?php the_sub_field('feature_block_link'); ?>
+					">
+						
 
+						<?php 
 
-			</div> <!-- end .columns -->
+						$image = get_sub_field('feature_image');
+						$size = 'thumbnail-medium'; // (thumbnail, medium, large, full or custom size)
+
+						if( $image ) {
+
+							echo wp_get_attachment_image( $image, $size );
+
+						}
+
+						?>
+					</a>
+				</div>
+				<h3 class="child-grid__title heading--small">
+					<a href="#" class="text-link text-link--black">
+						<?php the_sub_field('feature_title'); ?>
+					</a>
+				</h3>
+				<p class="child-grid__excerpt ">
+					<?php the_sub_field('feature_subtitle'); ?>
+				</p>
+			</div>
+			<?php endwhile; // while( has_sub_field('feature_blocks') ): ?>
+			
+		<?php endif; // if( get_field('feature_blocks') ): ?>
+
 
 
 

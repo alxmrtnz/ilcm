@@ -403,6 +403,34 @@ function remove_homepage_meta_boxes()
     }
 }
 
+add_action( 'admin_menu', 'remove_resources_meta_boxes' );
+
+function remove_resources_meta_boxes() 
+{
+    if( $_GET['post'] == '9' ) 
+    {
+        remove_meta_box('tagsdiv-post_tag', 'page', 'normal');
+        remove_meta_box('categorydiv', 'page', 'normal');
+        remove_meta_box('postimagediv', 'post', 'normal');
+        remove_meta_box('editor', 'post', 'normal');
+        // remove_meta_box('authordiv', 'post', 'normal');
+        // remove_meta_box('authordiv', 'page', 'normal');
+        // remove_meta_box('postexcerpt', 'post', 'normal');
+        // remove_meta_box('trackbacksdiv', 'post', 'normal');
+        remove_meta_box('commentsdiv', 'page', 'normal');
+        remove_meta_box('commentstatusdiv', 'page', 'normal');
+        // remove_meta_box('postcustom', 'post', 'normal');
+        // remove_meta_box('postcustom', 'page', 'normal');
+        remove_meta_box('commentstatusdiv', 'post', 'normal');
+        remove_meta_box('commentsdiv', 'post', 'normal');
+        // remove_meta_box('revisionsdiv', 'page', 'normal');
+        // remove_meta_box('authordiv', 'post', 'normal');
+        // remove_meta_box('authordiv', 'page', 'normal');
+        // remove_meta_box('slugdiv', 'post', 'normal');
+        // remove_meta_box('slugdiv', 'page', 'normal');
+    }
+}
+
 function get_menu_name($theme_location) {
     $cippo_menu_locations = (array) get_nav_menu_locations();
 
