@@ -222,6 +222,19 @@ function ilcm_register_sidebars() {
         )
     );
 
+    /* Register the DACA sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-contact',
+            'name' => __( 'Contact Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Contact" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="sidebar-nav__title">',
+            'after_title' => '</h4>'
+        )
+    );
+
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 add_action( 'widgets_init', 'ilcm_register_sidebars' );

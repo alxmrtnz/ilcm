@@ -570,7 +570,7 @@ ul.sub-nav__ul {
 
 		ul.sub-menu {
 
-			// display: none;
+			display: none;
 			li {
 				color: $black;
 				
@@ -590,6 +590,14 @@ ul.sub-nav__ul {
 			}
 		}
 
+	}
+
+	&.ul--news {
+		li {
+			ul.sub-menu {
+				display: block;
+			}
+		}
 	}
 }
 

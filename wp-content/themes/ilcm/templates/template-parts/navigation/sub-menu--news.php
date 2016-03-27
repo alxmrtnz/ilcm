@@ -7,7 +7,7 @@
 		</div>
 		<div class="medium-12 large-9 columns">
 			News
-			<ul class="sub-nav__ul">
+			<ul class="sub-nav__ul ul--news">
 				<?php
 
 	            $menu = array(

@@ -23,4 +23,7 @@
 	else if ($cat_name == 'Educational Presentations') {
 		dynamic_sidebar( 'sidebar-educational-presentations' );
 	}
+	else if ($cat_name == 'Contact') {
+		dynamic_sidebar( 'sidebar-contact' );
+	}
 ?>

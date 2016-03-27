@@ -40,11 +40,12 @@ get_header(); ?>
 					<?php 
 						if (is_page('Cases Served')) {
 							require('template-parts/case-highlights.php');
-						} else if (is_page('Referrals')) {
-							require('template-parts/referral-list.php');
 						} else if (is_page('Volunteer')) {
 							require('template-parts/volunteer-positions.php');
-						} else if (is_page('Trainings and Registration')) {
+						} else if (is_page('Careers')) {
+							require('template-parts/career-openings.php');
+						}
+						else if (is_page('Trainings and Registration')) {
 							require('template-parts/training-registration-listings.php');
 						}
 					?>
