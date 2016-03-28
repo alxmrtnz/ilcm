@@ -34,7 +34,7 @@
 			</li>
 		<?php endwhile; else: ?>
 
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<p><?php _e( 'Sorry, there are no volunteer positions available at this time.' ); ?></p>
 
 		<?php endif; ?>
 		</ul>
