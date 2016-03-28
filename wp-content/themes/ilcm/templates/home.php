@@ -31,8 +31,10 @@ get_header(); ?>
 			$args = array(
 				'numberposts'	=> '1',
 				'post_type'		=> 'news-post',
-				'posts_per_page' 	=> 3,
-				'paged' 		=> $paged
+				'posts_per_page' 	=> 4,
+				'paged' 		=> $paged,
+				'meta_key'		=> 'featured_news_article',
+				'meta_value'	=> 'Featured'
 			); 
 
 			$the_query = new WP_Query( $args );
