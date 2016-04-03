@@ -27,46 +27,52 @@ get_header(); ?>
 		</div>
 	</div> <!-- end .slide__nav-container -->
 	<div class="slider slider--homepage">
-		<?php 
-			$args = array(
-				'numberposts'	=> '1',
-				'post_type'		=> 'news-post',
-				'posts_per_page' 	=> 4,
-				'paged' 		=> $paged,
-				'meta_key'		=> 'featured_news_article',
-				'meta_value'	=> 'Featured'
-			); 
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php 
+				// check for rows (parent repeater)
+			if( have_rows('homepage_slider') ): ?>
+				<?php 
 
-			$the_query = new WP_Query( $args );
-		?>
-
-		<?php if( $the_query->have_posts() ): ?>
-		<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<div class="slider__slide" style="background-image:url(
+				// loop through rows (parent repeater)
+				while( have_rows('homepage_slider') ): the_row(); ?>
+					<div class="slider__slide" style="background-image:url(
 				<?php
-				$thumb_id = get_post_thumbnail_id();
-				$thumb_url = wp_get_attachment_image_src($thumb_id,'featured-homepage', true);
-				echo $thumb_url[0];
-				?>
-			">
-				<div class="row slide__content-row">
-					<div class="columns small-12 slide__content-columns">
-						<div class="slide__content">
-							<div class="slide__copy">
-								<h2 class="slide__title">
-									<a class="text-link--white" href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<div class="slide__subtitle">
-									<?php the_field( "byline" ); ?>
+					 the_sub_field('slide_background_image');
+				?>">
+						<div class="row slide__content-row">
+							<div class="columns small-12 slide__content-columns">
+								<div class="slide__content">
+									<div class="slide__copy">
+										<h2 class="slide__title">
+											<?php the_sub_field('slide_title'); ?>
+										</h2>
+										<div class="slide__subtitle">
+											<?php the_sub_field('slide_subtitle'); ?>
+										</div>
+										<div class="slide__link">
+											<?php
+												$value = get_sub_field( "slide_link" );
+
+												if( $value ) {
+												    
+												    echo '<a class="text-link--white text-link--underline" href="';
+												    the_sub_field('slide_link');
+												    echo ';"> Learn More ></a>';
+
+												}
+											?>
+										</div>
+
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="slider__bg-overlay"></div>
-			</div> <!-- end .slider__slide -->
+						<div class="slider__bg-overlay"></div>
+					</div> <!-- end .slider__slide -->
+
+				<?php endwhile; // while( has_sub_field('intake_hour_times') ): ?>
+			
+			<?php endif; // if( get_field('intake_hour_times') ): ?>
 
 		<?php endwhile; else: ?>
 

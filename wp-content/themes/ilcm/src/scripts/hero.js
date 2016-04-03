@@ -15,7 +15,9 @@ module.exports = function () {
             fade: true,
             dots: true,
             arrows: true,
-            appendDots: $('.slide__nav-content')
+            appendDots: $('.slide__nav-content'),
+            autoplay: true,
+            autoplaySpeed: 5000
 
         })
         .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
