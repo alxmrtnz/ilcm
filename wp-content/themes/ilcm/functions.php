@@ -64,6 +64,8 @@ require get_template_directory() . '/lib/theme-require-plugins.php';
 Misc Theme Functions
 *****************************************/
 
+
+
 /**
  * Define custom post type capabilities for use with Members
  */

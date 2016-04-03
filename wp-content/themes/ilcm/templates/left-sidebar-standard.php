@@ -32,13 +32,20 @@ get_header(); ?>
 					</p>
 
 
-					<?php  
-						// Get the page's title to determine if page is the presenations page
-		    			$pageTitle = get_the_title( $ID );
+				
 
-		    			if ($pageTitle == 'Educational Presentations') {
-		   
+					<?php 
+						if (is_page('Cases Served')) {
+							require('template-parts/case-highlights.php');
+						} else if (is_page('Educational Presentations')) {
 							require('template-parts/presentation-list.php');
+						} else if (is_page('Internships & Volunteering')) {
+							require('template-parts/volunteer-positions.php');
+						} else if (is_page('Careers')) {
+							require('template-parts/career-openings.php');
+						}
+						else if (is_page('Trainings and Registration')) {
+							require('template-parts/training-registration-listings.php');
 						}
 					?>
 

@@ -34,7 +34,5 @@
 		</li>
 	<?php endwhile; else: ?>
 
-		<p><?php _e( 'Sorry, there are no open positions at this time.' ); ?></p>
-
 	<?php endif; ?>
 	</ul>

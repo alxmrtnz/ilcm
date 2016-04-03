@@ -40,7 +40,9 @@ get_header(); ?>
 					<?php 
 						if (is_page('Cases Served')) {
 							require('template-parts/case-highlights.php');
-						} else if (is_page('Volunteer')) {
+						} else if (is_page('Educational Presentations')) {
+							require('template-parts/presentation-list.php');
+						} else if (is_page('Internships & Volunteering')) {
 							require('template-parts/volunteer-positions.php');
 						} else if (is_page('Careers')) {
 							require('template-parts/career-openings.php');
