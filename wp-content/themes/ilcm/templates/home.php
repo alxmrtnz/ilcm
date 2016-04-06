@@ -89,7 +89,7 @@ get_header(); ?>
 	<div class="intro-row-1 row">
 		<div class="intro-copy small-12 medium-12 large-7 columns">
 				<div class="intro-header-block">
-					<h3 class="heading--medium intro-header-block__heading heading--white">
+					<h3 class="heading--medium intro-header-block__heading ">
 						<?php the_field('intro_paragraph_title'); ?>
 					</h3>
 				</div>
@@ -100,7 +100,7 @@ get_header(); ?>
 		<div class="intake-block-container small-12 medium-12 large-5 columns">
 			<div class="intake-block">
 				<div class="intake-block__header">
-					<h4 class="heading--small heading--white">
+					<h4 class="heading--small heading--bold">
 						<?php the_field('intake_hour_block_title'); ?>
 					</h4>
 				</div>
@@ -165,7 +165,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<h3 class="child-grid__title heading--small">
-					<a href="#" class="text-link text-link--white">
+					<a href="#" class="text-link text-link--black">
 						<?php the_sub_field('featured_section_title'); ?>
 					</a>
 				</h3>
