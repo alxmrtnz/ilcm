@@ -29,9 +29,17 @@ body.home {}
 	height: 85vh;
 
 	@media #{$medium-up} {
-		min-height: 500px;
+		min-height: 350px;
 		height: 95vh;
-		max-height: 675px;
+		max-height: 500px;
+		margin-top:170px;
+	}
+
+	@media screen and (min-width: 1300px) {
+		min-height: 350px;
+		height: 95vh;
+		max-height: 600px;
+		margin-top:170px;
 	}
 }
 
@@ -216,22 +224,16 @@ ul.slick-dots {
 }
 
 .intro {
-	background: $dark-bg;
 	padding: 40px 10px 50px 10px;
 
-	p {
-		color: $shadow;
-	}
-
 	@media #{$medium-up} {
-		border: 20px solid #262A2F;
 		padding: 100px 0px 50px 0px;
 	}
 }
 
 .intro-row-1 {
 	padding-bottom: 50px;
-	border-bottom: 1px solid #262A2f;
+	border-bottom: 1px solid #eaeaea;
 	margin-bottom: 50px;
 
 	@media #{$medium-up}{
@@ -267,9 +269,9 @@ ul.slick-dots {
 }
 
 .intake-block {
-	background: lighten($dark-bg, 20%);
+	border: 1px solid #eaeaea;
 	border-radius: 5px;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 	padding: 30px;
 
 	@media #{$medium-only} {
@@ -278,7 +280,7 @@ ul.slick-dots {
 	}
 
 	p {
-		color: $white;
+		// color: $white;
 	}
 
 	.intake-block__header {
@@ -303,7 +305,7 @@ ul.slick-dots {
 			margin: 0px 0px 20px 0px;
 		}
 		.details__contact {
-			border-top: 1px solid lighten($dark-bg, 30%);
+			border-top: 1px solid #eaeaea;
 			padding-top: 20px;
 			font-size: 15px;
 		}
@@ -316,6 +318,9 @@ ul.slick-dots {
 }
 
 .homepage__child-grid {
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 70px; 
+
 	.child-grid__feature {
 		margin-bottom: 30px;
 
@@ -345,7 +350,7 @@ ul.slick-dots {
 	}
 
 	@media #{$large-up}{
-		padding: 150px 20px;
+		padding: 100px 20px 150px 20px;
 	}
 }
 

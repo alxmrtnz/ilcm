@@ -12,7 +12,7 @@ header.nav-bar {
 	top: 0px;
 	width: 100%;
 	z-index: 100;
-	background: none;
+	background: #fff;
 	transition: all .25s;
 
 	.nav-bar__main-menu li.current-page-ancestor, .nav-bar__main-menu li.current_page_item {
@@ -41,146 +41,15 @@ header.nav-bar {
 		}
 
 
-	.ilcm-svg-logo {
-		.cls-1 {
-		  fill: #231f20;
-		}
-
-		.cls-2 {
-		  fill: #b4594a;
-		}
-
-		.cls-3 {
-		  fill: #6583a6;
-		}
-
-		.cls-4 {
-		  fill: #699057;
-		}
-
-		.cls-5 {
-		  fill: #6d6e70;
-		}
-	}
-
-	.ilcm-svg-logo__tagline {
-		display: none;
-	}
-
-
 
 
 
 	@media #{$large-up} {
 
-		.ilcm-svg-logo {
-			.cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-			  fill: $white;
-			}
-		}
 
-		.ilcm-svg-logo__tagline {
-			display: block;
-		}
-
-
-
-		&:hover {
-			background: $nav-bg-gray;
-			color: $black;
-			border-bottom: 1px solid $line-main;
-
-			
-			.ilcm-svg-logo {
-				.cls-1 {
-				  fill: #231f20;
-				}
-
-				.cls-2 {
-				  fill: #b4594a;
-				}
-
-				.cls-3 {
-				  fill: #6583a6;
-				}
-
-				.cls-4 {
-				  fill: #699057;
-				}
-
-				.cls-5 {
-				  fill: #6d6e70;
-				}
-			}
-
-
-			.nav-bar__top-menu {
-				border-bottom: 1px solid rgba(230,230,230,1);
-			}
-			
-			.nav-bar__top-menu li a, .nav-bar__main-menu li a {
-				color: $black;
-			}
-
-			.nav-bar__top-menu-bg {
-				background: none;
-			}
-			.nav__social-icon {
-
-				a {
-					svg {
-						fill: $black;
-					}
-				}
-				
-			}
-
-
-
-			.org-logo-path {
-				fill: $black;
-			}
-		}
-	}
-
-	&.nav--not-home {
-
-		background: #EEF1F2;
+		// background: #EEF1F2;
 		color: $black;
 		border-bottom: 1px solid $line-main;
-
-
-		@media #{$large-up} {
-			.nav-bar__org-logo a object {
-				fill: $black;
-			}
-	
-			.org-logo-path {
-				fill: $black;
-			}
-		}
-
-		.ilcm-svg-logo {
-			.cls-1 {
-			  fill: #231f20;
-			}
-
-			.cls-2 {
-			  fill: #b4594a;
-			}
-
-			.cls-3 {
-			  fill: #6583a6;
-			}
-
-			.cls-4 {
-			  fill: #699057;
-			}
-
-			.cls-5 {
-			  fill: #6d6e70;
-			}
-		}
 
 		.nav-bar__top-menu {
 			border-bottom: 1px solid rgba(230,230,230,1);
@@ -194,7 +63,7 @@ header.nav-bar {
 			background: none;
 		}
 
-	
+		
 
 		.nav__social-icon {
 
@@ -205,7 +74,6 @@ header.nav-bar {
 			}
 			
 		}
-
 	}
 }
 
@@ -214,14 +82,14 @@ header.nav-bar.nav--not-home {
 }
 
 .nav-bar__mobile-open {
-	background-color: rgba(black, 0.1);
+	background-color: $white;
 	border: none;
 	height: 60px;
 	outline: 0;
 	padding-top: 8px;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 20px;
+	top: 26px;
 	-webkit-appearance: none;
 	width: 60px;
 
@@ -307,30 +175,26 @@ header.nav-bar.nav--not-home {
 
 
 .nav-bar__main-menu-bg {
-	background-color: $nav-bg-gray;
-	height: 60px;
+	background-color: $white;
+	height: 119px;
 	position: relative;
 	width: 100%;
 	z-index: 5;
 
 	@media #{$large-up} {
-		background-color: transparent;
+		// background-color: transparent;
 		height: 0;
 	}
 }
 
 
 .nav-bar__org-logo {
-	width: 160px;
-	margin-bottom: 0px;
-	margin-top: 9px;
-	height: 46px;
+	width: 200px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 
 	@media #{$large-up} {
-		height: 50px;
-	    margin-top: 14px;
-	    margin-bottom: 11px;
-	    width: 270px;
+	    width: 250px;
 	}
 
 	a {
@@ -373,7 +237,7 @@ header.nav-bar.nav--not-home {
 		}
 
 		a {
-			color: $white;
+			// color: $white;
 			text-decoration: none;
 			display: block;
 			height: 100%;
@@ -422,11 +286,16 @@ header.nav-bar.nav--not-home {
 	padding-right: 0;
 	text-align: right;
 	max-height: 0;
+	border-top: 1px solid #EAEAEA;
 	@include transition(max-height 0.8s);
 	@include transform(translateY(-125%));
 	@include transition(transform 0.2s);
 	@include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
 	// width: 100%;
+
+	@media #{$medium-up} {
+		border-top: none;
+	}
 
 	@media #{$large-up} {
 		max-height: none;
@@ -470,7 +339,7 @@ header.nav-bar.nav--not-home {
 				background-color: transparent;
 				border-bottom: none;
 				color: $white;
-				padding: 48px 18px 46px 18px;
+				padding: 58px 18px 55px 18px;
 			}
 		}
 		
@@ -521,7 +390,7 @@ header.nav-bar.nav--not-home {
 	.nav-bar__main-menu {
 		@include transform(translateY(0));
 		max-height: none;
-		background: $nav-bg-gray;
+		background: $white;
 	}
 }
 
