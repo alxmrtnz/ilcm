@@ -29,9 +29,17 @@ body.home {}
 	height: 85vh;
 
 	@media #{$medium-up} {
-		min-height: 500px;
+		min-height: 350px;
 		height: 95vh;
-		max-height: 675px;
+		max-height: 500px;
+		margin-top:170px;
+	}
+
+	@media screen and (min-width: 1300px) {
+		min-height: 350px;
+		height: 95vh;
+		max-height: 600px;
+		margin-top:170px;
 	}
 }
 

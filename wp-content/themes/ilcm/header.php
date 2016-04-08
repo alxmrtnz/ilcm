@@ -43,14 +43,7 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
-	<header class="nav-bar
-		<?php
-		if ( !is_page('Home') ) {
-		    // This is not the homepage
-		    echo 'nav--not-home';
-		}
-		?>
-	" role="banner">
+	<header class="nav-bar" role="banner">
 		<div class="nav-bar__color-bar">
 		</div>
 
@@ -106,7 +99,7 @@
 				   			</a>
 				   		</li>
 				   		<li class="nav__social-icon">
-				   			<a href="https://www.youtube.com/user/ImmigrantLawCenterMN" target="_blank">
+				   			<a href="https://www.linkedin.com/company/immigrant-law-center-of-minnesota" target="_blank">
 				   				<?php 
 				   					require('social/icon-linkedin.svg');
 				   				?>
@@ -128,7 +121,7 @@ function googleTranslateElementInit() {
 				<div class="nav-bar__org-logo-container columns small-10 medium-3">
 					<div class="nav-bar__org-logo">
 						<a href="/">
-							<?php get_template_part( 'ilcm_20_logo' );  // Navigation and Logo (nav_logo.php) ?>
+							<img src="<?php bloginfo('template_url'); ?>/dist/assets/images/20th-ILCM-Logo.jpg" alt="Immigrant Law Center of Minnesota">
 						</a>
 					</div>
 				</div>
