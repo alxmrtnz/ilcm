@@ -43,7 +43,14 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
 
-	<header class="nav-bar" role="banner">
+	<header class="nav-bar
+		<?php
+		if ( !is_page('Home') ) {
+		    // This is not the homepage
+		    echo 'nav--not-home';
+		}
+		?>
+	" role="banner">
 		<div class="nav-bar__color-bar">
 		</div>
 
