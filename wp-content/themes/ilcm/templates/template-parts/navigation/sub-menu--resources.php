@@ -65,13 +65,13 @@
 			</ul>		
 		</div>
 		<div class="medium-12 large-3 columns">
-			Educational Presentations
+			Educational Resources
 			<ul class="resources-sub-menu__immigration-resources sub-nav__ul">
 				<?php
 
 	            $menu = array(
 	                'theme_location'  => '',
-	                'menu'            => 'Educational Presentations Menu',
+	                'menu'            => 'Educational Resources Menu',
 	                'container'       => false,
 	                'container_class' => '',
 	                'container_id'    => '',

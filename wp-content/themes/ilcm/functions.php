@@ -249,8 +249,8 @@ function ilcm_register_sidebars() {
     register_sidebar(
         array(
             'id' => 'sidebar-educational-presentations',
-            'name' => __( 'Educational Presentations', 'ilcm' ),
-            'description' => __( 'Widgets placed here will go in the left sidebar of the "Educational Presentations" pages.', 'ilcm' ),
+            'name' => __( 'Educational Resources', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Educational Resources" pages.', 'ilcm' ),
             'before_widget' => '<aside class="sidebar-nav"">',
             'after_widget' => '</aside>',
             'before_title' => '<h4 class="sidebar-nav__title">',
