@@ -9,77 +9,80 @@
 
 get_header(); ?>
 
-<section class="hero">
-	<div class="row slide__nav-container">
-		<div class="slide__nav">
-			<div class="slide__nav-content">
-				<div class="slide__arrows-container">
-					<div class="slide__arrow arrow--prev">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/arrow-left.svg" onerror="">
-						<span class="off-screen">previous slide</span>
-					</div>
-					<div class="slide__arrow arrow--next">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/arrow-right.svg" onerror="">
-						<span class="off-screen">next slide</span>
+<section class="hero ">
+	<div class="hero-content-container">
+		<div class="row slide__nav-container">
+			<div class="slide__nav">
+				<div class="slide__nav-content">
+					<div class="slide__arrows-container">
+						<div class="slide__arrow arrow--prev">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/arrow-left.svg" onerror="">
+							<span class="off-screen">previous slide</span>
+						</div>
+						<div class="slide__arrow arrow--next">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/arrow-right.svg" onerror="">
+							<span class="off-screen">next slide</span>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div> <!-- end .slide__nav-container -->
-	<div class="slider slider--homepage">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php 
-				// check for rows (parent repeater)
-			if( have_rows('homepage_slider') ): ?>
+		</div> <!-- end .slide__nav-container -->
+		<div class="slider slider--homepage">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php 
+					// check for rows (parent repeater)
+				if( have_rows('homepage_slider') ): ?>
+					<?php 
 
-				// loop through rows (parent repeater)
-				while( have_rows('homepage_slider') ): the_row(); ?>
-					<div class="slider__slide" style="background-image:url(
-				<?php
-					 the_sub_field('slide_background_image');
-				?>">
-						<div class="row slide__content-row">
-							<div class="columns small-12 slide__content-columns">
-								<div class="slide__content">
-									<div class="slide__copy">
-										<h2 class="slide__title">
-											<?php the_sub_field('slide_title'); ?>
-										</h2>
-										<div class="slide__subtitle">
-											<?php the_sub_field('slide_subtitle'); ?>
+					// loop through rows (parent repeater)
+					while( have_rows('homepage_slider') ): the_row(); ?>
+						<div class="slider__slide" style="background-image:url(
+					<?php
+						 the_sub_field('slide_background_image');
+					?>">
+							<div class="row slide__content-row">
+								<div class="columns small-12 slide__content-columns">
+									<div class="slide__content">
+										<div class="slide__copy">
+											<h2 class="slide__title">
+												<?php the_sub_field('slide_title'); ?>
+											</h2>
+											<div class="slide__subtitle">
+												<?php the_sub_field('slide_subtitle'); ?>
+											</div>
+											<div class="slide__link">
+												<?php
+													$value = get_sub_field( "slide_link" );
+
+													if( $value ) {
+													    
+													    echo '<a class="text-link--white text-link--underline" href="';
+													    the_sub_field('slide_link');
+													    echo ';"> Learn More ></a>';
+
+													}
+												?>
+											</div>
+
 										</div>
-										<div class="slide__link">
-											<?php
-												$value = get_sub_field( "slide_link" );
-
-												if( $value ) {
-												    
-												    echo '<a class="text-link--white text-link--underline" href="';
-												    the_sub_field('slide_link');
-												    echo ';"> Learn More ></a>';
-
-												}
-											?>
-										</div>
-
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="slider__bg-overlay"></div>
-					</div> <!-- end .slider__slide -->
+							<div class="slider__bg-overlay"></div>
+						</div> <!-- end .slider__slide -->
 
-				<?php endwhile; // while( has_sub_field('intake_hour_times') ): ?>
-			
-			<?php endif; // if( get_field('intake_hour_times') ): ?>
+					<?php endwhile; // while( has_sub_field('intake_hour_times') ): ?>
+				
+				<?php endif; // if( get_field('intake_hour_times') ): ?>
 
-		<?php endwhile; else: ?>
+			<?php endwhile; else: ?>
 
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 
-		<?php endif; ?>
-	</div> <!-- end .slider.slider--homepage -->
+			<?php endif; ?>
+		</div> <!-- end .slider.slider--homepage -->
+	</div> <!-- end .hero-slider-container -->
+	
 </section> <!-- end .hero -->
 
 

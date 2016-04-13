@@ -150,10 +150,10 @@ add_action( 'init', 'register_my_menus' );
 //Add Post Thumbnail Theme Support
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
-
+// 1.831541219
 // additional image sizes
 // delete the next line if you do not need additional image sizes
-add_image_size( 'featured-homepage', 1440, 800 ); //1440 pixels wide, 800 pixels tall
+add_image_size( 'featured-homepage', 1440, 760 ); //1440 pixels wide, 800 pixels tall
 add_image_size( 'thumbnail-medium-square', 300, 300 ); //300 pixels wide, 300 pixels tall
 add_image_size( 'thumbnail-medium', 350, 250 ); //350 pixels wide, 250 pixels tall
 add_image_size( 'featured-news', 720, 300 ); //750 pixels wide, 450 pixels tall
