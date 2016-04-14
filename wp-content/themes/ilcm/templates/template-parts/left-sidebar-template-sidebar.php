@@ -26,4 +26,10 @@
 	else if ($cat_name == 'Contact') {
 		dynamic_sidebar( 'sidebar-contact' );
 	}
+	else if ($cat_name == 'Events') {
+		dynamic_sidebar( 'sidebar-events' );
+	}
+	else if ($cat_name == 'Subscribe') {
+		dynamic_sidebar( 'sidebar-subscribe' );
+	}
 ?>

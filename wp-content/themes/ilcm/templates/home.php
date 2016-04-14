@@ -38,7 +38,22 @@ get_header(); ?>
 					while( have_rows('homepage_slider') ): the_row(); ?>
 						<div class="slider__slide" style="background-image:url(
 					<?php
-						 the_sub_field('slide_background_image');
+
+						// first, get the image ID returned by ACF
+						$image_id = get_sub_field('slide_background_image');
+
+						// and the image size you want to return
+						$image_size = 'featured-homepage';
+
+						// use wp_get_attachment_image_src to return an array containing the image
+						// we'll pass in the $image_id in the first parameter
+						// and the image size registered using add_image_size() in the second
+						$image_array = wp_get_attachment_image_src($image_id, $image_size);
+
+						// finally, extract and store the URL from $image_array
+						$image_url = $image_array[0];
+
+						echo $image_url;
 					?>">
 							<div class="row slide__content-row">
 								<div class="columns small-12 slide__content-columns">

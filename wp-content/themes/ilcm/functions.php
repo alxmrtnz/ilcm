@@ -270,6 +270,31 @@ function ilcm_register_sidebars() {
             'after_title' => '</h4>'
         )
     );
+    /* Register the Events sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-events',
+            'name' => __( 'Events Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Events" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="sidebar-nav__title">',
+            'after_title' => '</h4>'
+        )
+    );
+
+    /* Register the Subscribe sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'sidebar-subscribe',
+            'name' => __( 'Subscribe Sidebar', 'ilcm' ),
+            'description' => __( 'Widgets placed here will go in the left sidebar of the "Subscribe" pages.', 'ilcm' ),
+            'before_widget' => '<aside class="sidebar-nav"">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h4 class="sidebar-nav__title">',
+            'after_title' => '</h4>'
+        )
+    );
 
     /* Repeat register_sidebar() code for additional sidebars. */
 }
