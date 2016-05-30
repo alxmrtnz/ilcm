@@ -176,6 +176,7 @@ function googleTranslateElementInit() {
 				require('templates/template-parts/navigation/sub-menu--resources.php');
 				require('templates/template-parts/navigation/sub-menu--our-work.php');
 				require('templates/template-parts/navigation/sub-menu--news.php');
+				require('templates/template-parts/navigation/sub-menu--events.php');
 			?>
 		</div> <!-- end .sub-menu__marquee -->
 	

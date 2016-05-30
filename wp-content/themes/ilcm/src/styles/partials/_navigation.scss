@@ -544,6 +544,13 @@ ul.sub-nav__ul {
 			}
 		}
 	}
+	&.ul--events {
+		li {
+			ul.sub-menu {
+				display: block;
+			}
+		}
+	}
 }
 
 .sub-menu__featured-img-left {
