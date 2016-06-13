@@ -39,9 +39,9 @@
 					    	echo '<h5 class="footer__menu-title">' . $menuName . '</h5>';
 
 					    echo '<ul class="footer__sub-menu-list">';
-					    wp_nav_menu($aboutMenu); 
+					    wp_nav_menu($aboutMenu);
 					    echo '</ul>';
-					  
+
 
 					 ?>
 				</div>
@@ -186,7 +186,7 @@
 					        'depth'           => 0,
 					        'walker'          => ''
 					    );
-				    	
+
 				    	$menuName = get_menu_name('about-menu');
 				    	echo '<h5 class="footer__menu-title">' . $menuName . '</h5>';
 
@@ -197,7 +197,7 @@
 					 ?>
 				</div>
 			</div>
-			
+
 		</div> <!-- .row -->
 
 		<div class="row">
@@ -226,7 +226,7 @@
 					        'depth'           => 0,
 					        'walker'          => ''
 					    );
-				    	
+
 
 					    echo '<ul class="footer__sub-menu-list secondary-menu__menu-list">';
 					    wp_nav_menu($footerSecondaryMenu);
@@ -260,7 +260,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 		</div><!-- .row -->
 	</footer><!-- #colophon -->
 
@@ -270,6 +270,16 @@
 
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/scripts/main.min.js"></script>
+
+<a href="http://www.google.com" class="safe-browsing-modal-container hidden">
+   <div class="safe-browsing ">
+      <div class="safe-browsing__modal">
+         <div class="modal__content">
+            <?php the_field('safe_browsing_modal_content', 'option'); ?>
+         </div>
+      </div>
+   </div>
+</a>
 
 </body>
 </html>

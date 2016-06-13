@@ -66,7 +66,7 @@ Misc Theme Functions
 
 
 function post_remove ()      //creating functions post_remove for removing menu item
-{ 
+{
    remove_menu_page('edit.php');
 }
 
@@ -336,7 +336,7 @@ function custom_post_type_news() {
 		'view_item'          => __( 'View News Post' ),
 		'search_items'       => __( 'Search News Posts' ),
 		'not_found'          => __( 'No news posts found' ),
-		'not_found_in_trash' => __( 'No news posts found in the Trash' ), 
+		'not_found_in_trash' => __( 'No news posts found in the Trash' ),
 		'parent_item_colon'  => '',
 		'menu_name'          => 'News Post'
 	);
@@ -349,7 +349,7 @@ function custom_post_type_news() {
         'rewrite' => array( 'slug' => 'news'),
 		'has_archive'   => false
 	);
-	register_post_type( 'news-post', $args );	
+	register_post_type( 'news-post', $args );
 }
 add_action( 'init', 'custom_post_type_news' );
 
@@ -376,18 +376,18 @@ function create_topics_hierarchical_taxonomy() {
     'all_items' => __( 'All News Topics' ),
     'parent_item' => __( 'Parent News Topic' ),
     'parent_item_colon' => __( 'Parent News Topic:' ),
-    'edit_item' => __( 'Edit News Topic' ), 
+    'edit_item' => __( 'Edit News Topic' ),
     'update_item' => __( 'Update News Topic' ),
     'add_new_item' => __( 'Add New News Topic' ),
     'new_item_name' => __( 'New News Topic Name' ),
     'menu_name' => __( 'Topics' ),
-  );    
+  );
 
 // Now register the taxonomy
 
   register_taxonomy(
     'topics', //this line registers the taxonomy name
-    'news-post', //this line determines what kind of post type (or custom post type) to display the taxonomy's meta box on the wordpress backend 
+    'news-post', //this line determines what kind of post type (or custom post type) to display the taxonomy's meta box on the wordpress backend
 
     array(
         'hierarchical' => true,
@@ -401,10 +401,10 @@ function create_topics_hierarchical_taxonomy() {
 
 }
 ///////////////////////////////////////////
-// Function to delete and reset the categories for news posts. 
-//Uncomment this, save, and reload a page on the site to run. 
-// After running, make sure your categories have been deleted and 
-// then comment this out again or it will delete and clear any new 
+// Function to delete and reset the categories for news posts.
+//Uncomment this, save, and reload a page on the site to run.
+// After running, make sure your categories have been deleted and
+// then comment this out again or it will delete and clear any new
 // categories added any time a page is reloaded.
 /////////////////////////////////////////////
 // function sjc_delete_terms() {
@@ -430,16 +430,16 @@ function hide_editor() {
 
     // Hide the editor on the page titled 'Homepage'
       $homepgname = get_the_title($post_id);
-      if($homepgname == 'Home'){ 
+      if($homepgname == 'Home'){
         remove_post_type_support('page', 'editor');
       }
       $boardpgname = get_the_title($post_id);
-      if($boardpgname == 'Board of Directors'){ 
+      if($boardpgname == 'Board of Directors'){
         remove_post_type_support('page', 'editor');
       }
 
       $staffpgname = get_the_title($post_id);
-      if($staffpgname == 'Staff'){ 
+      if($staffpgname == 'Staff'){
         remove_post_type_support('page', 'editor');
       }
       // Hide the editor on a page with a specific page template
@@ -452,9 +452,9 @@ function hide_editor() {
 
 add_action( 'admin_menu', 'remove_homepage_meta_boxes' );
 
-function remove_homepage_meta_boxes() 
+function remove_homepage_meta_boxes()
 {
-    if( $_GET['post'] == '38' ) 
+    if( $_GET['post'] == '38' )
     {
         remove_meta_box('tagsdiv-post_tag', 'page', 'normal');
         remove_meta_box('categorydiv', 'page', 'normal');
@@ -479,9 +479,9 @@ function remove_homepage_meta_boxes()
 
 add_action( 'admin_menu', 'remove_resources_meta_boxes' );
 
-function remove_resources_meta_boxes() 
+function remove_resources_meta_boxes()
 {
-    if( $_GET['post'] == '9' ) 
+    if( $_GET['post'] == '9' )
     {
         remove_meta_box('tagsdiv-post_tag', 'page', 'normal');
         remove_meta_box('categorydiv', 'page', 'normal');
@@ -555,7 +555,7 @@ function ilcm_customize_register( $wp_customize ) {
 
     //site logo image upload
     $wp_customize->add_setting( 'logo-upload' );
-     
+
     $wp_customize->add_control(
         new WP_Customize_Image_Control(
             $wp_customize,
@@ -588,4 +588,17 @@ function example_customize_preview() {
     </script>
     <?php
 }  // End function example_customize_preview()
+
+
+
+///////////////////////////////////////////
+// Function instanciate an Advanced Custom
+// Fields global options page
+///////////////////////////////////////////
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+    acf_add_options_sub_page('Safe Browsing Modal');
+
+}
 
