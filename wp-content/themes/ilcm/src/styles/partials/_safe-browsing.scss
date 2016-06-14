@@ -31,6 +31,7 @@ $safe-browsing-color: $primary-color;
 	position: fixed;
 	background: rgba(0,0,0,.8);
 	z-index: 500;
+	top: 0;
 
 	.safe-browsing__modal {
 		background: $white;

@@ -271,7 +271,7 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/scripts/main.min.js"></script>
 
-<a href="http://www.google.com" class="safe-browsing-modal-container hidden">
+<a href="<?php the_field('safe_browsing_modal_link', 'option'); ?>" class="safe-browsing-modal-container hidden">
    <div class="safe-browsing ">
       <div class="safe-browsing__modal">
          <div class="modal__content">

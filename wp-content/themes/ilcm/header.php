@@ -159,13 +159,32 @@ function googleTranslateElementInit() {
 		            wp_nav_menu($menu);
 
 		         ?>
-		         <li>
-		         	<button class="button--standard button--nav">
-		         		<a href="/get-involved/donate" class="button__link">
-		         			Donate
-		         		</a>
-		         	</button>
-		         </li>
+
+		         <?php 
+
+			         if( get_field( 'nav_button_toggle', 'option' ) ) {
+			             
+			             echo '<li>
+			         			<button class="button--standard button--nav">
+			         				<a href="';
+			         	 
+			         	 the_field('nav_button_link_url', 'option');
+			         	 
+			         	 echo '" class="button__link">';
+			             
+			             the_field('nav_button_text', 'option');
+			             
+			             echo '		</a>
+					      		</button>
+					         </li>';
+
+			         } else {
+
+			             
+			         }
+		         ?>
+
+		         
 		    </ul>
 		</nav>
 

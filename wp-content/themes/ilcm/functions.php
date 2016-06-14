@@ -598,7 +598,7 @@ function example_customize_preview() {
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page();
-    acf_add_options_sub_page('Safe Browsing Modal');
+    acf_add_options_sub_page('Global Options');
 
 }
 

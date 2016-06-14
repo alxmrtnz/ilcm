@@ -44,7 +44,6 @@ var Header = require('./header.js');
 
     function showPopUpWarning() {
     	setTimeout(function(){
-    		// $('.safe-browsing').removeClass('hide');
     		$('.safe-browsing-modal-container').removeClass('hidden');
     		$('body').addClass('overflow-hidden');
     	}, 5000);
