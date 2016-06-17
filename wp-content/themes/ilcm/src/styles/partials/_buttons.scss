@@ -25,10 +25,18 @@
 	}
 }
 
+.button--small {
+	font-size: 15px;
+}
+
 .button--nav {
 	margin: 10px 0px 14px 19px;
+	padding:  7px 15px !important;
+	border-bottom: none !important;
+	width: auto !important;
+
 	.button__link {
-		padding: 5px 8px !important;
+		
 		border: none;
 
 	}

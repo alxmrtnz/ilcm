@@ -179,10 +179,12 @@ header.nav-bar.nav--not-home {
 	height: 119px;
 	position: relative;
 	width: 100%;
+	border-bottom: 1px solid $line-main;
 	z-index: 5;
 
 	@media #{$large-up} {
 		// background-color: transparent;
+		border: none;
 		height: 0;
 	}
 }

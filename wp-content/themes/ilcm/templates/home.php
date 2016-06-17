@@ -11,7 +11,7 @@ get_header(); ?>
 
 <section class="hero ">
 	<div class="hero-content-container">
-		<div class="row slide__nav-container">
+		<div class=" slide__nav-container">
 			<div class="slide__nav">
 				<div class="slide__nav-content">
 					<div class="slide__arrows-container">
@@ -55,8 +55,8 @@ get_header(); ?>
 
 						echo $image_url;
 					?>">
-							<div class="row slide__content-row">
-								<div class="columns small-12 slide__content-columns">
+							<div class=" slide__content-row">
+								<div class="columns slide__content-columns">
 									<div class="slide__content">
 										<div class="slide__copy">
 											<h2 class="slide__title">
@@ -183,7 +183,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<h3 class="child-grid__title heading--small">
-					<a href="#" class="text-link text-link--black">
+					<a href="<?php the_sub_field('featured_section_link'); ?>" class="text-link text-link--black">
 						<?php the_sub_field('featured_section_title'); ?>
 					</a>
 				</h3>
@@ -216,11 +216,9 @@ get_header(); ?>
 					<p class="text--centered">
 						<?php the_sub_field('cta_description'); ?>
 					</p>
-					<button class="button--standard">
-						<a href="<?php the_sub_field('cta_button_link'); ?>" class="button__link">
-							<?php the_sub_field('cta_button_text'); ?>
-						</a>
-					</button>
+					<a href="<?php the_sub_field('cta_button_link'); ?>" class="button--standard button__link">
+						<?php the_sub_field('cta_button_text'); ?>
+					</a>
 				</div>
 			</div>
 

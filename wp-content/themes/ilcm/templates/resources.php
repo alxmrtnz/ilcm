@@ -67,7 +67,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<h3 class="child-grid__title heading--small">
-					<a href="#" class="text-link text-link--black">
+					<a href="<?php the_sub_field('feature_block_link'); ?>" class="text-link text-link--black">
 						<?php the_sub_field('feature_title'); ?>
 					</a>
 				</h3>

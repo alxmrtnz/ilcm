@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -165,17 +166,15 @@ function googleTranslateElementInit() {
 			         if( get_field( 'nav_button_toggle', 'option' ) ) {
 			             
 			             echo '<li>
-			         			<button class="button--standard button--nav">
-			         				<a href="';
+			         				<a class="button--standard button--nav" href="';
 			         	 
 			         	 the_field('nav_button_link_url', 'option');
 			         	 
-			         	 echo '" class="button__link">';
+			         	 echo '" >';
 			             
 			             the_field('nav_button_text', 'option');
 			             
 			             echo '		</a>
-					      		</button>
 					         </li>';
 
 			         } else {
