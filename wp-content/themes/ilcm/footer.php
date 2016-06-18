@@ -269,6 +269,7 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/scripts/main.min.js"></script>
 
 <a href="<?php the_field('safe_browsing_modal_link', 'option'); ?>" class="safe-browsing-modal-container hidden">

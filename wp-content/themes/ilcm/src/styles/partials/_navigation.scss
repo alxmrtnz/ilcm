@@ -45,11 +45,9 @@ header.nav-bar {
 
 
 	@media #{$large-up} {
-
-
-		// background: #EEF1F2;
 		color: $black;
 		border-bottom: 1px solid $line-main;
+		position: relative;
 
 		.nav-bar__top-menu {
 			border-bottom: 1px solid rgba(230,230,230,1);

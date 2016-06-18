@@ -28,6 +28,10 @@
 	<!-- Load Slick Slider -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/>
+
+	<!-- Load Flex Slider -->
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/flexslider/flexslider.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick-theme.css"/>
 					
 
 	<?php wp_head(); ?>
