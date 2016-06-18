@@ -52,7 +52,7 @@ header.nav-bar {
 		border-bottom: 1px solid $line-main;
 
 		.nav-bar__top-menu {
-			border-bottom: 1px solid rgba(230,230,230,1);
+			
 		}
 		
 		.nav-bar__top-menu li a, .nav-bar__main-menu li a {
@@ -190,6 +190,8 @@ header.nav-bar.nav--not-home {
 }
 
 
+
+
 .nav-bar__org-logo {
 	width: 200px;
 	margin-bottom: 10px;
@@ -209,11 +211,24 @@ header.nav-bar.nav--not-home {
 	transition: fill $hover-time;
 }
 
+.nav-bar__top-menu-container-row {
+	position: relative;
+}
 
+#google_translate_element {
+	position: absolute;
+	left: 10px;
+}
+
+.goog-te-gadget-simple {
+	padding: 9px 0px 2px 23px !important;
+
+}
 
 .nav-bar__top-menu-bg {
-	background: rgba(0,0,0,.2);
-	// overflow: hidden;
+	background: $white;
+	min-height: 40px;
+	border-bottom: 1px solid rgba(230,230,230,1);
 	transition: all $hover-time;
 }
 

@@ -56,8 +56,10 @@
 		</div>
 
 		<nav class="nav-bar__top-menu-bg">
-			<div class="row show-for-large-up">
-					<ul class="nav-bar__top-menu columns small-12 ">
+			<div class="row nav-bar__top-menu-container-row">
+				<div id="google_translate_element"></div>
+				<div class=" show-for-large-up">
+					<ul class="nav-bar__top-menu columns small-12 medium-10 medium-offset-2">
 						<?php
 
 				            $topMenu = array(
@@ -82,9 +84,6 @@
 				            wp_nav_menu($topMenu);
 
 				         ?>
-				   		<li>
-				   			<div id="google_translate_element"></div>
-				   		</li>
 				   		<li class="nav__social-icon">
 				   			<a href="https://www.facebook.com/immigrantlawcenterMN/" target="_blank">
 				   				<?php 
@@ -114,12 +113,10 @@
 				   			</a>
 				   		</li>
 					</ul>
+				</div>
 			</div>
-			<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			
+			
 
 				
 		</nav>
@@ -200,7 +197,13 @@ function googleTranslateElementInit() {
 	
 		
 
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+	</script>
 
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		
 	</header><!-- #masthead -->
 
