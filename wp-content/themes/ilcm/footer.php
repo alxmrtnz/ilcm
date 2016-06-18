@@ -271,7 +271,7 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/scripts/main.min.js"></script>
 
-<div class="safe-browsing-modal-container ">
+<div class="safe-browsing-modal-container hidden">
 	<div class="safe-browsing ">
    		<a href="<?php the_field('safe_browsing_modal_link', 'option'); ?>" >
 			<div class="safe-browsing__modal">
