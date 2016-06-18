@@ -271,15 +271,17 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/scripts/main.min.js"></script>
 
-<a href="<?php the_field('safe_browsing_modal_link', 'option'); ?>" class="safe-browsing-modal-container hidden">
-   <div class="safe-browsing ">
-      <div class="safe-browsing__modal">
-         <div class="modal__content">
-            <?php the_field('safe_browsing_modal_content', 'option'); ?>
-         </div>
-      </div>
+<div class="safe-browsing-modal-container ">
+	<div class="safe-browsing ">
+   		<a href="<?php the_field('safe_browsing_modal_link', 'option'); ?>" >
+			<div class="safe-browsing__modal">
+				<div class="modal__content">
+					<?php the_field('safe_browsing_modal_content', 'option'); ?>
+				</div>
+			</div>
+		</a>
    </div>
-</a>
+</div>
 
 </body>
 </html>
