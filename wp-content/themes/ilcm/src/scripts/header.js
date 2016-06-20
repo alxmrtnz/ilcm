@@ -16,7 +16,7 @@ module.exports = Backbone.View.extend({
 		'click .nav-bar__main-menu-open-sub-menu': 'toggleMobileSubMenu'
 	},
 
-	initialize(options) {
+	initialize: function(options) {
 		this.options = options || {};
 		this.ui = {
 			body: $('body'),
@@ -28,7 +28,7 @@ module.exports = Backbone.View.extend({
 		this.render();
 	},
 
-	render() {
+	render: function() {
 		var that = this;
 
 		this.ui.menuLinks.each(function(index, el) {
@@ -55,13 +55,13 @@ module.exports = Backbone.View.extend({
 		return this;
 	},
 
-	showSubMenu(e) {
+	showSubMenu: function(e) {
 		e.stopImmediatePropagation();
 		$(e.target).addClass('is-shown');
 		clearTimeout(this.options.hoverTimeout);
 	},
 
-	showSubMenuItem(e) {
+	showSubMenuItem: function(e) {
 		e.stopImmediatePropagation();
 		var link = $(e.target).attr('href').match(/([\w-]+)\/$/)[1];
 		this.ui.subMenus.removeClass('is-shown');
@@ -76,19 +76,19 @@ module.exports = Backbone.View.extend({
 		};
 	},
 
-	hideSubMenu(e) {
+	hideSubMenu: function(e) {
 		this.ui.subMenus.removeClass('is-shown');
 		this.ui.menuItems.removeClass('is-current-link');
 	},
 
-	hideHoverState(e) {
+	hideHoverState: function(e) {
 		var that = this;
 		this.options.hoverTimeout = setTimeout(function () {
 			that.ui.menuItems.removeClass('is-current-link');
 		}, 200);
 	},
 
-	toggleMobileMenu(e) {
+	toggleMobileMenu: function(e) {
 		if (this.ui.body.hasClass('is-mobile-menu-open')) {
 			this.hideMobileMenu();
 		} else {
@@ -96,15 +96,15 @@ module.exports = Backbone.View.extend({
 		}
 	},
 
-	showMobileMenu(e) {
+	showMobileMenu: function(e) {
 		this.ui.body.addClass('is-mobile-menu-open');
 	},
 
-	hideMobileMenu(e) {
+	hideMobileMenu: function(e) {
 		this.ui.body.removeClass('is-mobile-menu-open');
 	},
 
-	toggleMobileSubMenu(e) {
+	toggleMobileSubMenu: function(e) {
 		var clickedItem = $(e.target).parent();
 		clickedItem.siblings().removeClass('is-mobile-sub-menu-open');
 		clickedItem.toggleClass('is-mobile-sub-menu-open');
