@@ -67,8 +67,10 @@ Misc Theme Functions
 
 function post_remove ()      //creating functions post_remove for removing menu item
 {
-   remove_menu_page('edit.php');
+   // remove_menu_page('edit.php');
 }
+
+define('DISALLOW_FILE_EDIT', false);
 
 add_action('admin_menu', 'post_remove');   //adding action for triggering function call
 
@@ -105,7 +107,7 @@ add_action( 'load-post-new.php', 'disable_new_post' );
  */
 add_action( 'admin_init', 'mb_add_post_type_caps' );
 function mb_add_post_type_caps() {
-	// mb_add_capabilities( 'portfolio' );
+    // mb_add_capabilities( 'portfolio' );
 }
 
 /**
@@ -113,17 +115,17 @@ function mb_add_post_type_caps() {
  */
 add_filter( 'wpseo_metabox_prio', 'mb_filter_yoast_seo_metabox' );
 function mb_filter_yoast_seo_metabox() {
-	return 'low';
+    return 'low';
 }
 
 //Making jQuery Google API
 function modify_jquery() {
-	if (!is_admin()) {
-		// comment out the next two lines to load the local copy of jQuery
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
-		wp_enqueue_script('jquery');
-	}
+    if (!is_admin()) {
+        // comment out the next two lines to load the local copy of jQuery
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
+        wp_enqueue_script('jquery');
+    }
 }
 add_action('init', 'modify_jquery');
 
@@ -325,31 +327,31 @@ add_action( 'widgets_init', 'ilcm_register_sidebars' );
 
 
 function custom_post_type_news() {
-	$labels = array(
-		'name'               => _x( 'News Posts', 'post type general name' ),
-		'singular_name'      => _x( 'News Post', 'post type singular name' ),
-		'add_new'            => _x( 'Add New', 'book' ),
-		'add_new_item'       => __( 'Add New News Post' ),
-		'edit_item'          => __( 'Edit News Post' ),
-		'new_item'           => __( 'New News Post' ),
-		'all_items'          => __( 'All News Posts' ),
-		'view_item'          => __( 'View News Post' ),
-		'search_items'       => __( 'Search News Posts' ),
-		'not_found'          => __( 'No news posts found' ),
-		'not_found_in_trash' => __( 'No news posts found in the Trash' ),
-		'parent_item_colon'  => '',
-		'menu_name'          => 'News Post'
-	);
-	$args = array(
-		'labels'        => $labels,
-		'description'   => 'All of my news posts',
-		'public'        => true,
-		'menu_position' => 6,
-		'supports'      => array( 'title', 'editor', 'thumbnail' ),
+    $labels = array(
+        'name'               => _x( 'News Posts', 'post type general name' ),
+        'singular_name'      => _x( 'News Post', 'post type singular name' ),
+        'add_new'            => _x( 'Add New', 'book' ),
+        'add_new_item'       => __( 'Add New News Post' ),
+        'edit_item'          => __( 'Edit News Post' ),
+        'new_item'           => __( 'New News Post' ),
+        'all_items'          => __( 'All News Posts' ),
+        'view_item'          => __( 'View News Post' ),
+        'search_items'       => __( 'Search News Posts' ),
+        'not_found'          => __( 'No news posts found' ),
+        'not_found_in_trash' => __( 'No news posts found in the Trash' ),
+        'parent_item_colon'  => '',
+        'menu_name'          => 'News Post'
+    );
+    $args = array(
+        'labels'        => $labels,
+        'description'   => 'All of my news posts',
+        'public'        => true,
+        'menu_position' => 6,
+        'supports'      => array( 'title', 'editor', 'thumbnail' ),
         'rewrite' => array( 'slug' => 'news'),
-		'has_archive'   => false
-	);
-	register_post_type( 'news-post', $args );
+        'has_archive'   => false
+    );
+    register_post_type( 'news-post', $args );
 }
 add_action( 'init', 'custom_post_type_news' );
 
