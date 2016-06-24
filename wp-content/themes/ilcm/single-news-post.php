@@ -33,7 +33,7 @@ get_header(); ?>
 						}
 					?>
 					<p class="heading--micro heading--sub-gray">
-						Posted on <?php the_time('M n Y'); ?>
+						Posted on <?php echo get_the_date( 'M d Y' ); ?> 
 					</p>
 					<?php the_content(); ?>
 

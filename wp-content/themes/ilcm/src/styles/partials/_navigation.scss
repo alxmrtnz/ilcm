@@ -458,9 +458,9 @@ header.nav-bar.nav--not-home {
 .mobile-top-nav {
 
 	.sub-menu {
-		// display: none;
+		display: none;
 	}
-	
+
 	@media #{$large-up} {
 		display: none;
 	}
@@ -479,7 +479,8 @@ header.nav-bar.nav--not-home {
 	text-transform: uppercase;
 	padding: 30px 20px;
 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
-	
+	z-index: 10;
+
 	&.is-shown {
 
 		@media #{$large-up} {

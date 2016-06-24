@@ -41,7 +41,7 @@
 				</a>
 			</h3> 
 			<p class="articles-block__article-date heading--micro heading heading--sub-gray">
-				<?php the_time('M n Y'); ?>
+				<?php echo get_the_date( 'M d Y' ); ?> 
 			</p>
 
 		</li>

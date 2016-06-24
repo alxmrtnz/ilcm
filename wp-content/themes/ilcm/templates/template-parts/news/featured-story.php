@@ -31,7 +31,7 @@
 					
 						<h3 class="heading--micro heading--sub-gray">
 							
-							<?php the_field('news_section'); ?>&nbsp;&nbsp;|&nbsp;&nbsp;  <?php the_time('M n Y'); ?>
+							<?php the_field('news_section'); ?>&nbsp;&nbsp;|&nbsp;&nbsp;  <?php echo get_the_date( 'M d Y' ); ?> 
 							
 						</h3>
 					<h2 class="heading--medium heading--bold heading--featured-news">
