@@ -158,7 +158,34 @@
 
 		         ?>
 
-		         <?php 
+		         <div class="mobile-top-nav">
+		         	<?php
+
+		         	   $topMenu = array(
+		         	       'theme_location'  => 'secondary-menu',
+		         	       'menu'            => 'topMenu',
+		         	       'container'       => false,
+		         	       'container_class' => '',
+		         	       'container_id'    => '',
+		         	       'menu_class'      => 'topMenuList',
+		         	       'menu_id'         => 'topMenu',
+		         	       'echo'            => true,
+		         	       'fallback_cb'     => 'wp_page_menu',
+		         	       'before'          => '',
+		         	       'after'           => '',
+		         	       'link_before'     => '',
+		         	       'link_after'      => '',
+		         	       'items_wrap'      => '%3$s',
+		         	       'depth'           => 0,
+		         	       'walker'          => ''
+		         	   );
+
+		         	   wp_nav_menu($topMenu);
+
+		         	?>
+		         </div>
+		         
+		        <?php 
 
 			         if( get_field( 'nav_button_toggle', 'option' ) ) {
 			             
@@ -182,6 +209,8 @@
 
 		         
 		    </ul>
+
+	
 		</nav>
 
 

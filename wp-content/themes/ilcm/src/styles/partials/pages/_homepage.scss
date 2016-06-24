@@ -41,15 +41,20 @@ body.home {}
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	min-height: 450px;
+	min-height: 300px;
 	max-height: 500px;
-	height: 85vh;
+	height: 40vh;
 
 	@media #{$medium-up} {
 		min-height: 350px;
-		height: 95vh;
+		height: 55vh;
 		max-height: 625px;
 		// margin-top:119px;
+	}
+
+	@media #{$large-up} {
+		min-height: 450px;
+		height: 75vh;
 	}
 
 	@media screen and (min-width: 1500px) {
