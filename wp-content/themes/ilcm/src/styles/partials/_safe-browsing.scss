@@ -43,6 +43,7 @@ $safe-browsing-color: $primary-color;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		width: 50%;
+		min-width: 300px;
 		overflow-y: hidden;
 	}
 
