@@ -37,7 +37,7 @@
 				'numberposts'	=> '1',
 				'post_type'		=> 'news-post',
 				'meta_key'		=> 'news_section',
-				'meta_value'	=> $newsType, //1 for "True". Checkbox is checked in Wordpress
+				'meta_value'	=> $newsType, 
 				'posts_per_page' 	=> 10,
 				'paged' 		=> $paged
 			);

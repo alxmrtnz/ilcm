@@ -349,7 +349,7 @@ function custom_post_type_news() {
         'menu_position' => 6,
         'supports'      => array( 'title', 'editor', 'thumbnail' ),
         'rewrite' => array( 'slug' => 'news'),
-        'has_archive'   => false
+        'has_archive'   => true
     );
     register_post_type( 'news-post', $args );
 }

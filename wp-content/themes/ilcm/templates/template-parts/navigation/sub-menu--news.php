@@ -1,4 +1,4 @@
-<div class="nav-bar__sub-menu sub-menu--news" data-name="news">
+<div class="nav-bar__sub-menu sub-menu--news" data-name="news-from-ilcm">
 	<div class="row">
 		<div class="small-12 small-offset-1 large-3 large-offset-0 columns">
 			<div class="sub-menu__featured-img-left">
