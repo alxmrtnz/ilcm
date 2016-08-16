@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: News Archive 
+ * Template Name: News (Subnews) 
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
